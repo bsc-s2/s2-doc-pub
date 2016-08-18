@@ -65,7 +65,7 @@ Content-Disposition: form-data; name="submit"
           <tr>
             <td>key</td>
             <td>
-            	object上传后的key（路径），例如：angel/${filename}，变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。如：angel/path/to/myfile.txt
+            	object上传后的key（路径），例如：angel/${filename}，变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。如：angel/path/to/myfile.txt, <br/>变量名可以为: filename, sha1, md5, size
             </td>
             <td>Yes</td>
           </tr>    
@@ -83,7 +83,8 @@ Content-Disposition: form-data; name="submit"
             <td>
             	上传成功后的响应码，可以设置的值为:200, 201, or 204(defalut),
                 若设置为200或者204, 则返回body为空, status为200或者204,
-                若设置为201, 则返回xml格式的body, stats为201
+                若设置为201, 则返回xml格式的body, stats为201, 如果设置为非法的值, 则忽略该值,使用默认值204<br/>
+                 <b>注</b>: 如果设置success_action_redirect或者redirect, 则忽略该设置
             </td>
             <td>No</td>
           </tr>  
@@ -91,7 +92,7 @@ Content-Disposition: form-data; name="submit"
           <tr>
             <td>success_action_redirect, redirect</td>
             <td>
-            	上传成功后客户端重定向的URL。
+            	上传成功后客户端重定向的URL,实际返回的location会在原来的URL加上bucket, key和etag querystring
             </td>
             <td>No</td>
           </tr>
@@ -130,18 +131,9 @@ Content-Disposition: form-data; name="submit"
           </tr>
           
           <tr>
-            <td>Cache-Control</td>
+            <td>Cache-Control, Content-Type, Content-Disposition,Content-Encoding,Expires</td>
             <td>
-            	文件Cache，标准HTTP协议，更多内容参见：http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
-            </td>
-            <td>No</td>
-          </tr>
-          
-          <tr>
-            <td>Expires</td>
-            <td>
-            	文件过期时间，到期系统将自动清除文件（非即时，清除时间不定期），格式参考：http://www.w3.org/Protocols/rfc2616/
-                rfc2616-sec14.html#sec14.21.
+            	和put_file一样, 参考put_file接口
             </td>
             <td>No</td>
           </tr>
@@ -149,7 +141,7 @@ Content-Disposition: form-data; name="submit"
         </tbody>
 </table>
 
- - Policy的构建：
+#### Policy的构建：
  策略是使用 UTF-8 和 Base64 编码的 JSON
  文档，它指定了请求必须满足的条件并且用于对内容进行身份验证。根据您设计策略文档的方式，您可以对每次上传、每个用户、所有上传或根据其他能够满足您需要的设计来使用它们。
 
@@ -185,8 +177,52 @@ Content-Disposition: form-data; name="submit"
   - starts-with：$key必须以”my_prefix/”开始 (Policy中”$key”前必须带”$”)。若$key值为空，文件名前无前缀。
   - content-length-range：文件大小必须在指定范围内。
   - 最终将policy进行base64编码设置到表单Policy的value中。
+
   
- - Signature的构建：
+##### expiration:
+  expiration用于指定policy的过期时间, 采用ISO 8601 UTC日期格式来指定策略的过期日期。例如，“2007-12-01T12:00:00.000Z”指定, 在策略中过期是必需的。
+ 
+##### Condition:
+Condition用于验证上传的对象的内容与表单冲填写的域
+###### Condition 类型
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Condition</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td width="185px">精确匹配</td>
+            <td>
+            	1. 精确匹配将验证字段是否匹配特定的值。此示例指示ACL 必须设置为公共读取：{"acl": "public-read" } <br/>
+            	2.ACL 必须设置为公共读取的替代方法: [ "eq", "$acl", "public-read" ]
+            </td>
+          </tr>    
+            
+          <tr>
+            <td>Starts With</td>
+            <td>
+            如果值必须从某个特定的值开始，请使用starts-with。本示例指示密钥必须从user/betty开始：["starts-with", "$key", "user/betty/"]
+            	
+            </td>
+          </tr>  
+          <tr>
+            <td>指定范围</td>
+            <td>
+            对于接受范围的字段，请使用逗号来分隔上限和下限值。本示例允许1 到10 MB 的文件大小：["content-length-range", 1048579, 10485760], 单位字节
+            	
+            </td>
+          </tr>                        
+        </tbody>
+</table>
+
+###### Conditions 字段
+策略文档中的条件验证上传的对象的内容。您在表单中指定的每个表单字段（AWSAccessKeyId、Signature、file、Policy除外）都可以作为条件
+
+#### Signature的构建：
   - 用UTF-8对policy进行编码
   - 用Base64对UTF-8形式的policy进行编码
   - 用HMAC SHA-1和你的Secret Key将你的policy进行转换。最后进行base64编码。如：使用php时，base64_encode( hash_hmac( "sha1", $policy, $SECRETKEY, true ) );
@@ -209,5 +245,5 @@ Content-Disposition: form-data; name="submit"
  - 注意事项：
   - POST请求后的uri只能是“/”
   - success_action_redirect：指定上传成功后客户端重定向的URL。
-  - key：变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。
+  - key：变量${filename}将被自动替换成被上传文件的文件名；
 
