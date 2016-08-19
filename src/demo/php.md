@@ -35,8 +35,8 @@ $cli = new Aws\S3\S3Client([
     'version' => 'latest',
     'region' => 'us-east-1',
     'credentials' => [
-        'key' => 'z2qutjf718d0i9gw6skc',
-        'secret' => 'SEQgcc1ppH7uXPG4ZPIcrCv2cWz8grcReMfFABCn',
+        'key' => 'z2qutjf718d0i9gw6skc',  //请替换为您自己的access_key
+        'secret' => 'SEQgcc1ppH7uXPG4ZPIcrCv2cWz8grcReMfFABCn', //请替换为您自己的secret_key
     ],
     'endpoint' => 'http://s2.i.qingcdn.com',
 ]);

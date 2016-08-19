@@ -46,8 +46,8 @@ from boto3.s3.transfer import TransferConfig
 
 cli = boto3.client(
     's3',
-    aws_access_key_id='ziw5dp1alvty9n47qksu',
-    aws_secret_access_key='V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV',
+    aws_access_key_id='ziw5dp1alvty9n47qksu', #请替换为您自己的access_key
+    aws_secret_access_key='V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV', #请替换为您自己的secret_key
     endpoint_url='http://s2.i.qingcdn.com'
 )
 
