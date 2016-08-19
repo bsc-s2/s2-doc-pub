@@ -12,9 +12,9 @@ Authorization: <authorization string> #请参照《签名算法》
 
 #ACL规则: XML or Json
 {
-    'Baishan0000000000000001' :  [ "read", "read_acp" , "write", "write_acp" ],
-    'GRPS000000ANONYMOUSE' :  [ "read", "read_acp" , "write", "write_acp" ],
-    'GRPS0000000CANONICAL' :  [ "read", "read_acp" , "write", "write_acp" ],
+    "Baishan0000000000000001" :  [ "read", "read_acp" , "write", "write_acp" ],
+    "GRPS000000ANONYMOUSE" :  [ "read", "read_acp" , "write", "write_acp" ],
+    "GRPS0000000CANONICAL" :  [ "read", "read_acp" , "write", "write_acp" ]
 }
 ```
 
