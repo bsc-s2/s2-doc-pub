@@ -1,9 +1,11 @@
 # Summary
 
 * [1. 简介](README.md)
-* [2. 快速开始(Amazon SDK)]()
+* [2. 快速开始(兼容Amazon SDK)]()
     * [2.1 Python](demo/python.md)
     * [2.2 PHP](demo/php.md)
+    * [2.3 Browser](demo/browser.md)
+    * [2.4 Nodejs](demo/nodejs.md)
 * [3. API ]()
     * [3.1 Service]()
         * [List Buckets](bucket/buckets_list.md)

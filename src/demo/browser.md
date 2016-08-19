@@ -1,5 +1,5 @@
 ## JavaScript  Demo
-```JavaScript
+```html
 
 <html>
 <!--将输入文本框中的数据作为文件上传，列出已经上传的文件，下载文件的示例-->
