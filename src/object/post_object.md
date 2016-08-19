@@ -65,7 +65,8 @@ Content-Disposition: form-data; name="submit"
           <tr>
             <td>key</td>
             <td>
-            	object上传后的key（路径），例如：angel/${filename}，变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。如：angel/path/to/myfile.txt, <br/>变量名可以为: filename, sha1, md5, size
+            	object上传后的key（路径），例如：angel/${filename}，变量
+                ${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在存储中的文件名。如：angel/path/to/myfile.txt, <br/>变量名可以为: filename, sha1, md5, size
             </td>
             <td>Yes</td>
           </tr>    
@@ -73,7 +74,7 @@ Content-Disposition: form-data; name="submit"
           <tr>
             <td>acl</td>
             <td>
-            	文件的ACL：创建文件的同时，设置一个ACL。请参照：<a href="http://open.baishanstorage.com/?c=doc&a=guide&section=acl">《ACL》
+            	文件的ACL：创建文件的同时，设置一个ACL。请参照《ACL》
             </a></td>
             <td>No</td>
           </tr>    

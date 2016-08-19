@@ -100,7 +100,7 @@ x-amz-s2-requester: <Your UserName>
           <tr>
             <td>x-amz-acl</td>
             <td>
-            	文件ACL：创建文件的同时，设置一个ACL。请参照：<a href="http://open.baishanstorage.com/?c=doc&a=guide&section=acl">《ACL》</a>
+            	文件ACL：创建文件的同时，设置一个ACL。请参照《ACL》
             </td>
             <td>No</td>
           </tr>

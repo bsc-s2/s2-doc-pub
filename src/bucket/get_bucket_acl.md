@@ -1,6 +1,6 @@
 ### GET Bucket ACL
 
- - 描述：获得指定Bucket的ACL信息。更多信息请参照：[《ACL》][2]
+ - 描述：获得指定Bucket的ACL信息。更多信息请参照：[《ACL》]((../acl/acl.md))
 
  - 请求格式：
 
@@ -67,7 +67,7 @@ X-Requester: Your UserId
 
 ```
 
- - 响应格式说明请参照：[《ACL》][2]
+ - 响应格式说明请参照：[《ACL》]((../acl/acl.md))
 
  - 请求示例：
 

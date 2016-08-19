@@ -1,7 +1,7 @@
 # Summary
 
 * [1. 简介](README.md)
-* [2. 快速开始(兼容Amazon SDK)]()
+* [2. 实例(兼容Amazon SDK)]()
     * [2.1 Python](demo/python.md)
     * [2.2 PHP](demo/php.md)
     * [2.3 Browser](demo/browser.md)
@@ -28,6 +28,5 @@
         * [Upload Part](object/upload_part.md)
         * [Complete Multipart Upload](object/complete_multipart_upload.md)
         * [List Parts](object/list_parts.md)
-    * [3.4 ACL]()
-        * [Access Control List](acl/acl.md)
-
+* [4. ACL](acl/acl.md)
+* [5. 约束与限制](limitation/limit.md)

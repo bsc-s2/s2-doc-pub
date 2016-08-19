@@ -1,6 +1,6 @@
 ### PUT Bucket ACL
 
- - 描述：给指定Bucket设置ACL规则。更多信息请参照：[《ACL》][2]
+ - 描述：给指定Bucket设置ACL规则。更多信息请参照：[《ACL》](../acl/acl.md)
 
  - 请求格式：
 
@@ -48,7 +48,7 @@ X-Requester: Your UserId
 }
 ```
 
- - 请求格式说明请参照：[《ACL》][2]
+ - 请求格式说明请参照：[《ACL》](../acl/acl.md)
  - 请求示例：
 
 ```

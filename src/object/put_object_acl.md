@@ -1,6 +1,6 @@
 ### PUT Object ACL
 
- - 描述：给指定Object设置ACL规则。更多信息请参照：[《ACL》][2]
+ - 描述：给指定Object设置ACL规则。更多信息请参照：[《ACL》](../acl/acl.md)
 
  - 请求格式：
 
@@ -32,7 +32,7 @@ Authorization: <authorization string> #请参照《签名算法》
           <tr>
             <td>x-amz-acl</td>
             <td>
-            	文件ACL：请参照：<a href="http://open.baishanstorage.com/?c=doc&a=guide&section=acl">《ACL》</a>
+            	文件ACL：请参照《ACL》
             </td>
             <td>No</td>
           </tr>
@@ -54,7 +54,7 @@ Note: 假如指定了x-amz-acl header将忽略body中acl, body中的xml格式由
 
  - Response（无HTTP Body）：
 
- - 请求格式说明请参照：[《ACL》][2]
+ - 请求格式说明请参照：[《ACL》](../acl/acl.md)
 
  - 请求示例：
 

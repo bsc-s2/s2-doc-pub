@@ -9,7 +9,7 @@ PUT /?formatter=json HTTP/1.1
 Host: <Your-Bucket-Name>.s2.i.qingcdn.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
-x-amz-acl: <Canned-ACL> #请参照《ACL》
+x-amz-acl: <Canned-ACL> #请参照[《ACL》](../acl/acl.md)
 ```
 
 或者
@@ -19,7 +19,7 @@ PUT /<Your-Bucket-Name>/?formatter=json HTTP/1.1
 Host: s2.i.qingcdn.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
-x-amz-acl: <Canned-ACL> #请参照《ACL》
+x-amz-acl: <Canned-ACL> #请参照[《ACL》](../acl/acl.md)
 ```
 
  - Request Header（请求头）：
@@ -36,7 +36,7 @@ x-amz-acl: <Canned-ACL> #请参照《ACL》
         
           <tr>
             <td>x-amz-acl</td>
-            <td>创建Bucket的同时，设置一个ACL。请参照：<a href="http://open.baishanstorage.com/?c=doc&a=guide&section=acl">《ACL》</a></td>
+            <td>创建Bucket的同时，设置一个ACL。请参照《ACL》
             <td>No</td>
           </tr>
                     
