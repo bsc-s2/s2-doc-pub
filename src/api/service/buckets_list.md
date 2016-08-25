@@ -100,7 +100,7 @@ Authorization: <authorization string> #请参照《签名算法》
  - 请求示例：
 
 ``` 
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://s2.i.qingcdn.com/?formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://s2.i.qingcdn.com/?formatter=json"
 ```
 
 或者
