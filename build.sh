@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in faq-pub.md; do
+for i in $(cd src; find . -name "*.md"); do
 
     pandoc --standalone         \
         -H src/_inc/css.html    \
