@@ -43,18 +43,3 @@ done <<-END
 imgx
 s2
 END
-
-
-exit $?
-
-
-for i in $(cd building; find . -name "*.md"); do
-
-    pandoc --standalone         \
-        -H building/_inc/css.html    \
-        -f markdown -t html     \
-        --toc --toc-depth=5     \
-        building/$i                  \
-        --output dist/${i%.*}.html
-
-done
