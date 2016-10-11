@@ -30,7 +30,7 @@ cp -R src/* building/ || die copy to building/
 # add table-of-content to every *.md
 for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 
-    doctoc "building/$i" || die adding TOC to "$i"
+    doctoc --title "**Table of Content**" "building/$i" || die adding TOC to "$i"
 
 done
 
