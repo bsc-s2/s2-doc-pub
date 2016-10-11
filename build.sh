@@ -34,12 +34,4 @@ for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 
 done
 
-# build online web doc
-while read pth; do
-
-    gitbook build -f web building/$pth dist/$pth || die build with gitbook "$pth"
-
-done <<-END
-imgx
-s2
-END
+gitbook build -f web building/ dist || die build with gitbook
