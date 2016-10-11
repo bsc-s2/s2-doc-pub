@@ -1,6 +1,7 @@
 # Summary
 
 * [1. 简介](README.md)
+    * [1.1 常见问题 FAQ](faq-pub.md)
 * [2. 实例(兼容Amazon SDK)](demo/README.md)
     * [2.1 Python](demo/python.md)
     * [2.2 PHP](demo/php.md)
@@ -31,3 +32,4 @@
 * [4. 签名算法](signature/signature.md)
 * [5. ACL](acl/acl.md)
 * [6. 约束与限制](limitation/limit.md)
+* [7. 图片实时处理API imgx](imgx/imgx_manual.md)
