@@ -64,7 +64,10 @@
 </script>
 </html>
 
+```
 
+
+```html
 
 <html>
 <!--上传用户本地文件，并生成文件的URL的示例-->
@@ -109,4 +112,7 @@
   }, false);
 </script>
 </html>
+
 ```
+
+AWS 官方 SDK [aws-sdk-browser](https://aws.amazon.com/sdk-for-browser/)

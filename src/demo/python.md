@@ -29,7 +29,7 @@ cli = boto3.client(
 
 ##### 使用put_object接口上传
 
-ACL可设置为：'private' 或 'public-read' 或 'public-read-write'
+ACL可设置为：'private' 或 'public-read' 或 'public-read-write' 或 'authenticated-read'
 
 ```python
 resp = cli.put_object(
@@ -103,7 +103,7 @@ resp = cli.get_object_acl(
 
 ##### 使用预定义的ACL
 
-支持的预定义ACL有：'private', 'public-read', 'public-read-write'
+支持的预定义ACL有：'private', 'public-read', 'public-read-write' 或 'authenticated-read'
 
 ```python
 resp = cli.put_object_acl(
@@ -150,7 +150,7 @@ resp = cli.put_object_acl(
 
 #### 创建桶
 
-ACL可设置为：'private' 或 'public-read' 或 'public-read-write'
+ACL可设置为：'private' 或 'public-read' 或 'public-read-write' 或 'authenticated-read'
 
 ```python
 resp = cli.create_bucket(
@@ -184,6 +184,17 @@ resp = cli.get_bucket_acl(
 ```
 
 #### 设置桶的ACL
+
+##### 使用预定义的ACL
+
+支持的预定义ACL有：'private', 'public-read', 'public-read-write' 或 'authenticated-read'
+
+```python
+resp = cli.put_bucket_acl(
+    ACL='public-read',
+    Bucket='test-bucket-xxx',
+)
+```
 
 ##### 使用自定义的ACL
 
