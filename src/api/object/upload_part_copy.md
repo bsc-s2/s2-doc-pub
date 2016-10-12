@@ -28,6 +28,29 @@ x-amz-s2-requester: <Your UserName>
     <ETag>870c06c00566c4fb1861bb10f34d1904</ETag>
 </CopyObjectResult>
 ```
+ - Request Parameters(请求参数)：
+
+<table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>partNumber</td>
+        <td>文件分片的序号，从1开始</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>uploadId</td>
+        <td>通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+</table>
 
  - Request Headers（请求头）：
 
