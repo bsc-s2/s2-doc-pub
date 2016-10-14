@@ -1,0 +1,174 @@
+<html>
+
+<body>
+    <div>
+        <div id="set_global_div" align="center">
+            <div><h5>set up account and endpoint ip</h5></div>
+            <div>
+                <br/>
+            </div>
+            <div>input endpoint ip:
+                <input type="text" id="endpoint_ip" size="50" value="101.200.190.134"></input>
+            </div>
+            <div>input your access key:
+                <input type="text" id="access_key" size="50" value="ziw5dp1alvty9n47qksu"></input>
+            </div>
+            <div>input your secret key:
+                <input type="text" id="secret_key" size="50" value="V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV"></input>
+            </div>
+            <div>
+                <button id="update_account_button">update</button>
+            </div>
+            <div>
+                <br/>
+            </div>
+            <div id="create_list_buckets_div" align="center">
+                <div><h5>create a new bucket and list all your buckets</h5></div>
+                <div>
+                    input a bucket name:
+                    <input type="test" id="create_bucket_name" value=""></input>
+                    <button id="create_bucket_button">Create bucket</button>
+                </div>
+                <div>
+                    <br/>
+                </div>
+                <div>list all buckets</div>
+                <div>
+                    <button id="list_buckets_button">List all buckets</button>
+                </div>
+                <div>
+                    <textarea rows="10" cols="40" id="list_buckets_result"></textarea>
+                </div>
+            </div>
+            <div>
+                <br/>
+            </div>
+            <div id="upload_object_div" align="center">
+                <div><h5>upload file to a bucket</h5></div>
+                <div>
+                    <div>input bucket name to upload to:
+                        <input type="text" id="bucket_to_upload_to" value=""></input>
+                    </div>
+                    <div>input file name:
+                        <input type="text" id="file_name" value=""></input>
+                    </div>
+                    <div>input file content:
+                        <textarea rows="5" cols="40" id="file_content"></textarea>
+                    </div>
+                    <div>
+                        <button id="put_object_button">Upload file</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <br/>
+            </div>
+            <div id="list_objects_div" align="center">
+                <div><h5>lists files in a bucket</h5></div>
+                <div>
+                    <div>input bucket name:
+                        <input type="text" id="list_files_in_bucket_name" value=""></input>
+                    </div>
+                    <div>
+                        <button id="list_files_button">List files</button>
+                    </div>
+                    <div>
+                        <textarea rows="10" cols="40" id="list_files_result"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="aws-sdk-2.7.6.min.js"></script>
+        <script type="text/javascript">
+            AWS.config.update({
+                accessKeyId: 'ziw5dp1alvty9n47qksu',
+                secretAccessKey: 'V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV',
+                region: 'us-west-1',
+                endpoint: 'http://101.200.190.134',
+                s3ForcePathStyle: true,
+            });
+
+            var s3 = new AWS.S3();
+
+            var update_account_button = document.getElementById('update_account_button');
+            var create_bucket_button = document.getElementById('create_bucket_button');
+            var list_buckets_button = document.getElementById('list_buckets_button');
+            var put_object_button = document.getElementById('put_object_button');
+            var list_files_button = document.getElementById('list_files_button');
+
+            update_account_button.addEventListener('click', function () {
+                AWS.config.update({
+                    accessKeyId: document.getElementById('access_key').value,
+                    secretAccessKey: document.getElementById('secret_key').value,
+                    endpoint: 'http://' + document.getElementById('endpoint_ip').value,
+                });
+                s3 = new AWS.S3();
+                alert('updated');
+            });
+
+
+            create_bucket_button.addEventListener('click', function () {
+                var params = {
+                    Bucket: document.getElementById('create_bucket_name').value
+                };
+                s3.createBucket(params, function (err, data) {
+                    if (err) {
+                        alert(err);
+                    } else {
+                        alert('bucket created');
+                    }
+                })
+            });
+
+            list_buckets_button.addEventListener('click', function () {
+                s3.listBuckets(function (err, data) {
+                    if (err) {
+                        alert(err);
+                    } else {
+                        var str = '';
+                        for (i in data.Buckets) {
+                            str += data.Buckets[i].Name + '\n';
+                        }
+                        console.log(str);
+                        document.getElementById('list_buckets_result').innerText = str;
+                    }
+                })
+            });
+
+            put_object_button.addEventListener('click', function () {
+                var params = {
+                    Bucket: document.getElementById('bucket_to_upload_to').value,
+                    Key: document.getElementById('file_name').value,
+                    Body: document.getElementById('file_content').value,
+                };
+                s3.putObject(params, function (err, data) {
+                    if (err) {
+                        alert(err);
+                    } else {
+                        alert('file uploaded');
+                    }
+                })
+            });
+
+            list_files_button.addEventListener('click', function () {
+                var params = {
+                    Bucket: document.getElementById('list_files_in_bucket_name').value
+                };
+                s3.listObjects(params, function (err, data) {
+                    if (err) {
+                        alert(err);
+                    } else {
+                        var str = '';
+                        for (i in data.Contents) {
+                            str += 'file_name:' + data.Contents[i].Key + '    size:' + data.Contents[i].Size + '\n';
+                        }
+                        console.log(str);
+                        document.getElementById('list_files_result').innerText = str;
+                    }
+                })
+            });
+        </script>
+</body>
+
+</html>
