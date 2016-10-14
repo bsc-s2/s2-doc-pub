@@ -17,7 +17,7 @@
 
 die()
 {
-    echo "$@" >&2
+    echo "ERROR: $@" >&2
     exit 1
 }
 
@@ -38,6 +38,11 @@ gitbook build -f web building/ dist || die build with gitbook
 
 git checkout release || die checkout release
 rm -rf building/     || die rm building/
+
+for p in $(ls dist/); do
+    rm -rf "$p" || die rm -rf "$p"
+done
+
 mv dist/* .          || die mv dist/xx
 rmdir dist/          || die rmdir dist/
 git add .            || die git-add .
