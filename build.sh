@@ -14,6 +14,9 @@
 #
 #   doctoc # to generate table-of-content
 #       $ npm install doctoc
+#
+#   pandoc # to build standalone html from markdown
+#       $ brew install pandoc
 
 die()
 {
@@ -37,6 +40,10 @@ cat building/SUMMARY.md | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while
 done > building/all-in-one.md
 
 
+# # build pdf, it does not need manually created table-of-content.
+# # disabled for now. FAQ is not completed.
+# gitbook pdf building/ dist/s2-doc.pdf || die build pdf with gitbook
+
 
 # add table-of-content to every *.md
 for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
@@ -45,7 +52,7 @@ for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 
 done
 
-gitbook build -f web building/ dist || die build with gitbook
+gitbook build -f web building/ dist || die build html with gitbook
 
 
 # build all-in-one.html
