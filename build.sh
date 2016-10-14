@@ -35,3 +35,13 @@ for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 done
 
 gitbook build -f web building/ dist || die build with gitbook
+
+git checkout release || die checkout release
+rm -rf building/     || die rm building/
+mv dist/* .          || die mv dist/xx
+rmdir dist/          || die rmdir dist/
+git add .            || die git-add .
+git add -u .         || die git-add -u .
+
+git commit -m "build release from master $(git rev-parse master)" \
+    || die git-commit
