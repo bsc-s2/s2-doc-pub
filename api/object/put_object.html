@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PUT Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="post_object.html" />
+    
+    
+    <link rel="prev" href="get_object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../faq-pub.html">
+            
+                <a href="../../faq-pub.html">
+            
+                    
+                    1.1 常见问题 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../demo/">
+            
+                <a href="../../demo/">
+            
+                    
+                    2. 实例(兼容Amazon SDK)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../demo/python.html">
+            
+                <a href="../../demo/python.html">
+            
+                    
+                    2.1 Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../demo/php.html">
+            
+                <a href="../../demo/php.html">
+            
+                    
+                    2.2 PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../demo/browser.html">
+            
+                <a href="../../demo/browser.html">
+            
+                    
+                    2.3 Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../demo/nodejs.html">
+            
+                <a href="../../demo/nodejs.html">
+            
+                    
+                    2.4 Nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    3. API 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../bucket/">
+            
+                <a href="../bucket/">
+            
+                    
+                    3.1 Bucket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../bucket/buckets_list.html">
+            
+                <a href="../bucket/buckets_list.html">
+            
+                    
+                    LIST Buckets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../bucket/get_bucket_list_objects.html">
+            
+                <a href="../bucket/get_bucket_list_objects.html">
+            
+                    
+                    GET Bucket (List Objects)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../bucket/put_bucket.html">
+            
+                <a href="../bucket/put_bucket.html">
+            
+                    
+                    PUT Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../bucket/delete_bucket.html">
+            
+                <a href="../bucket/delete_bucket.html">
+            
+                    
+                    DELETE Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../bucket/put_bucket_acl.html">
+            
+                <a href="../bucket/put_bucket_acl.html">
+            
+                    
+                    PUT Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../bucket/get_bucket_acl.html">
+            
+                <a href="../bucket/get_bucket_acl.html">
+            
+                    
+                    GET Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.2 Object
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="head_object.html">
+            
+                <a href="head_object.html">
+            
+                    
+                    HEAD Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="get_object.html">
+            
+                <a href="get_object.html">
+            
+                    
+                    GET Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.3" data-path="put_object.html">
+            
+                <a href="put_object.html">
+            
+                    
+                    PUT Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="post_object.html">
+            
+                <a href="post_object.html">
+            
+                    
+                    POST Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="put_object_copy.html">
+            
+                <a href="put_object_copy.html">
+            
+                    
+                    PUT Object - Copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="delete_object.html">
+            
+                <a href="delete_object.html">
+            
+                    
+                    DELETE Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="get_object_acl.html">
+            
+                <a href="get_object_acl.html">
+            
+                    
+                    GET Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="put_object_acl.html">
+            
+                <a href="put_object_acl.html">
+            
+                    
+                    PUT Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="initiate_multipart_upload.html">
+            
+                <a href="initiate_multipart_upload.html">
+            
+                    
+                    Initiate Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="upload_part.html">
+            
+                <a href="upload_part.html">
+            
+                    
+                    Upload Part
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="upload_part_copy.html">
+            
+                <a href="upload_part_copy.html">
+            
+                    
+                    Upload Part copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="complete_multipart_upload.html">
+            
+                <a href="complete_multipart_upload.html">
+            
+                    
+                    Complete Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.13" data-path="list_parts.html">
+            
+                <a href="list_parts.html">
+            
+                    
+                    List Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../signature/signature.html">
+            
+                <a href="../../signature/signature.html">
+            
+                    
+                    4. 签名算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../acl/acl.html">
+            
+                <a href="../../acl/acl.html">
+            
+                    
+                    5. ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../limitation/limit.html">
+            
+                <a href="../../limitation/limit.html">
+            
+                    
+                    6. 约束与限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../imgx/imgx_manual.html">
+            
+                <a href="../../imgx/imgx_manual.html">
+            
+                    
+                    7. 图片实时处理API imgx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >PUT Object</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Content</strong></p>
+<ul>
+<li><a href="#put-object">PUT Object</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h3 id="put-object">PUT Object</h3>
+<ul>
+<li><p>&#x63CF;&#x8FF0;&#xFF1A;PUT&#x65B9;&#x5F0F;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF08;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;meta&#x548C;acl&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A; </p>
+</li>
+</ul>
+<pre><code class="lang-http"><span class="hljs-keyword">PUT</span> <span class="hljs-string">/&lt;ObjectName&gt;</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.s2.i.qingcdn.com
+<span class="hljs-attribute">Date</span>: &lt;date&gt;
+<span class="hljs-attribute">Content-Length</span>: &lt;object data length&gt;
+<span class="hljs-attribute">Content-Type</span>: &lt;mime-type&gt;
+<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
+
+<span class="haskell">[object <span class="hljs-class"><span class="hljs-keyword">data</span>]</span>
+</span></code></pre>
+<ul>
+<li>&#x54CD;&#x5E94;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
+<span class="hljs-attribute">Connection</span>: keep-alive
+<span class="hljs-attribute">ETag</span>: &quot;&lt;&#x6587;&#x4EF6;&#x7684;MD5&#x503C;&gt;&quot;
+<span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
+<span class="hljs-attribute">x-amz-s2-requester</span>: &lt;Your UserName&gt;
+</code></pre>
+<ul>
+<li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;</li>
+</ul>
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Expires</td>
+            <td>
+                &#x6587;&#x4EF6;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x5230;&#x671F;&#x7CFB;&#x7EDF;&#x5C06;&#x81EA;&#x52A8;&#x6E05;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5373;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x65F6;&#x95F4;&#x4E0D;&#x5B9A;&#x671F;&#xFF09;&#xFF0C;&#x683C;&#x5F0F;&#x53C2;&#x8003;&#xFF1A;http://www.w3.org/Protocols/rfc2616/
+                rfc2616-sec14.html#sec14.21.
+            </td>
+            <td>No</td>
+          </tr>    
+
+          <tr>
+            <td>Cache-Control</td>
+            <td>
+                &#x6587;&#x4EF6;Cache&#xFF0C;&#x6807;&#x51C6;HTTP&#x534F;&#x8BAE;&#xFF0C;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#x53C2;&#x89C1;&#xFF1A;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Content-Type</td>
+            <td>
+                &#x6587;&#x4EF6;mime type&#xFF0C;&#x8BFB;&#x53D6;&#x65F6;&#x539F;&#x503C;&#x8FD4;&#x56DE;
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Content-Length</td>
+            <td>
+                &#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x8BFB;&#x53D6;&#x65F6;&#x539F;&#x503C;&#x8FD4;&#x56DE;
+            </td>
+            <td>Yes</td>
+          </tr>
+
+          <tr>
+            <td>Content-MD5</td>
+            <td>
+                base64&#x7F16;&#x7801;&#x7684;&#x6587;&#x4EF6;MD5&#xFF08;&#x4E0E;&#x4F20;&#x9001;&#x5185;&#x5BB9;&#x4E0D;&#x7B26;&#x65F6;&#x5931;&#x8D25;&#xFF09;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;rfc&#x6807;&#x51C6;&#x4F7F;&#x7528;base64&#x7F16;&#x7801;&#x7684;&#x503C;
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Content-Disposition</td>
+            <td>
+                HTTP&#x6807;&#x51C6;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x4FE1;&#x606F;&#xFF0C;&#x8BFB;&#x53D6;&#x65F6;&#x539F;&#x503C;&#x8FD4;&#x56DE;&#x3002;&#x53C2;&#x89C1;&#xFF1A;http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Content-Encoding</td>
+            <td>
+                &#x6587;&#x4EF6;&#x7F16;&#x7801;&#xFF0C;HTTP&#x6807;&#x51C6;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x4FE1;&#x606F;&#xFF0C;&#x8BFB;&#x53D6;&#x65F6;&#x539F;&#x503C;&#x8FD4;&#x56DE;&#x3002;&#x53C2;&#x89C1;&#xFF1A;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>x-amz-acl</td>
+            <td>
+                &#x6587;&#x4EF6;ACL&#xFF1A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;ACL&#x3002;&#x8BF7;&#x53C2;&#x7167;&#x300A;ACL&#x300B;
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>x-amz-meta-*</td>
+            <td>
+                &#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;MetaDeta, header&#x4EE5;x-amz-meta-&#x5F00;&#x5934;, &#x6240;&#x6709;meta&#x4EE5;key:value&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;,&#x6700;&#x5927;&#x9650;&#x5236;64KB,
+                HEAD&#x6216;&#x8005;GET&#x65F6;&#x539F;&#x6837;&#x8FD4;&#x56DE;
+            </td>
+            <td>No</td>
+          </tr>    
+        </tbody>
+</table>
+
+<ul>
+<li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code>curl -v -T &quot;myfile.txt&quot; -H &quot;x-amz-meta-UploadLocation: My Home&quot; -H &quot;Date: Sat,20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.s2.i.qingcdn.com/path/to/myfile.txt&quot;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="get_object.html" class="navigation navigation-prev " aria-label="Previous page: GET Object">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="post_object.html" class="navigation navigation-next " aria-label="Next page: POST Object">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PUT Object","level":"1.3.2.3","depth":3,"next":{"title":"POST Object","level":"1.3.2.4","depth":3,"path":"api/object/post_object.md","ref":"api/object/post_object.md","articles":[]},"previous":{"title":"GET Object","level":"1.3.2.2","depth":3,"path":"api/object/get_object.md","ref":"api/object/get_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"api/object/put_object.md","mtime":"2016-10-14T03:40:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-14T03:40:48.659Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
