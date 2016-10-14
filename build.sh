@@ -27,6 +27,12 @@ mkdir building || die mkdir building
 # adding toc changes src files
 cp -R src/* building/ || die copy to building/
 
+# build all in one page doc
+cat building/SUMMARY.md | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
+    cat building/$pth
+    echo ""
+done > building/all-in-one.md
+
 # add table-of-content to every *.md
 for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 
