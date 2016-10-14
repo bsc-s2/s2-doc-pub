@@ -36,11 +36,6 @@ cat building/SUMMARY.md | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while
     echo ""
 done > building/all-in-one.md
 
-pandoc --standalone          \
-    -H src/_include/css.html \
-    -f markdown -t html      \
-    building/all-in-one.md   \
-    --output built/all-in-one.html
 
 
 # add table-of-content to every *.md
@@ -52,6 +47,16 @@ done
 
 gitbook build -f web building/ dist || die build with gitbook
 
+
+# build all-in-one.html
+pandoc --standalone          \
+    -H _include/css.html \
+    -f markdown -t html      \
+    building/all-in-one.md   \
+    --output dist/all-in-one.html || die build all-in-one.html
+
+
+# build branch: release
 git checkout release || die checkout release
 rm -rf building/     || die rm building/
 
