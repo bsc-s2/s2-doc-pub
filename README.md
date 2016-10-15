@@ -24,20 +24,6 @@ All public doc about S2, including API, demo, FAQ etc.
     sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
     ```
 
--   `doctoc`
-    to generate table-of-content.
-
-    ```
-    npm install doctoc
-    ```
-
--   `pandoc`
-    to build standalone html from markdown.
-
-    ```
-    brew install pandoc
-    ```
-
 ## Build
 
 `build.sh` generates table-of-content,

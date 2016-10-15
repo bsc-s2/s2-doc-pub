@@ -11,12 +11,6 @@
 #   ebook-convert
 #       install calibre.app
 #       $ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
-#
-#   doctoc # to generate table-of-content
-#       $ npm install doctoc
-#
-#   pandoc # to build standalone html from markdown
-#       $ brew install pandoc
 
 die()
 {
@@ -34,7 +28,7 @@ cp -R src/* building/ || die copy to building/
 
 
 # build all in one page doc
-cat building/SUMMARY.md | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
+cat building/SUMMARY.md | grep -v 'all-in-one.md' | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
     cat building/$pth
     echo ""
 done > building/all-in-one.md
@@ -48,19 +42,12 @@ done > building/all-in-one.md
 # add table-of-content to every *.md
 for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
 
-    doctoc --title "**Table of Content**" "building/$i" || die adding TOC to "$i"
+    python2 mdtoc.py "building/$i" "building/$i" || die adding TOC to "$i"
 
 done
 
+
 gitbook build -f web building/ dist || die build html with gitbook
-
-
-# build all-in-one.html
-pandoc --standalone          \
-    -H _include/css.html \
-    -f markdown -t html      \
-    building/all-in-one.md   \
-    --output dist/all-in-one.html || die build all-in-one.html
 
 
 # build branch: release
