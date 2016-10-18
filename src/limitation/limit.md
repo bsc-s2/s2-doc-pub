@@ -1,14 +1,13 @@
 ## 约束与限制
--------------------
 
 - 编码限制
 
     -   bucket名称、object key、meta、ACL内容等只支持UTF-8编码=
-    
+
     -   访问资源的url要进行rawurlencode编码
-    
+
     -   object key除了“/”以外需要进行rawurlencode编码
-    
+
 - 命名规则
 
     API中的bucket和object的命名需符合以下规则：
