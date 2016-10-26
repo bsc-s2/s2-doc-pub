@@ -4,6 +4,28 @@
 
 ### 白山云存储和七牛比的优势在哪里? 为什么七牛的API 不如 aws-s3的 API 灵活?  任稚
 ### 白山云存储提供哪些语言的 SDK 客户端? 哪里可以找到快速上手的例子? 任稚
+
+### 云存储的Object是以目录结构存储的吗?
+
+白山云存储的Object不是传统意义上的一个文件，存储方式也不是以文件系统保存的。
+每个Object看上去是一个目录下的文件，对于云存储只是一个类似目录的字符串。
+
+使用的时候需要注意的问题：
+
+- Object 名字最好不要用 '/' 开头
+  比如： 需要上传一个叫file.txt文件，bucket 是 `sandbox`,
+  - object 设置为 `file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/file.txt` （推荐方式）
+  - object 如果设置为 `/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox//file.txt` （强烈不推荐）
+
+- Object 名字中最好不要有两个连续的 '/'
+  比如： 需要在folder目录下上传一个叫file.txt文件，bucket 是 `sandbox`,
+  - object 设置为 `folder/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder/file.txt` （推荐方式）
+  - object 如果设置为 `folder//file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder//file.txt` （强烈不推荐）
+
+为什么白山云存储不建议在URL中带有2个'//'：
+
+- 某些CDN的cache server可能会把URL中两个连续的'//'合并为一个'/'来回源，这个时候就会出现验证失败或者404
+
 ### 如何删除一个目录?
 
 白山云存储不支持直接删除一个目录,
@@ -19,7 +41,8 @@
 
 - List Objects接口返回的文件列表不全部是该目录下的文件（列表是根据文件名字符排序的），
   可能包含下一个或几个目录；所以需要根据实际情况调整max-keys参数的值，
-  并且需要对每一个文件进行筛选，确认是该目录的文件
+  并且需要对每一个文件进行筛选，确认是该目录的文件;
+  如果设置 `prefix` 参数的话，就可以严格的列出以该 `prefix` 下所有文件.
 
 - 一次删除（列出所有文件，逐一删除）不能保障该目录的文件都被清理完成
   在删除的过程中可能会有新上传，所以整个过程不能保持原子性
