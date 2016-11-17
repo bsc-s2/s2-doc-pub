@@ -1,6 +1,6 @@
 # Summary
 
-* [1. 简介](README.md)
+* [1. 简介](intro/README.md)
     * [1.1 常见问题 FAQ](faq-pub.md)
 * [2. 实例(兼容Amazon SDK)](demo/README.md)
     * [2.1 Python](demo/python.md)
