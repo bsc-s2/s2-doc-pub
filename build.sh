@@ -32,7 +32,7 @@ gitbook pdf building/ s2-doc.pdf || die build pdf with gitbook
 
 
 # build all in one page doc
-cat building/SUMMARY.md | grep -v 'all-in-one.md' | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
+cat building/SUMMARY.md | grep -v 'all-in-one.md\|toolkit' | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
     cat building/$pth
     echo ""
 done > building/all-in-one.md
@@ -47,6 +47,7 @@ done
 
 
 gitbook build -f web building/ dist || die build html with gitbook
+mv s2-doc.pdf dist/
 
 
 # build branch: release
