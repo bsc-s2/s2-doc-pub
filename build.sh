@@ -10,7 +10,7 @@
 #
 #   ebook-convert
 #       install calibre.app
-#       $ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
+#       $ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
 die()
 {
