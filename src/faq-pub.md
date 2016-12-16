@@ -404,3 +404,17 @@ web管理界面目前正在开发中，之后会上线。
 
 [AWS SDK for C++ Documentation]:https://aws.amazon.com/cn/documentation/sdk-for-cpp/
 [aws-sdk-cpp]:https://github.com/aws/aws-sdk-cpp
+
+##  SDK 相关
+
+### 在使用java SDK上传文件时报错：Unable to verify integrity of data upload.  Client calculated content hash (contentMD5: E+6KS0B2pNPJ272XbG92fw== in base 64) didn't match hash (etag: 359740e5918c395b6e35a2c612582e42 in hex) calculated by Amazon S3
+
+Java SDK 在上传文件时，默认使用“ChunkedEncoding”的方式，我们暂不支持这种方式，您可以通过参数设置来禁用这种上传方式，可参考下面的例子。
+
+```java
+BasicAWSCredentials awsCreds = new BasicAWSCredentials(
+		accessKey, secretKey);
+AmazonS3 s3 = new AmazonS3Client(awsCreds);
+
+s3.setS3ClientOptions(S3ClientOptions.builder().disableChunkedEncoding().build());
+```
