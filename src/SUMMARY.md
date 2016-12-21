@@ -32,7 +32,7 @@
         * [Upload Part copy](                      doc/s2/object/upload_part_copy.md)
         * [Complete Multipart Upload](             doc/s2/object/complete_multipart_upload.md)
         * [List Parts](                            doc/s2/object/list_parts.md)
-* [离线下载](                                      doc/offline/offline-download-interface.md)
+* [离线下载 Offline Downloader](                   doc/offline/offline-api.md)
 * [图片实时处理API imgx](                          doc/imgx/imgx_manual.md)
 * [工具](                                          toolkit/README.md)
     * [windows 图形界面存储管理工具 s3-browser](   toolkit/s3-browser.md)
