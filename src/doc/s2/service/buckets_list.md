@@ -1,5 +1,3 @@
-## Service操作
-
 ### GET Service (List Buckets)
 
  - 描述：获得当前Owner下所有Bucket的列表。
@@ -99,13 +97,13 @@ Authorization: <authorization string> #请参照《签名算法》
 
  - 请求示例：
 
-``` 
+```
 curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://s2.i.qingcdn.com/?formatter=json"
 ```
 
 或者
 
-```    
+```
 curl -v "http://s2.i.qingcdn.com/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
