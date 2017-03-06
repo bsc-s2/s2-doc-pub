@@ -431,3 +431,15 @@ AmazonS3 s3 = new AmazonS3Client(awsCreds);
 
 s3.setS3ClientOptions(S3ClientOptions.builder().disableChunkedEncoding().build());
 ```
+
+### 从Maven Repository下载AWS SDK时速度太慢，且容易断线。可以在pom.xml中加入以下配置，更换镜像。
+
+```java
+<repositories>
+    <repository>
+        <id>my-repo1</id>
+        <name>your custom repo</name>
+        <url>http://mirrors.redv.com/maven2</url>
+    </repository>
+</repositories>
+```
