@@ -2,14 +2,27 @@
 
 ### 安装AWS Java SDK
 
-使用maven，在pom.xml中加入如下依赖
+使用maven，在pom.xml中加入如下内容
 
 ```
-<dependency>
-	<groupId>com.amazonaws</groupId>
-	<artifactId>aws-java-sdk</artifactId>
-	<version>1.11.66</version>
-</dependency>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-bom</artifactId>
+            <version>1.11.22</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-java-sdk-s3</artifactId>
+    </dependency>
+</dependencies>
 ```
 
 ### 初始化，设置帐号信息和域名
