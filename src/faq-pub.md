@@ -443,3 +443,51 @@ s3.setS3ClientOptions(S3ClientOptions.builder().disableChunkedEncoding().build()
     </repository>
 </repositories>
 ```
+
+### 如何让SDK使用指定版本的签名（V2签名或V4签名）。
+
+#### java SDK
+
+java SDK 默认使用V4签名，如果要使用V2签名，可参考下面的代码进行设置
+
+```java
+import com.amazonaws.ClientConfiguration;
+
+ClientConfiguration clientconfiguration = new ClientConfiguration();
+clientconfiguration.setSignerOverride("S3SignerType");
+AmazonS3 client = new AmazonS3Client(awsCreds, clientconfiguration);
+```
+
+#### python SDK
+
+python SDK(boto3) 默认使用V2签名，如果要使用V4签名，可参考下面的代码进行设置
+
+```python
+from botocore.client import Config
+
+config = Config(signature_version='s3v4')
+client = boto3.client(
+	's3',
+	aws_access_key_id = access_key,
+	aws_secret_access_key = secret_key,
+	config = config,
+	region_name = 'us-east-1',
+	endpoint_url = 'http://bscstorage.com',
+)
+```
+
+#### php SDK
+
+php SDK 只支持V4签名，不能使用V2签名
+
+#### go SDK
+
+go SDK 只支持V4签名，不能使用V2签名
+
+#### JavaScript SDK
+
+JavaScript SDK 默认使用V2签名，如果要使用V4签名，可添加下面的代码
+
+```javasrcript
+AWS.config.signatureVersion = 'v4';
+```
