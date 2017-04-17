@@ -66,7 +66,7 @@ $url = (string) $req->getUri();
 ```php
 $resp = $cli->deleteObject([
     'Bucket' => 'test-bucket-xxx',
-    'key' => 'test-key-xxx',
+    'Key' => 'test-key-xxx',
 ]);
 ```
 
@@ -75,7 +75,7 @@ $resp = $cli->deleteObject([
 ```php
 $resp = $cli->getObjectAcl([
     'Bucket' => 'test-bucket-xxx',
-    'key' => 'test-key-xxx',
+    'Key' => 'test-key-xxx',
 ]);
 ```
 
