@@ -236,4 +236,4 @@ resp = cli.put_bucket_acl(
 resp = cli.list_buckets()
 ```
 
-AWS 官方 SDK [aws-sdk-python](https://github.com/boto/boto3)
+AWS 官方 SDK [aws-sdk-python](https://aws.amazon.com/sdk-for-python/)
