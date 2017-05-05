@@ -432,6 +432,22 @@ AmazonS3 s3 = new AmazonS3Client(awsCreds);
 s3.setS3ClientOptions(S3ClientOptions.builder().disableChunkedEncoding().build());
 ```
 
+### 在使用android SDK上传文件时报错：Unable to verify integrity of data upload. Client calculated content hash didn't match hash calculated by Amazon S3. You may need to delete the data stored in Amazon S3
+
+android SDK 在上传文件时，默认使用“ChunkedEncoding”的方式，我们暂不支持这种方式，虽然android SDK提供了接口禁用这种方式，
+但是设置为禁用后，仍然不能生效，因此需要通过使用v2签名来绕开这个问题。“ChunkedEncoding”是只有v4签名的时候才会使用的。
+设置使用v2签名的方法可以参考以下代码。
+
+```java
+AWSCredentials credentials = new BasicAWSCredentials(
+		accessKey, secretKey);
+
+ClientConfiguration configuration = new ClientConfiguration();
+configuration.setSignerOverride("S3SignerType");
+
+AmazonS3 s3 = new AmazonS3Client(credentials, configuration);
+```
+
 ### 从Maven Repository下载AWS SDK时速度太慢，且容易断线。可以在pom.xml中加入以下配置，更换镜像。
 
 ```java
