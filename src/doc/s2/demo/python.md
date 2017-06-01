@@ -36,6 +36,7 @@ resp = cli.put_object(
     ACL='public-read',
     Bucket='test-bucket-xxx',
     Key='test-key-xxx',
+    ContentType='image/jpeg', # 请替换为合适的文件类型
     Body='the content of the file as a string'
 )
 ```
@@ -52,6 +53,10 @@ resp = cli.upload_file(
     '/root/test.mp4',
     'test-bucket-xxx',
     'test-key-xxx',
+    ExtraArgs={
+        'ContentType': 'image/jpeg', # 请替换为合适的文件类型
+        'ACL': 'private',
+    },
     Config=config
 )
 ```
@@ -123,7 +128,7 @@ resp = cli.put_object_acl(
         'Grants': [
             {
                 'Grantee': {
-                    'ID': 'user_foo',
+                    'ID': 'user_foo', # 请替换为真实存在的用户
                     'Type': 'CanonicalUser',
                 },
                 'Permission': 'WRITE',
@@ -206,7 +211,7 @@ resp = cli.put_bucket_acl(
         'Grants': [
             {
                 'Grantee': {
-                    'ID': 'user_foo',
+                    'ID': 'user_foo', # 请替换为真实存在的用户
                     'Type': 'CanonicalUser',
                 },
                 'Permission': 'WRITE',
@@ -237,3 +242,4 @@ resp = cli.list_buckets()
 ```
 
 AWS 官方 SDK [aws-sdk-python](https://aws.amazon.com/sdk-for-python/)
+接口详细文档 [api-reference](https://boto3.readthedocs.io/en/latest/reference/services/s3.html)

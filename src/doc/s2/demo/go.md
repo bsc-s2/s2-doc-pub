@@ -48,6 +48,7 @@ params := &s3.PutObjectInput{
 	Bucket: aws.String("test-bucket"),
 	Key: aws.String("test-key"),
 	ACL: aws.String("public-read"),
+    ContentType: aws.String("image/jpeg"), //请替换为合适的文件类型
 	Body: bytes.NewReader([]byte("bla bla")),
 	Metadata: map[string]*string{
 		"key-foo": aws.String("value-bar"),
@@ -392,3 +393,4 @@ fmt.Println(resp)
 ```
 
 AWS 官方 SDK [aws-sdk-go](https://aws.amazon.com/sdk-for-go/)
+接口详细文档 [api-reference](http://docs.aws.amazon.com/sdk-for-go/api/service/s3/)

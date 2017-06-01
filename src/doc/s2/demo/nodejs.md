@@ -288,3 +288,4 @@ s3.listBuckets(function(err, data) {
 ```
 
 AWS 官方 SDK [aws-sdk-node.js](https://aws.amazon.com/sdk-for-node-js/)
+接口详细文档 [api-reference](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)

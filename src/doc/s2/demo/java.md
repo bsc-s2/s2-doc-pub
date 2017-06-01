@@ -73,6 +73,7 @@ String file_content = "bla bla";
 InputStream inputStream = new ByteArrayInputStream(file_content.getBytes());
 
 ObjectMetadata objectMetadata = new ObjectMetadata();
+objectMetadata.setContentType("image/jpeg"); //请替换为合适的文件类型
 objectMetadata.addUserMetadata("key-foo", "value_bar");
 
 PutObjectRequest putObjectrequest = new PutObjectRequest(
@@ -221,3 +222,4 @@ allBuckets = s3.listBuckets();
 ```
 
 AWS 官方 SDK [aws-sdk-java](https://aws.amazon.com/sdk-for-java/)
+接口详细文档 [api-reference](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html)

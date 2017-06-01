@@ -29,13 +29,18 @@ $cli = new Aws\S3\S3Client([
 #### 上传文件
 
 ACL可设置为：'private' 或 'public-read' 或 'public-read-write' 或 'authenticated-read'
+如果需要上传的文件内容已经在内存中,可以直接使用'Body'指定。
+如果文件在磁盘上，可以通过'SourceFile'指定文件名，’Body‘和'SourceFile'不能同时使用。
+
 
 ```php
 $resp = $cli->putObject([
     'ACL' => 'public-read',
     'Bucket' => 'test-bucket-xxx',
     'Key' => 'test-key-xxx',
-    'Body' => 'file content as a string'
+    'ContentType' => 'image/jpeg',  //请替换为合适的文件类型
+    'Body' => 'file content as a string',
+    //'SourceFile' => '/root/test.jpg',
 ]);
 ```
 
@@ -103,7 +108,7 @@ $resp = $cli->putObjectAcl([
         'Grants' => [
             [
                 'Grantee' => [
-                    'ID' => 'user_foo',
+                    'ID' => 'user_foo', //请替换为真实存在的用户
                     'Type' => 'CanonicalUser',
                 ],
                 'Permission' => 'WRITE',
@@ -187,7 +192,7 @@ $resp = $cli->putBucketAcl([
         'Grants' => [
             [
                 'Grantee' => [
-                    'ID' => 'user_foo',
+                    'ID' => 'user_foo', //请替换为真实存在的用户
                     'Type' => 'CanonicalUser',
                 ],
                 'Permission' => 'WRITE',
@@ -220,3 +225,4 @@ $resp = $cli->listBuckets([
 ```
 
 AWS 官方 SDK [aws-sdk-php](https://aws.amazon.com/sdk-for-php/)
+接口详细文档 [api-reference](http://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.S3.S3Client.html)
