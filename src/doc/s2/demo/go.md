@@ -45,20 +45,20 @@ ACL可设置为：'private' 或 'public-read' 或 'public-read-write' 或 'authe
 
 ```go
 params := &s3.PutObjectInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
-	ACL: aws.String("public-read"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
+    ACL: aws.String("public-read"),
     ContentType: aws.String("image/jpeg"), //请替换为合适的文件类型
-	Body: bytes.NewReader([]byte("bla bla")),
-	Metadata: map[string]*string{
-		"key-foo": aws.String("value-bar"),
-	},
+    Body: bytes.NewReader([]byte("bla bla")),
+    Metadata: map[string]*string{
+        "key-foo": aws.String("value-bar"),
+    },
 }
 
 resp, err := svc.PutObject(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -67,14 +67,14 @@ fmt.Println(resp)
 
 ```go
 params := &s3.GetObjectInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 }
 
 resp, err := svc.GetObject(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 buf := new(bytes.Buffer)
 buf.ReadFrom(resp.Body)
@@ -87,8 +87,8 @@ fmt.Println(buf.String())
 
 ```go
 params := &s3.GetObjectInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 }
 req, _ := svc.GetObjectRequest(params)
 url, _ := req.Presign(300 * time.Second) //300秒后过期
@@ -99,13 +99,13 @@ fmt.Println(url)
 
 ```go
 params := &s3.DeleteObjectInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 }
 resp, err := svc.DeleteObject(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -114,14 +114,14 @@ fmt.Println(resp)
 
 ```go
 params := &s3.GetObjectAclInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 }
 
 resp, err := svc.GetObjectAcl(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -130,13 +130,13 @@ fmt.Println(resp)
 
 ##### 使用预定义的ACL
 
-支持的预定义ACL有：'private', 'public-read', 'public-read-write' 和	'authenticated-read'
+支持的预定义ACL有：'private', 'public-read', 'public-read-write' 和 'authenticated-read'
 
 ```go
 params := &s3.PutObjectAclInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
-	ACL: aws.String("private"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
+    ACL: aws.String("private"),
 }
 
 resp, err := svc.PutObjectAcl(params)
@@ -151,14 +151,14 @@ fmt.Println(resp)
 
 ```go
 params := &s3.PutObjectAclInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 
-	GrantFullControl: aws.String("id=your_user_id"),
-	GrantRead: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AllUsers\""),
-	GrantReadACP: aws.String("id=some_user_id, id=another_user_id"),
-	GrantWrite: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AuthenticatedUsers\""),
-	GrantWriteACP: aws.String("emailAddress=\"some_email@some.com\", id=some_user_id"),
+    GrantFullControl: aws.String("id=your_user_id"),
+    GrantRead: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AllUsers\""),
+    GrantReadACP: aws.String("id=some_user_id, id=another_user_id"),
+    GrantWrite: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AuthenticatedUsers\""),
+    GrantWriteACP: aws.String("emailAddress=\"some_email@some.com\", id=some_user_id"),
 }
 
 resp, err := svc.PutObjectAcl(params)
@@ -175,40 +175,40 @@ fmt.Println(resp)
 
 ```go
 params := &s3.PutObjectAclInput{
-	Bucket: aws.String("test-bucket"),
-	Key: aws.String("test-key"),
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
 
-	AccessControlPolicy: &s3.AccessControlPolicy{
-		Grants: []*s3.Grant{
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("CanonicalUser"),
-					DisplayName: aws.String(""),
-					ID: aws.String("some_user_id"),
-				},
-				Permission: aws.String("FULL_CONTROL"),
-			},
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("Group"),
-					URI: aws.String("http://acs.amazonaws.com/groups/global/AllUsers"),
-				},
-				Permission: aws.String("READ"),
-			},
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("AmazonCustomerByEmail"),
-					DisplayName: aws.String(""),
-					EmailAddress: aws.String("some_email@some.com"),
-				},
-				Permission: aws.String("READ"),
-			},
-		},
-		Owner: &s3.Owner{
-			DisplayName: aws.String(""),
-			ID: aws.String("your_user_id"),
-		},
-	},
+    AccessControlPolicy: &s3.AccessControlPolicy{
+        Grants: []*s3.Grant{
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("CanonicalUser"),
+                    DisplayName: aws.String(""),
+                    ID: aws.String("some_user_id"),
+                },
+                Permission: aws.String("FULL_CONTROL"),
+            },
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("Group"),
+                    URI: aws.String("http://acs.amazonaws.com/groups/global/AllUsers"),
+                },
+                Permission: aws.String("READ"),
+            },
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("AmazonCustomerByEmail"),
+                    DisplayName: aws.String(""),
+                    EmailAddress: aws.String("some_email@some.com"),
+                },
+                Permission: aws.String("READ"),
+            },
+        },
+        Owner: &s3.Owner{
+            DisplayName: aws.String(""),
+            ID: aws.String("your_user_id"),
+        },
+    },
 }
 
 resp, err := svc.PutObjectAcl(params)
@@ -228,14 +228,14 @@ ACL可设置为：'private' 或 'public-read' 或 'public-read-write' 或 'authe
 
 ```go
 params := &s3.CreateBucketInput{
-	Bucket: aws.String("test-bucket"),
-	ACL: aws.String("public-read"),
+    Bucket: aws.String("test-bucket"),
+    ACL: aws.String("public-read"),
 }
 
 resp, err := svc.CreateBucket(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -244,7 +244,7 @@ fmt.Println(resp)
 
 ```go
 params := &s3.ListObjectsInput{
-	Bucket: aws.String("test-bucket"),
+    Bucket: aws.String("test-bucket"),
     Marker: aws.String("foo"), //设置从哪个key开始列
     Prefix: aws.String("foo"), //只返回以“foo“为前缀的key
     Delimiter: aws.String("/"), //对含有公共部分的keys进行合并
@@ -253,8 +253,8 @@ params := &s3.ListObjectsInput{
 
 resp, err := svc.ListObjects(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -263,12 +263,12 @@ fmt.Println(resp)
 
 ```go
 params := &s3.DeleteBucketInput{
-	Bucket: aws.String("test-bucket"),
+    Bucket: aws.String("test-bucket"),
 }
 resp, err := svc.DeleteBucket(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -277,12 +277,12 @@ fmt.Println(resp)
 
 ```go
 params := &s3.GetBucketAclInput{
-	Bucket: aws.String("test-bucket"),
+    Bucket: aws.String("test-bucket"),
 }
 resp, err := svc.GetBucketAcl(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
@@ -295,8 +295,8 @@ fmt.Println(resp)
 
 ```go
 params := &s3.PutBucketAclInput{
-	Bucket: aws.String("test-bucket"),
-	ACL: aws.String("public-read-write"),
+    Bucket: aws.String("test-bucket"),
+    ACL: aws.String("public-read-write"),
 }
 
 resp, err := svc.PutBucketAcl(params)
@@ -311,13 +311,13 @@ fmt.Println(resp)
 
 ```go
 params := &s3.PutBucketAclInput{
-	Bucket: aws.String("test-bucket"),
+    Bucket: aws.String("test-bucket"),
 
-	GrantFullControl: aws.String("id=your_user_id"),
-	GrantRead: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AllUsers\""),
-	GrantReadACP: aws.String("id=some_user_id, id=another_user_id"),
-	GrantWrite: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AuthenticatedUsers\""),
-	GrantWriteACP: aws.String("emailAddress=\"some_email@some.com\", id=some_user_id"),
+    GrantFullControl: aws.String("id=your_user_id"),
+    GrantRead: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AllUsers\""),
+    GrantReadACP: aws.String("id=some_user_id, id=another_user_id"),
+    GrantWrite: aws.String("uri=\"http://acs.amazonaws.com/groups/global/AuthenticatedUsers\""),
+    GrantWriteACP: aws.String("emailAddress=\"some_email@some.com\", id=some_user_id"),
 }
 
 resp, err := svc.PutBucketAcl(params)
@@ -334,39 +334,39 @@ fmt.Println(resp)
 
 ```go
 params := &s3.PutBucketAclInput{
-	Bucket: aws.String("test-bucket"),
+    Bucket: aws.String("test-bucket"),
 
-	AccessControlPolicy: &s3.AccessControlPolicy{
-		Grants: []*s3.Grant{
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("CanonicalUser"),
-					DisplayName: aws.String(""),
-					ID: aws.String("some_user_id"),
-				},
-				Permission: aws.String("FULL_CONTROL"),
-			},
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("Group"),
-					URI: aws.String("http://acs.amazonaws.com/groups/global/AllUsers"),
-				},
-				Permission: aws.String("READ"),
-			},
-			{
-				Grantee: &s3.Grantee{
-					Type: aws.String("AmazonCustomerByEmail"),
-					DisplayName: aws.String(""),
-					EmailAddress: aws.String("some_email@some.com"),
-				},
-				Permission: aws.String("READ"),
-			},
-		},
-		Owner: &s3.Owner{
-			DisplayName: aws.String(""),
-			ID: aws.String("your_user_id"),
-		},
-	},
+    AccessControlPolicy: &s3.AccessControlPolicy{
+        Grants: []*s3.Grant{
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("CanonicalUser"),
+                    DisplayName: aws.String(""),
+                    ID: aws.String("some_user_id"),
+                },
+                Permission: aws.String("FULL_CONTROL"),
+            },
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("Group"),
+                    URI: aws.String("http://acs.amazonaws.com/groups/global/AllUsers"),
+                },
+                Permission: aws.String("READ"),
+            },
+            {
+                Grantee: &s3.Grantee{
+                    Type: aws.String("AmazonCustomerByEmail"),
+                    DisplayName: aws.String(""),
+                    EmailAddress: aws.String("some_email@some.com"),
+                },
+                Permission: aws.String("READ"),
+            },
+        },
+        Owner: &s3.Owner{
+            DisplayName: aws.String(""),
+            ID: aws.String("your_user_id"),
+        },
+    },
 }
 
 resp, err := svc.PutBucketAcl(params)
@@ -386,8 +386,8 @@ fmt.Println(resp)
 var params *s3.ListBucketsInput
 resp, err := svc.ListBuckets(params)
 if err != nil {
-	fmt.Println(err.Error())
-	return
+    fmt.Println(err.Error())
+    return
 }
 fmt.Println(resp)
 ```
