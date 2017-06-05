@@ -1,4 +1,4 @@
-﻿
+
 
 ![](http://imgx-ss.bscstorage.com/imgx-test/w_300/bsc_logo.jpg?AWSAccessKeyId=acc_drdrxp&Expires=1504489369&Signature=hzOLDt69E94WpxQP69FEsvWJWbU%3D%)
 
@@ -63,7 +63,7 @@ http://imgx-test.imgx.i.qingcdn.com/c_thumb,g_face,w_400,h_400,r_max,e_brightnes
 ```
 将文件保存到您对应的bucket下的路径：
 ```
-imgx/t/my_thumb.json    #其中文件名(my_thumb)是您自定义的“指令集名称”，类似css中的class
+imgx/cmd_template/my_thumb.json    #其中文件名(my_thumb)是您自定义的“指令集名称”，类似css中的class
 ```
 然后就可以通过下面的URL进行访问（也就是说，处理指令也可以不用放在URL中，直接隐藏到您自定义的json文件中）：
 ```
@@ -910,7 +910,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
             <td><i>superman</i></td>
             <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,w_500,h_500,g_face,f_png--l_superman,g_south_east,w_250,x_-120,y_-60--l_bs_logo,x_20,y_20/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464835936&Signature=VntmQ1EndLDbBb4wiG3ofN7TdcI%3D" /></td>
             <td>
-                在图片的右下角加一个方脸超人的水印（支持外部区域）；首先需要将水印贴图（必须是png格式）保存到您的对应bucket下，路径规则为：imgx/l/my_name.png，然后您可以使用l_my_name指令进行水印操作了
+                在图片的右下角加一个方脸超人的水印（支持外部区域）；首先需要将水印贴图（必须是png格式）保存到您的对应bucket下，路径规则为：imgx/overlay/my_name.png，然后您可以使用l_my_name指令进行水印操作了
                 <br /><br /><code>c_fill,w_500,h_500,g_face,<br>
                 f_png--l_superman,g_south_east,<br>
                 w_250,x_-120,y_-60--l_scs_logo,x_20,y_20</code>
@@ -1013,7 +1013,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
             <td><i>my_thumbs</i></td>
             <td></td>
             <td>
-                自定义名称，在对应的bucket下，创建文件：<i>imgx/t/my_thumbs.json</i>
+                自定义名称，在对应的bucket下，创建文件：<i>imgx/cmd_template/my_thumbs.json</i>
                 <br /><br /><code>t_my_thumbs</code>
             </td>
         </tr>
@@ -1029,7 +1029,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 
 ### 图片水印
 
-您需要预先将水印贴图保存到对应的bucket下 `imgx/l/<filename>.png`，图片必须是png格式，下面两张图为例：
+您需要预先将水印贴图保存到对应的bucket下 `imgx/overlay/<filename>.png`，图片必须是png格式，下面两张图为例：
 
 
 <table class="table table-striped table-bordered table-condensed">
@@ -1043,12 +1043,12 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
     <tbody>
         <tr>
             <td><img src="http://s2.i.qingcdn.com/imgx-test/imgx/l/icon_v.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848305&Signature=xlPiRJyVFwdViWHgbsj5yiTYl%2Bk%3D" /></td>
-            <td><i>imgx/l/icon_v.png</i></td>
+            <td><i>imgx/overlay/icon_v.png</i></td>
             <td><code>l_icon_v</code></td>
         </tr>
         <tr>
             <td><img src="http://s2.i.qingcdn.com/imgx-test/imgx/l/bs_logo.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848350&Signature=H37eufIimTWyx240GDCspIUzAQM%3D" /></td>
-            <td><i>imgx/l/bs_logo.png</i></td>
+            <td><i>imgx/overlay/bs_logo.png</i></td>
             <td><code>l_bs_logo</code></td>
         </tr>
     </tbody>
@@ -1110,7 +1110,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 
 ### 文字水印
 
-您需要预先将文字水印的字体配置(json格式的文件)保存到对应的bucket下 `imgx/l/<file>.json`，例如：
+您需要预先将文字水印的字体配置(json格式的文件)保存到对应的bucket下 `imgx/overlay/<file>.json`，例如：
 ```json
 {
     "font_family" : "Xingkai SC",
@@ -1127,7 +1127,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
     "text" : "默认值",
 }
 ```
-对应路径：`imgx/l/my_font.json`
+对应路径：`imgx/overlay/my_font.json`
 
 字体参数介绍
 
@@ -1214,7 +1214,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 
 
 ####示例1：
-`imgx/l/simple_font.json` :
+`imgx/overlay/simple_font.json` :
 ```json
 {
     "font_family" : "Microsoft YaHei",
@@ -1234,7 +1234,7 @@ w_800,f_png--l_text:simple_font:Hello+Bai+Shan!!,x_20,y_20,a_-25
 
 ####示例2：
 
-`imgx/l/subtitles.json` :
+`imgx/overlay/subtitles.json` :
 ```json
 {
     "font_size" : 22,
@@ -1242,7 +1242,7 @@ w_800,f_png--l_text:simple_font:Hello+Bai+Shan!!,x_20,y_20,a_-25
 }
 ```
 
-`imgx/l/subtitles_s.json` :
+`imgx/overlay/subtitles_s.json` :
 
 ```json
 {
@@ -1262,7 +1262,7 @@ f_png,c_fill,w_800,h_400,e_brightness:-8--c_pad,w_800,h_550,g_center,b_000000ff,
 
 
 ####示例3：
-`imgx/l/my_font.json` :
+`imgx/overlay/my_font.json` :
 ```json
 {
     "font_family" : "Xingkai SC",
@@ -1283,7 +1283,7 @@ w_800,f_png--l_text:my_font:马驰大道征途远,g_south_west,w_40,x_20,y_100--
 
 
 ####示例4：
-`imgx/l/font_me.json` :
+`imgx/overlay/font_me.json` :
 ```json
 {
     "font_family": "Microsoft YaHei",
@@ -1309,7 +1309,7 @@ l_text:font_me:你好，白山云,g_north_west,x_20,y_20--w_800
 
 
 ####示例5：
-`imgx/l/tile.json` :
+`imgx/overlay/tile.json` :
 ```json
 {
     "font_family" : "Microsoft YaHei",
@@ -1331,7 +1331,7 @@ w_800,f_png--l_text:tile:Hello BaiShan!!,g_south
 
 
 ####示例6：
-`imgx/l/badge.json` :
+`imgx/overlay/badge.json` :
 ```json
 {
     "font_style" : "bold",
@@ -1360,7 +1360,7 @@ c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_text:badge:69,r_max,g_so
 下面举例说明，自动识别照片上的人脸位置并做一张带有边框的圆形缩略图：
 
 - 先创建一个json文件，保存到对应的bucket中：
-路径： `imgx/t/avatar.json` ：
+路径： `imgx/cmd_template/avatar.json` ：
 ```json
 [
     {
