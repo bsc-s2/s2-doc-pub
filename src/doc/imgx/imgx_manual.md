@@ -10,11 +10,11 @@
 
 ## URL格式
 ```
-http://imgx.i.qingcdn.com/<bucket>/<处理指令>/<文件路径>?<签名保护>
+http://imgx-ss.bscstorage.com/<bucket>/<处理指令>/<文件路径>?<签名保护>
 ```
 或者
 ```
-http://<bucket>.imgx.i.qingcdn.com/<处理指令>/<文件路径>?<签名保护>
+http://<bucket>.imgx-ss.bscstorage.com/<处理指令>/<文件路径>?<签名保护>
 ```
 
 - `bucket` : 您在云存储服务中的bucket名称；
@@ -41,11 +41,11 @@ http://<bucket>.imgx.i.qingcdn.com/<处理指令>/<文件路径>?<签名保护>
 处理指令为：`c_thumb,g_face,w_400,h_400,r_max,e_brightness:8,f_png`
 我们可以通过URL直接进行访问：
 ```
-http://imgx.i.qingcdn.com/imgx-test/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773122&Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
+http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773122&Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
 ```
 或者
 ```
-http://imgx-test.imgx.i.qingcdn.com/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773122&Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
+http://imgx-test.imgx-ss.bscstorage.com/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773122&Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
 ```
 或者创建一个json文件(如果您不想将处理指令暴露在URL中)，内容为：
 ```json
@@ -67,7 +67,7 @@ imgx/cmd_template/my_thumb.json    #其中文件名(my_thumb)是您自定义的�
 ```
 然后就可以通过下面的URL进行访问（也就是说，处理指令也可以不用放在URL中，直接隐藏到您自定义的json文件中）：
 ```
-http://imgx.i.qingcdn.com/imgx-test/t_my_thumb/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773563&Signature=WIMaNLacGaPRAlA6fl%2BGAsStfoQ%3D
+http://imgx-ss.bscstorage.com/imgx-test/t_my_thumb/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773563&Signature=WIMaNLacGaPRAlA6fl%2BGAsStfoQ%3D
 ```
 
 
@@ -98,7 +98,7 @@ http://imgx.i.qingcdn.com/imgx-test/t_my_thumb/demo/1.jpg?AWSAccessKeyId=acc_drd
 * @param boolean $https Use HTTPS ($hostBucket should be false for SSL verification)
 * @return string
 */
-function getAuthenticatedURL($accessKey, $secretKey, $bucket, $uri, $lifetime, $hostBucket = false, $https = false, $endpoint = 'imgx.i.qingcdn.com') {
+function getAuthenticatedURL($accessKey, $secretKey, $bucket, $uri, $lifetime, $hostBucket = false, $https = false, $endpoint = 'imgx-ss.bscstorage.com') {
 
     $expires = time() + $lifetime;
     $uri = str_replace(array('%2F', '%2B', '%2C', '%3A', '%20'), array('/', '+', ',', ':', '+'), rawurlencode($uri));
@@ -113,22 +113,21 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 
 ## 缓存 & CDN
 
- - 处理后的图片生成缓存，下次请求不在重复生成，默认缓存7天
+ - 处理后的图片生成缓存，下次请求不在重复生成，默认缓存2天
  - 如果配置了CDN，处理后的图片会自动推送到CDN节点
- - 如果您的原图修改了，可以使用`v`指令重新生成图片和链接，后面详细介绍
-
 
 
 ## 图片处理指令
 
-> 以下介绍具体处理指令，用下列几张原图为例，方便您对照：
-1. [demo/charles.png][1]
-2. [demo/1.jpg][2]
-3. [demo/3.png][3]
-4. [demo/4.png][4]
-5. [demo/sheep.png][5]
-6. [demo/horses.png][6]
-7. [avatar.png][7]
+>以下介绍具体处理指令，用下列几张原图为例，方便您对照：
+>1. [demo/charles.png][1]
+>2. [demo/1.jpg][2]
+>3. [demo/3.png][3]
+>4. [demo/4.png][4]
+>5. [demo/sheep.png][5]
+>6. [demo/horses.png][6]
+>7. [avatar.png][7]
+
 
 <table>
     <thead>
@@ -1022,6 +1021,7 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 </table>
 
 
+
 ## 水印功能详细介绍
 
 1. 水印分为：`图片水印` 和 `文字水印`；
@@ -1030,7 +1030,6 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 ### 图片水印
 
 您需要预先将水印贴图保存到对应的bucket下 `imgx/overlay/<filename>.png`，图片必须是png格式，下面两张图为例：
-
 
 <table class="table table-striped table-bordered table-condensed">
     <thead>
@@ -1385,8 +1384,8 @@ c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_text:badge:69,r_max,g_so
 - 通过下面的方式访问：
 
 ```
-http://imgx.i.qingcdn.com/imgx-test/t_avatar/demo/1.jpg?<签名>
-http://imgx.i.qingcdn.com/imgx-test/t_avatar/demo/3.jpg?<签名>
+http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/1.jpg?<签名>
+http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/3.jpg?<签名>
 ```
 
 - 效果：
@@ -1400,7 +1399,7 @@ http://imgx.i.qingcdn.com/imgx-test/t_avatar/demo/3.jpg?<签名>
 
 ## 字体 (font_family)
 
-> 查询字体的API：http://imgx.i.qingcdn.com/fonts
+> 查询字体的API：http://imgx-ss.bscstorage.com/fonts
 
 
   [1]: http://s2.i.qingcdn.com/imgx-test/demo/charles.png?AWSAccessKeyId=acc_drdrxp&Expires=2464851871&Signature=9Nb4uSsCdGbdhYdL05QNJMBOUDI%3D
