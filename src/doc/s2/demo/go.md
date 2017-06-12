@@ -12,7 +12,7 @@ go get -u github.com/aws/aws-sdk-go/...
 package main
 
 import "fmt"
-imoort "time"
+import "time"
 import "bytes"
 import "github.com/aws/aws-sdk-go/aws"
 import "github.com/aws/aws-sdk-go/service/s3"
