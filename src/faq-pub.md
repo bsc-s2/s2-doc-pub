@@ -448,6 +448,27 @@ configuration.setSignerOverride("S3SignerType");
 AmazonS3 s3 = new AmazonS3Client(credentials, configuration);
 ```
 
+### 在使用ios SDK上传,下载文件时报错：Code: 403; Error Code: SignatureDoesNotMatch; Request ID: 23e338d9-1706-1410-3759-a0369fd80cca
+
+ios SDK 会根据endpoint指定的域名来判断服务类型，如如果域名以‘s3’开头（s3.amazonaws.com)表示请求的是s3服务，则
+使用对应的签名方式，因此，当指定非AWS的标准域名时，会导致使用不正确签名方式。另外ios SDK可配置参数较少，只能
+通过修改源代码改变SDK行为。源代码github地址：‘https://github.com/aws/aws-sdk-ios.git‘。需在文件AWSCore/Authentication/AWSSignature.m第319行处插入新的一行：‘[request setValue:contentSha256 forHTTPHeaderField:@"x-amz-content-sha256"];‘。然后在源代码根目录执行以下命令编译源代码：
+
+```shell
+chmod +x Scripts/SdkPackage.sh
+sh Scripts/Package.sh
+```
+
+由于只需要重新编译AWSCore，您可以编辑Scripts/Package.sh文件，删掉编译其他模块的代码，删掉后文件末尾如下：
+
+```shell
+if [ -x "Scripts/SdkPackage.sh" ]; then
+    Scripts/SdkPackage.sh AWSCore
+fi
+```
+
+编译好的framework位于builtFramework/framework目录，使用新编译得到的AWSCore.framework替换项目中原来的即可。
+
 ### 从Maven Repository下载AWS SDK时速度太慢，且容易断线。可以在pom.xml中加入以下配置，更换镜像。
 
 ```java
