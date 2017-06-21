@@ -325,7 +325,7 @@
 白山云存储服务基于文件权限的控制和接口简洁可靠的原因，不直接支持ftp和rsync协议。<br/>
 但用户可以使用如下工具，实现ftp、rsync上传。<br/>
 
-- 形界面的ftp替代品可以使用Mac下的[cyberduck][cyberduck]或Windows下的[s3browser][s3browser]。
+- 图形界面的ftp替代品可以使用Mac下的[cyberduck][cyberduck]或Windows下的[s3browser][s3browser]。
 - 命令行方式的ftp或rsync的替代品可以使用[s3cmd][s3cmd]。
 
 [s3cmd]:        http://s3tools.org/s3cmd
