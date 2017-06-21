@@ -112,7 +112,7 @@
 |-------------|:-------------:|
 |Android文档：[AWS Mobile SDK for Android Documentation][AWS Mobile SDK for Android Documentation]|SDK下载:[aws-android-sdk][aws-android-sdk]|
 |Browser文档：[Getting Started with the SDK in the Browser][Getting Started with the SDK in the Browser]|SDK下载：[Bower][Bower]|
-|ISO文档：[AWS Mobile SDK iOS Developer Guid][AWS Mobile SDK iOS Developer Guid]    |SDK下载:[aws-ios-sdk][aws-ios-sdk]|
+|IOS文档：[AWS Mobile SDK iOS Developer Guid][AWS Mobile SDK iOS Developer Guid]    |SDK下载:[aws-ios-sdk][aws-ios-sdk]|
 |Java文档：[AWS SDK for Java Developer Guide][AWS SDK for Java Developer Guide]|SDK下载：[aws-java-sdk][aws-java-sdk]
 |.NET文档：[AWS SDK for .NET Documentation][AWS SDK for .NET Documentation]|SDK下载:[AWSToolsAndSDKForNet.msi][AWSToolsAndSDKForNet.msi]|
 |Node.js文档：[AWS SDK for JavaScript Documentation][AWS SDK for JavaScript Documentation]|SDK下载:[Getting Started with the SDK in Node.js]|
