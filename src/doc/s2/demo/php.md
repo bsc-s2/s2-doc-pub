@@ -1,5 +1,9 @@
 ## PHP Demo
 
+系统需求：
+
+  - PHP >= 5.5.0
+
 ### 安装AWS SDK for PHP
 
 ```
