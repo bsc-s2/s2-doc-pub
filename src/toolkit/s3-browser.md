@@ -16,7 +16,6 @@ Endpoint填s2.i.qingcdn.com。输入账号、AccessKey和SecretKey就可以点�
 ## 第三步
 
 添加新账户之后就可以看到Storage里面的内容了。选中左边的某个bucket，就可以点击Upload向这个bucket里上传文件。
-<font color=#FF4500>注:目前只能上传8M以下的文件。</font>
 
 ![](pic/s3-browser/step3.png)
 
