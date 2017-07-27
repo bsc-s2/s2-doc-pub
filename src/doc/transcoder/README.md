@@ -26,8 +26,8 @@
 
 ### 创建管道
 
-使用[创建管道](apis/pipeline/create_pipeline.md)创建管道。
+使用[创建管道](doc/transcoder/apis/pipeline/create_pipeline.md)创建管道。
 
 ### 创建任务
 
-使用[创建任务](apis/job/create_job.md)创建管道。
+使用[创建任务](doc/transcoder/apis/job/create_job.md)创建管道。
