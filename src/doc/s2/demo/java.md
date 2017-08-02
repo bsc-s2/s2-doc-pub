@@ -10,7 +10,7 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-bom</artifactId>
-            <version>1.11.22</version>
+            <version>1.11.77</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -106,6 +106,13 @@ try {
 } catch (IOException e) {
 	System.out.println("errr");
 }
+```
+
+#### 下载到本地文件
+
+```java
+GetObjectRequest getObjectRequest = new GetObjectRequest("test-bucket", "test-key");
+ObjectMetadata meta = s3.getObject(getObjectRequest, new File("/root/test.down"));
 ```
 
 #### 获取文件的URL
