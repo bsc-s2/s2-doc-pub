@@ -36,7 +36,9 @@ def add_md_toc(path):
     # find out all headers
     headers = []
     isblock = False
-    for line in lines:
+    reduce_level = None
+    level_index = []
+    for i, line in enumerate(lines[:]):
 
         if line.strip().startswith('```'):
             isblock = not isblock
@@ -52,29 +54,61 @@ def add_md_toc(path):
             level += 1
             line = line[1:]
 
+        origin_level = level
+
         text = line.strip()
 
         header_id = re.sub(ur'[,?_*()&]', '', text)
         header_id = re.sub(ur'[^0-9a-zA-Z_\u00ff-\uffff]', '-', header_id)
         header_id = header_id.lower()
 
-        headers.append((level, text, header_id))
+        if text.startswith('1.'):
+            has_number = True
+            text = text[2:]
+        else:
+            has_number = False
 
-    # reduce level
-    if len(headers) == 0 or headers[0][0] == 1:
-        pass
-    else:
-        reduce_level = headers[0][0] - 1
-        headers = [(max(1, x[0] - reduce_level),
-                    x[1],
-                    x[2])
-                   for x in headers]
+        # reduce all levels if the first header is at level >1
+
+        if reduce_level is None:
+            if level > 1:
+                reduce_level = level - 1
+            else:
+                reduce_level = 0
+
+        if reduce_level is not None:
+            level = max(1, level - reduce_level)
+
+        if has_number:
+
+            if level < len(level_index):
+                level_index = level_index[:level]
+            elif level > len(level_index):
+                if len(level_index) < level:
+                    level_index += [1] * (level - len(level_index) - 1) + [0]
+
+            level_index[-1] += 1
+
+            level_str = '.'.join([str(x) for x in level_index]) + '. '
+
+        else:
+            level_str = ''
+
+        text = level_str + text
+
+        if has_number:
+            lines[i] = '#' * origin_level + text
+
+        headers.append((level, text, header_id, has_number))
 
     # output
     toc = []
-    for level, text, header_id in headers:
-        s = ' ' * 4 * (level-1) + u'- [{text}](#{header_id})'.format(text=text, header_id=header_id)
+    for level, text, header_id, has_number in headers:
+
+        s = ' ' * 4 * (level-1) + u'- [{text}](#{header_id})'.format(
+                text=text, header_id=header_id)
         toc.append(s)
+
 
     return ( toc_start + u'\n'
             + u'\n'.join(toc) + u'\n'
