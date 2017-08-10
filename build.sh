@@ -66,5 +66,5 @@ rmdir dist/          || die rmdir dist/
 git add .            || die git-add .
 git add -u .         || die git-add -u .
 
-git commit -m "build release from master $(git rev-parse master)" \
+git commit -m "build release from master $(git rev-parse --short master) $(git log --format="%cd" master -n1)" \
     || die git-commit
