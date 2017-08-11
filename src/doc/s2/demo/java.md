@@ -171,7 +171,7 @@ createBucketRequest.withCannedAcl(CannedAccessControlList.PublicRead);
 Bucket bucket = s3.createBucket(createBucketRequest);
 ```
 
-#### 列出桶中所包含的文件
+#### 列出桶中所包含的文件, 每次最多返回1000个文件
 
 ```java
 ListObjectsRequest listObjectsRequest = new ListObjectsRequest();
@@ -179,9 +179,40 @@ listObjectsRequest.setBucketName("test-bucket");
 listObjectsRequest.setMarker("foo"); //设置从哪个key开始列
 listObjectsRequest.setPrefix("foo"); //只返回以“foo“为前缀的key
 listObjectsRequest.setDelimiter("/"); //对有公共部分的keys进行合并
-listObjectsRequest.setMaxKeys(100); //最多返回100个
+listObjectsRequest.setMaxKeys(200); //最多返回200个
 
 ObjectListing objectListing = s3.listObjects(listObjectsRequest);
+```
+
+#### 列出桶中所包含的所有文件
+
+```java
+String marker = "";
+
+ListObjectsRequest listObjectsRequest = new ListObjectsRequest();
+listObjectsRequest.setBucketName("test-bucket");
+listObjectsRequest.setMarker(marker);
+
+while (true)
+{
+    ObjectListing objectListing = s3.listObjects(listObjectsRequest);
+
+    List<S3ObjectSummary> contents = new ArrayList<S3ObjectSummary>();
+    contents = objectListing.getObjectSummaries();
+
+    if (contents.size() == 0)
+    {
+        break;
+    }
+
+    for (S3ObjectSummary content: contents)
+    {
+        String key = content.getKey();
+        long size = content.getSize();
+        System.out.format("key: %s, size: %d\n", key, size);
+        listObjectsRequest.setMarker(key);
+    }
+}
 ```
 
 #### 删除桶

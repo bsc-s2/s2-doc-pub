@@ -164,12 +164,34 @@ resp = cli.create_bucket(
 )
 ```
 
-#### 列出桶中所包含的文件
+#### 列出桶中所包含的文件, 每次最多可以返回1000个文件
 
 ```python
 resp = cli.list_objects(
-    Bucket='test-bucket-xxx'
+    Bucket='test-bucket-xxx',
+    Prefix='',
+    Marker='',
 )
+```
+
+#### 列出桶中所包含的所有文件
+
+```python
+marker = ''
+
+while True:
+    resp = s3.list_objects(
+        Bucket='test-bucket-xxx',
+        Marker=marker,
+    )
+
+    if 'Contents' not in resp:
+        break
+
+    for content in resp['Contents']:
+        print 'key: %s, size: %d' % (content['Key'], content['Size'])
+
+    marker = resp['Contents'][-1]['Key']
 ```
 
 #### 删除桶

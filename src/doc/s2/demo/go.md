@@ -14,8 +14,10 @@ package main
 import "fmt"
 import "time"
 import "bytes"
+import "os"
 import "github.com/aws/aws-sdk-go/aws"
 import "github.com/aws/aws-sdk-go/service/s3"
+import "github.com/aws/aws-sdk-go/service/s3/s3manager"
 import "github.com/aws/aws-sdk-go/aws/session"
 import "github.com/aws/aws-sdk-go/aws/credentials"
 
@@ -33,6 +35,8 @@ func main() {
 
     sess := session.New(config)
     svc := s3.New(sess)
+    uploader := s3manager.NewUploader(sess)
+    downloader := s3manager.NewDownloader(sess)
 }
 ```
 
@@ -63,6 +67,29 @@ if err != nil {
 fmt.Println(resp)
 ```
 
+#### 使用uploader上传本地文件
+
+```go
+f, err := os.Open("/root/test.txt")
+if err != nil {
+    fmt.Println("open file error")
+    return
+}
+
+params := &s3manager.UploadInput{
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
+    Body: f,
+}
+
+result, err := uploader.Upload(params)
+if err != nil {
+    fmt.Println("upload file error")
+    return
+}
+fmt.Printf("file uploaded to: %s\n", result.Location)
+```
+
 #### 下载文件
 
 ```go
@@ -79,6 +106,28 @@ if err != nil {
 buf := new(bytes.Buffer)
 buf.ReadFrom(resp.Body)
 fmt.Println(buf.String())
+```
+
+#### 使用downloader下载到本地文件
+
+```go
+f, err := os.Create("/root/test.txt.download")
+if err != nil {
+    fmt.Println("create file error")
+    return
+}
+
+params := &s3.GetObjectInput{
+    Bucket: aws.String("test-bucket"),
+    Key: aws.String("test-key"),
+}
+
+n, err := downloader.Download(f, params)
+if err != nil {
+    fmt.Println("download file error")
+    return
+}
+fmt.Printf("file download %d bytes\n", n)
 ```
 
 #### 获取文件的URL
@@ -240,7 +289,7 @@ if err != nil {
 fmt.Println(resp)
 ```
 
-#### 列出桶中所包含的文件
+#### 列出桶中所包含的文件, 每次最多可以返回1000个文件
 
 ```go
 params := &s3.ListObjectsInput{
@@ -248,7 +297,7 @@ params := &s3.ListObjectsInput{
     Marker: aws.String("foo"), //设置从哪个key开始列
     Prefix: aws.String("foo"), //只返回以“foo“为前缀的key
     Delimiter: aws.String("/"), //对含有公共部分的keys进行合并
-    MaxKeys: aws.Int64(100), //最多返回100个
+    MaxKeys: aws.Int64(200), //最多返回200个
 }
 
 resp, err := svc.ListObjects(params)
@@ -257,6 +306,34 @@ if err != nil {
     return
 }
 fmt.Println(resp)
+```
+
+#### 列出桶中所用的文件
+
+```go
+marker := ""
+
+for {
+    params := &s3.ListObjectsInput{
+        Bucket: aws.String("test-bucket"),
+        Marker: aws.String(marker),
+    }
+
+    resp, err := svc.ListObjects(params)
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
+
+    if len(resp.Contents) == 0 {
+        break;
+    }
+
+    for _, content := range resp.Contents {
+        fmt.Printf("key:%s, size:%d\n", *content.Key, *content.Size)
+        marker = *content.Key
+    }
+}
 ```
 
 #### 删除桶

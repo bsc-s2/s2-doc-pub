@@ -160,12 +160,37 @@ $resp = $cli->createBucket(array(
 ));
 ```
 
-#### 列出桶中所包含的文件
+#### 列出桶中所包含的文件, 每次最多返回1000个文件
 
 ```php
 $resp = $cli->listObjects(array(
     'Bucket' => 'test-bucket-xxx',
+    'Prefix' => '',
+    'Marker' => '',
 ));
+```
+
+#### 列出桶中所包含的所有文件
+
+```php
+$marker = '';
+while (true):
+    $resp = $cli->listObjects(array(
+        'Bucket' => 'test-bucket-xxx',
+        'Marker' => $marker,
+    ));
+
+    if($resp['Contents'] == NULL)
+    {
+        break;
+    }
+
+    foreach($resp['Contents'] as $content)
+    {
+        var_dump($content['Key']);
+        $marker = $content['Key'];
+    }
+endwhile;
 ```
 
 #### 删除桶
