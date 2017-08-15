@@ -42,6 +42,7 @@ Date: Mon, 14 Jun 2017 06:01:47 GMT
        },
        "SuccessCallbackUrl": "http://mydomain.com/cb",
        "FailureCallbackUrl": "http://mydomain.com/cb",
+       "Status": "Active|Paused",
     }
 }
 ```

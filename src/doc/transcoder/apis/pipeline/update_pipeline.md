@@ -90,6 +90,8 @@ Date: Mon, 14 Jun 2017 06:01:47 GMT
        "OutputBucket":"output_bucket",
        "SuccessCallbackUrl": "http://mydomain.com/cb",
        "FailureCallbackUrl": "http://mydomain.com/cb",
+       "ContentConfig": {...},
+       "Status": "Active|Paused",
     }
 }
 ```
