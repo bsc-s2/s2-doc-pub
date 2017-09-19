@@ -20,27 +20,32 @@
 
 - 容器格式
 
-  FLV、MP4、TS、M3U8、MPG、TS、GIF、MP3
+  FLV、MP4、TS、M3U8、MPG、TS、GIF、MP3, MP2, AAC, WMV, WMA, AAC
 
 - 视频编码格式
 
-  H.264、H.265、GIF、MPEG-2
+  H.264、H.265、GIF、MPEG-2, MS-MPEG4
 
 - 音频编码格式
 
-  AAC、MP2、MP3
+  AAC、MP2、MP3, Windows Media Video
 
 - 编码格式兼容关系
 
-|  编码格式   | 支持的容器      |
+|  编码格式   | 支持的容器    |
 | ----------  | ---           |
 | H.264       |  FLV, MP4, TS |
 | H.265       |  FLV, MP4, TS |
-| GIF           |  GIF          |
+| GIF         |  GIF          |
 | MPEG2       |  MPG          |
-| AAC         |  FLV, MP4, TS |
-| MP2         |  MPG          |
+| AAC         |  FLV, MP4, TS, AAC |
+| MP2         |  MPG, MP2     |
 | MP3         |  MP3, FLV, MP4, TS|
+| MP3         |  MP3, FLV, MP4, TS|
+| MS-MPEG4    |  WMV          |
+| Windows Media Audio |  WMV, WMA |
+
+
 
 ### 转码方式
 
