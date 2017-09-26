@@ -50,6 +50,7 @@
         * [获取任务](                              doc/transcoder/apis/job/get_job.md)
         * [列出指定管道的任务](                    doc/transcoder/apis/job/list_jobs_by_pipeline.md)
         * [取消任务](                              doc/transcoder/apis/job/cancel_job.md)
+    * [音视频元信息](                              doc/transcoder/apis/metadata.md)
 * [工具](                                          toolkit/README.md)
     * [windows 图形界面存储管理工具 s3-browser](   toolkit/s3-browser.md)
 * [控制台使用手册](                                console-use/README.md)
