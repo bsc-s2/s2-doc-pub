@@ -69,19 +69,16 @@ Etag: <Etag>
         
           <tr>
             <td>Content-Length</td>
-            <td>
-            	文件大小，读取时原值返回
-            </td>
+            <td>文件大小，读取时原值返回</td>
             <td>Yes</td>
           </tr>
         
           <tr>
             <td>Content-MD5</td>
-            <td>
-            	base64编码的文件MD5（与传送内容不符时失败），注意：字符串格式为rfc标准使用base64编码的值
-            </td>
+            <td>base64编码的文件MD5（与传送内容不符时失败），注意：字符串格式为rfc标准使用base64编码的值</td>
             <td>No</td>
           </tr>
         </tbody>
-</table>
+    </table>
+
   - 注意：分片数不能超过2048。
