@@ -3,7 +3,7 @@
 - Append Object以追加写的方式上传文件，被追加的文件可以是bucket中任意方式上传的文件(除开分片上传的分片文件)， 如: put Object，copy Object，分片上传且已经合并的文件。
 
   Append上传和put Object接口一致，除开以下两点：
-    - x-amz-meta-append-position请求头，必选， 用于标识append上传和上传文件追加在当前文件的位置
+    - x-amz-meta-s2-append-position请求头，必选， 用于标识append上传和上传文件追加在当前文件的位置
         - position的值为0时，如果当前追加的文件不存在或者文件的size等于0，则将数据追加到文件尾部后返回成功，否则返回409错误；
         - position的值大于0时，如果和当前文件的size相等，将数据追加到size开始的位置后返回成功，且修改文件的修改时间为当前时间；否则，返回409错误，且在response的x-amz-meta-append-position header中设置当前文件的size。
     - x-amz-meta-s2-directive请求头，取值：COPY, REPLACE, 可选(则为COPY)，用于标识append文件是是否覆盖文件的file meta信息
