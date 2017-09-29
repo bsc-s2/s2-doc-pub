@@ -25,6 +25,7 @@
         * [HEAD Object](                           doc/s2/object/head_object.md)
         * [GET Object](                            doc/s2/object/get_object.md)
         * [PUT Object](                            doc/s2/object/put_object.md)
+        * [APPEND Object](                         doc/s2/object/append_object.md)
         * [POST Object](                           doc/s2/object/post_object.md)
         * [PUT Object - Copy](                     doc/s2/object/put_object_copy.md)
         * [DELETE Object](                         doc/s2/object/delete_object.md)
