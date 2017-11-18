@@ -14,7 +14,7 @@ SecretKey是需要保密的。签名是由此次http请求的相关信息和您�
 
 ## 添加签名
 
-> 由于计算签名的过程比较繁琐且容易出错，不建议自己计算签名，推荐使用[SDKs]('https://aws.amazon.com/tools/')，SDK可以自动为请求计算签名。
+> 由于计算签名的过程比较繁琐且容易出错，不建议自己计算签名，推荐使用[SDKs](https://aws.amazon.com/tools/)，SDK可以自动为请求计算签名。
 
 ### 添加version 2 签名
 
