@@ -20,15 +20,15 @@
 
 - 容器格式
 
-  FLV、MP4、TS、M3U8、MPG、TS、GIF、MP3, MP2, AAC, WMV, WMA, AAC
+  FLV、MP4、TS、M3U8、MPG、TS、GIF、MP3、MP2、AAC、WMV、WMA、AAC、DASH
 
 - 视频编码格式
 
-  H.264、H.265、GIF、MPEG-2, MS-MPEG4
+  H.264、H.265、GIF、MPEG-2、MS-MPEG4
 
 - 音频编码格式
 
-  AAC、MP2、MP3, Windows Media Video
+  AAC、MP2、MP3、Windows Media Video
 
 - 编码格式兼容关系
 
@@ -68,6 +68,7 @@
 - 转视频帧率
 - 设置GOP（关键帧固定间距）
 - HLS转码
+- DASH转码
 - FastStart：通过将 MP4 文件的原信息从文件尾部移到头部，实现播放快速启动。
 
 
