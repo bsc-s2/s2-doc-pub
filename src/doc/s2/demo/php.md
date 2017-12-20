@@ -22,7 +22,7 @@ $cli = new Aws\S3\S3Client([
         'key' => 'z2qutjf718d0i9gw6skc',  //请替换为您自己的access_key
         'secret' => 'SEQgcc1ppH7uXPG4ZPIcrCv2cWz8grcReMfFABCn', //请替换为您自己的secret_key
     ],
-    'endpoint' => 'http://s2.i.qingcdn.com',
+    'endpoint' => 'http://ss.bscstorage.com',
 ]);
 
 ```

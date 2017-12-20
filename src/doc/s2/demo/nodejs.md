@@ -16,7 +16,7 @@ var fs = require('fs');
 AWS.config.accessKeyId = 'ziw5dp1alvty9n47qksu'; //请替换为您自己的access_key
 AWS.config.secretAccessKey = 'V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV'; //请替换为您自己的secret_key
 AWS.config.region = 'us-west-1';
-AWS.config.endpoint = 'http://s2.i.qingcdn.com';
+AWS.config.endpoint = 'http://ss.bscstorage.com';
 AWS.config.s3ForcePathStyle = true
 
 var s3 = new AWS.S3();

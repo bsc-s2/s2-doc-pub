@@ -44,7 +44,7 @@ import com.amazonaws.services.s3.model.*;
 
 public class App
 {
-    private static String endPoint = "http://bscstorage.com";
+    private static String endPoint = "http://ss.bscstorage.com";
     private static String accessKey = "ziw5dp1alvty9n47qksu"; //请替换为您自己的access key
     private static String secretKey = "V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV"; //请替换为您自己的secret key
 

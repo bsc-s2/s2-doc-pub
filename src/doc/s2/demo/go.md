@@ -24,7 +24,7 @@ import "github.com/aws/aws-sdk-go/aws/credentials"
 var access_key = "ziw5dp1alvty9n47qksu" //请替换为您自己的access key
 var secret_key = "V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV" //请替换为您自己的secret key
 var token = ""
-var end_point = "http://bscstorage.com"
+var end_point = "http://ss.bscstorage.com"
 
 func main() {
     credential := credentials.NewStaticCredentials(access_key, secret_key, token)

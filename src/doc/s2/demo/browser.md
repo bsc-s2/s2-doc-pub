@@ -14,7 +14,7 @@
         secretAccessKey: 'V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV'    <!--请替换为您自己的secret key-->
     });
     AWS.config.region = 'us-west-1';
-    AWS.config.endpoint = 'http://s2.i.qingcdn.com';
+    AWS.config.endpoint = 'http://ss.bscstorage.com';
     AWS.config.s3ForcePathStyle = true
 
     var bucket_name = 'test-bucket'    <!--请替换为您自己的bucket的名字-->
@@ -85,7 +85,7 @@
   <!--请替换为您自己的access key 和secret key-->
   AWS.config.update({accessKeyId: 'ziw5dp1alvty9n47qksu', secretAccessKey: 'V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV'});
   AWS.config.region = 'us-west-1';
-  AWS.config.endpoint = 'http://s2.i.qingcdn.com';
+  AWS.config.endpoint = 'http://ss.bscstorage.com';
   AWS.config.s3ForcePathStyle = true
 
   var bucket_name = 'test-bucket'    <!--请替换为您自己的bucket的名字-->

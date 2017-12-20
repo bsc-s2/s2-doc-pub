@@ -17,7 +17,7 @@ curl -O http://docs.aws.amazon.com/aws-sdk-php/v2/download/aws.phar
 require 'aws.phar';
 
 $cli = Aws\S3\S3Client::factory(array(
-    'endpoint' => 'http://s2.i.qingcdn.com',
+    'endpoint' => 'http://ss.bscstorage.com',
     'credentials' => array(
         'key' => 'your access key',
         'secret' => 'your secret key',
