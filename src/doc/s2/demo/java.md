@@ -41,6 +41,7 @@ import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.S3ClientOptions;
 import com.amazonaws.services.s3.model.*;
+import com.amazonaws.ClientConfiguration;
 
 public class App
 {
@@ -53,7 +54,11 @@ public class App
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(
                 accessKey, secretKey);
 
-        AmazonS3 s3 = new AmazonS3Client(awsCreds);
+        ClientConfiguration clientconfiguration = new ClientConfiguration();
+        clientconfiguration.setSocketTimeout(60 * 60 * 1000); // in milliseconds
+        clientconfiguration.setConnectionTimeout(60 * 60 * 1000); // in milliseconds
+
+        AmazonS3 s3 = new AmazonS3Client(awsCreds, clientconfiguration);
 
         s3.setRegion(Region.getRegion(Regions.US_EAST_1));
         s3.setEndpoint(endPoint);
