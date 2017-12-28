@@ -6,6 +6,7 @@
     * [实例 兼容Amazon SDK](                       doc/s2/demo/README.md)
         * [Python](                                doc/s2/demo/python.md)
         * [PHP](                                   doc/s2/demo/php.md)
+        * [PHPV2](                                 doc/s2/demo/phpv2.md)
         * [Browser](                               doc/s2/demo/browser.md)
         * [Nodejs](                                doc/s2/demo/nodejs.md)
         * [Java](                                  doc/s2/demo/java.md)
