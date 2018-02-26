@@ -12,7 +12,7 @@ Content-Type: application/json; charset=UTF-8
 Accept: */*
 Host: transcoder-ss.bscstorage.com
 x-amz-date: 20170726T174952Z
-Authorization: AWS4-HMAC-SHA256 
+Authorization: AWS4-HMAC-SHA256
                Credential=AccessKeyID/request-date/Transcoder endpoint/elastictranscoder/aws4_request,
                SignedHeaders=host;x-amz-date;x-amz-target,
                Signature=calculated-signature
@@ -26,6 +26,21 @@ Content-Length: number of characters in the JSON string
       "Key":"转码后的输出文件名",
       "PresetId":"转码模板 ID",
       "SegmentDuration":"[1,60]",
+      "Watermarks": [{
+        "InputKey": "string",
+      }],
+      "Encryption": {
+        "Mode": "string",
+        "Key": "string",
+        "KeyMd5": "string",
+        "InitializationVector": "string"
+      },
+      "Composition": [{
+        "TimeSpan": {
+          "StartTime": "string",
+          "Duration": "string"
+        }
+      }],
    },
    {...}],
    "Snapshots":[{
@@ -90,6 +105,49 @@ Content-Length: number of characters in the JSON string
 HLS 切片时长。可选值：1 - 60。单位为秒。
 注意 SegmentDuration 仅对 Container 为 `ts` 有效。对于其他 Container， 则自动忽略此项。
 
+- (可选) Outputs: Watermarks
+
+视频水印。如果配置了此选项，转码模版中视频编码方式不能选择"不变"，否则无法创建任务。目前仅支持单一水印，例如：
+```
+"Watermarks": [{
+    "InputKey": "abc.png",
+}]
+```
+
+水印位置信息在转码模版中配置, 默认是右上角。
+图片格式仅支持jpg，png。"InputKey"表示在input bucket（配置在管道中）下的图片文件key，该图片文件必须存在。
+
+- (可选, hls加密) Outputs: Encryption
+
+hls切片AES-128加密信息。该选项只有在hls切片时起作用。
+```
+"Encryption": {
+    "Mode": "AES128",
+    "Key": "string",
+    "KeyMd5": "string",
+    "InitializationVector": "string"
+}
+```
+"Mode"选项：目前仅支持"AES128"。
+"Key"选项：json格式的字符串，包括AES128加密视频的秘钥（必须是16个字节）和密钥的访问url。其必须经过base64编码。
+比如：'{"Url": "http://ss.bscstorage.com/file.key", "Key": "1111111122222222"}'，base64编码之后为：'eyJVcmwiOiAiaHR0cDovL3NzLmJzY3N0b3JhZ2UuY29tL2ZpbGUua2V5IiwgIktleSI6ICIxMTExMTExMTIyMjIyMjIyIn0='
+"KeyMd5"选项：未经过base64编码的key的md5值，其必须经过base64编码。
+"InitializationVector"选项：可选配置，初始化向量，长度为16个字节，其必须经过base64编码。
+
+- (可选, 视频裁剪) Outputs: Composition
+
+视频裁剪配置，目前仅支持单一裁剪。
+```
+"Composition": [{
+  "TimeSpan": {
+    "StartTime": "string",
+    "Duration": "string"
+  }
+}]
+```
+"StartTime"选项：裁剪的开始时间，单位为毫秒。
+"Duration"选项：裁剪的时长，单位为毫秒。
+
 - （可选）Snapshots
 
 截图输出信息。Outputs 和 Snapshots 必须至少存在一个。
@@ -142,7 +200,7 @@ HLS 切片时长。可选值：1 - 60。单位为秒。
 
 自适应HLS播放列表的文件名。注意系统会自动添加 `.m3u8` 扩展名。
 
-- Playlists: OutputKeys
+ Playlists: OutputKeys
 
 包含在自适应 HLS 播放列表中的输出文件名。每个被包含的输出必须是 HLS 输出（Container 为 `ts`，且提供 SegmentDuration），而且 SegmentDuration 必须相同。
 
@@ -182,7 +240,7 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
       {...}]
       "Playlists":[{
          "Format":"HLSv3|HLSv4",
-         "Name":"播放列表文件名", 
+         "Name":"播放列表文件名",
          "OutputKeys":[
             "包含在输出文件列表中的输出文件名",
             ...
