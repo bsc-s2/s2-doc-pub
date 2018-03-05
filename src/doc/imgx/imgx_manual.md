@@ -1020,6 +1020,34 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
 
 </table>
 
+## 使用AWS-SDK访问图片处理服务
+可以使用标准的AWS-SDK直接访问图片处理服务，注意imgx服务只接受标准的`get_object`操作，其他操作都是非法的。
+
+下面的示例代码使用python boto3 sdk：
+
+```
+import boto3
+
+s2_imgx_domain_name = 'http://imgx-ss.bscstorage.com'   # 示例使用三副本集群配置，此处需要根据不同集群进行调整
+s2_imgx_access_key = 'xxxxxx'                           # 用户自己的access key
+s2_imgx_secret_key = 'xxxxxx'                           # 用户自己的secret key
+
+imgx_cmd = 'c_scale,w_100,h_100' # 图片处理命令，参考 图片处理指令 部分
+imgx_bucket = 'my_imgx_bucket'   # 用户在存储上的bucket名称
+imgx_key = 'my_img.jpg'          # 用户想要操作的图片的key名称
+
+
+# 创建s2 client
+imgx_cli = boto3.client('s3',
+                        endpoint_url=s2_imgx_domain_name,
+                        aws_access_key_id=s2_imgx_access_key,
+                        aws_secret_access_key=s2_imgx_secret_key)
+
+imgx_cmd_key = u'{cmd}/{key}'.format(cmd=imgx_cmd, key=imgx_key) # 作为最终访问时的Key
+resp = imgx_cli.get_object(Bucket=imgx_bucket, Key=imgx_cmd_key)
+
+print resp
+```
 
 
 ## 水印功能详细介绍
