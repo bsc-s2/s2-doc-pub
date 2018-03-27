@@ -1017,6 +1017,50 @@ echo getAuthenticatedURL('您的accessKey', '您的secretKey', '您的bucket', '
             </td>
         </tr>
     </tbody>
+    <thead>
+        <tr>
+            <th>information</th>
+            <th><b>t</b></th>
+            <th><i>信息类型</i></th>
+            <th></th>
+            <th>按照指定的类型，获取图片信息</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>exif</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_exif/info.jpg?AWSAccessKeyId=acc_drdrxp&Expires=1532134163&Signature=3wHpLeDk%2FZxTLodjQxiT5Lksc6w%3D">exif样例</a>
+            </td>
+            <td>
+                返回json格式的图片exif信息
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>iptc</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_iptc/info.jpg?AWSAccessKeyId=acc_drdrxp&Expires=1532134979&Signature=pOoJof%2Fzjahvk5JrK7c9z2oMOq4%3D">iptc样例</a>
+            </td>
+            <td>
+                返回json格式的图片iptc信息
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>all</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_all/info.jpg?AWSAccessKeyId=acc_drdrxp&Expires=1532135055&Signature=vsuwXraMZP7KmBql%2Bn1Y3G%2FpwVs%3D">全部信息样例</a>
+            </td>
+            <td>
+                返回json格式的图片全部信息
+            </td>
+        </tr>
+    </tbody>
 
 </table>
 
