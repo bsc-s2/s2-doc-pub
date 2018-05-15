@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>PUT Object ACL · GitBook</title>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -962,19 +962,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-<ul>
-<li><a href="#put-object-acl">PUT Object ACL</a></li>
-</ul>
+
+
+<ul><li><a href="#put-object-acl">PUT Object ACL</a>
+</li></ul>
 <!-- mdtoc end   -->
-<h3 id="put-object-acl">PUT Object ACL</h3>
-<ul>
-<li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x7ED9;&#x6307;&#x5B9A;Object&#x8BBE;&#x7F6E;ACL&#x89C4;&#x5219;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x8BF7;&#x53C2;&#x7167;&#xFF1A;<a href="../acl/acl.html">&#x300A;ACL&#x300B;</a></p>
-</li>
-<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p>
-</li>
-</ul>
+
+
+<h3 id="put-object-acl">PUT Object ACL</h3><ul><li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x7ED9;&#x6307;&#x5B9A;Object&#x8BBE;&#x7F6E;ACL&#x89C4;&#x5219;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x8BF7;&#x53C2;&#x7167;&#xFF1A;<a href="../acl/acl.html">&#x300A;ACL&#x300B;</a></p></li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p></li></ul>
 <pre><code class="lang-http"><span class="hljs-keyword">PUT</span> <span class="hljs-string">/&lt;ObjectName&gt;?acl</span> HTTP/1.1
-<span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.s2.i.qingcdn.com
+<span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: &lt;date&gt;
 <span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
 
@@ -983,11 +981,9 @@
     <span class="hljs-string">&quot;Baishan0000000000000001&quot;</span> :  [ <span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;read_acp&quot;</span> , <span class="hljs-string">&quot;write&quot;</span>, <span class="hljs-string">&quot;write_acp&quot;</span> ],
     <span class="hljs-string">&quot;GRPS000000ANONYMOUSE&quot;</span> :  [ <span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;read_acp&quot;</span> , <span class="hljs-string">&quot;write&quot;</span>, <span class="hljs-string">&quot;write_acp&quot;</span> ],
     <span class="hljs-string">&quot;GRPS0000000CANONICAL&quot;</span> :  [ <span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;read_acp&quot;</span> , <span class="hljs-string">&quot;write&quot;</span>, <span class="hljs-string">&quot;write_acp&quot;</span> ]
-}
-</span></code></pre>
-<ul>
-<li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;</li>
-</ul>
+}</span></code></pre>
+<ul><li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;
+</li></ul>
 <table class="table table-condensed">
         <thead>
           <tr>
@@ -1007,28 +1003,22 @@
         </tbody>
 </table>
 
+
+
 <pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">200</span> OK
 <span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
 <span class="hljs-attribute">Connection</span>: keep-alive
 <span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
-<span class="hljs-attribute">x-amz-s2-requester</span>: &lt;Your UserName&gt;
-</code></pre>
-<ul>
-<li>Request Body&#xFF08;&#x8BF7;&#x6C42;Body&#xFF09;&#xFF1A;
-XML or JSon format acl body</li>
-</ul>
-<p>Note: &#x5047;&#x5982;&#x6307;&#x5B9A;&#x4E86;x-amz-acl header&#x5C06;&#x5FFD;&#x7565;body&#x4E2D;acl, body&#x4E2D;&#x7684;xml&#x683C;&#x5F0F;&#x7531;&#x8BF7;&#x6C42;&#x53C2;&#x6570;formatter&#x53C2;&#x6570;&#x51B3;&#x5B9A;, &#x9ED8;&#x8BA4;&#x4E3A;XML</p>
-<ul>
-<li><p>Response&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;</p>
-</li>
-<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#x8BF7;&#x53C2;&#x7167;&#xFF1A;<a href="../acl/acl.html">&#x300A;ACL&#x300B;</a></p>
-</li>
-<li><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-</li>
-</ul>
+<span class="hljs-attribute">x-amz-s2-requester</span>: &lt;Your UserName&gt;</code></pre>
+<ul><li>Request Body&#xFF08;&#x8BF7;&#x6C42;Body&#xFF09;&#xFF1A;
+XML or JSon format acl body
+</li></ul>
+<p>Note: &#x5047;&#x5982;&#x6307;&#x5B9A;&#x4E86;x-amz-acl header&#x5C06;&#x5FFD;&#x7565;body&#x4E2D;acl, body&#x4E2D;&#x7684;xml&#x683C;&#x5F0F;&#x7531;&#x8BF7;&#x6C42;&#x53C2;&#x6570;formatter&#x53C2;&#x6570;&#x51B3;&#x5B9A;, &#x9ED8;&#x8BA4;&#x4E3A;XML</p><ul><li><p>Response&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;</p></li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#x8BF7;&#x53C2;&#x7167;&#xFF1A;<a href="../acl/acl.html">&#x300A;ACL&#x300B;</a></p></li>
+<li><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p></li></ul>
 <pre><code>curl -v -T &quot;acl.txt&quot; -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization:
-AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.s2.i.qingcdn.com/path/to/my/file.txt&quot;
-</code></pre>
+AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/path/to/my/file.txt&quot;</code></pre>
+
                                 
                                 </section>
                             
@@ -1071,7 +1061,7 @@ AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PUT Object ACL","level":"1.4.7.9","depth":3,"next":{"title":"Initiate Multipart Upload","level":"1.4.7.10","depth":3,"path":"doc/s2/object/initiate_multipart_upload.md","ref":"doc/s2/object/initiate_multipart_upload.md","articles":[]},"previous":{"title":"GET Object ACL","level":"1.4.7.8","depth":3,"path":"doc/s2/object/get_object_acl.md","ref":"doc/s2/object/get_object_acl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/put_object_acl.md","mtime":"2018-03-27T12:47:36.536Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-27T12:47:38.932Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PUT Object ACL","level":"1.4.7.9","depth":3,"next":{"title":"Initiate Multipart Upload","level":"1.4.7.10","depth":3,"path":"doc/s2/object/initiate_multipart_upload.md","ref":"doc/s2/object/initiate_multipart_upload.md","articles":[]},"previous":{"title":"GET Object ACL","level":"1.4.7.8","depth":3,"path":"doc/s2/object/get_object_acl.md","ref":"doc/s2/object/get_object_acl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/put_object_acl.md","mtime":"2018-05-15T06:21:43.045Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-15T06:21:46.106Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

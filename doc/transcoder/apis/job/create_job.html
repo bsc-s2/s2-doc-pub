@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>创建任务 · GitBook</title>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -960,22 +960,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-<ul>
-<li><a href="#&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</a><ul>
-<li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a></li>
-<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a></li>
-<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a></li>
-<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a></li>
-<li><a href="#&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</a></li>
-</ul>
+
+
+<ul><li><a href="#&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</a>
+<ul><li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a>
 </li>
-</ul>
+<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a>
+</li>
+<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a>
+</li>
+<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a>
+</li>
+<li><a href="#&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</a>
+</li></ul>
+</li></ul>
 <!-- mdtoc end   -->
-<h1 id="&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</h1>
-<h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
-<p>&#x53D1;&#x9001; POST &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/jobs</code> &#x4EE5;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;</p>
-<h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2>
-<pre><code>POST /2012-09-25/jobs HTTP/1.1
+
+
+<h1 id="&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</h1><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2><p>&#x53D1;&#x9001; POST &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/jobs</code> &#x4EE5;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;</p><h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2><pre><code>POST /2012-09-25/jobs HTTP/1.1
 Content-Type: application/json; charset=UTF-8
 Accept: */*
 Host: transcoder-ss.bscstorage.com
@@ -1029,144 +1031,89 @@ Content-Length: number of characters in the JSON string
    },
    {...}],
    &quot;PipelineId&quot;:&quot;&#x672C;&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;&#x7684;&#x7BA1;&#x9053; ID&quot;
-}
-</code></pre><h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2>
-<ul>
-<li>Inputs</li>
-</ul>
+}</code></pre>
+<h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2><ul><li>Inputs
+</li></ul>
 <p>&#x8F6C;&#x7801;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x63A5;&#x53D7;&#x7C7B;&#x578B;&#xFF1A;&#x6570;&#x7EC4;&#x3002;
-&#x6CE8;&#x610F;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x5355;&#x4E00; input&#x3002;&#x5982;&#xFF1A;</p>
-<pre><code>&quot;Inputs&quot;: [{
+&#x6CE8;&#x610F;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x5355;&#x4E00; input&#x3002;&#x5982;&#xFF1A;</p><pre><code>&quot;Inputs&quot;: [{
     &quot;Key&quot;: &quot;path/to/orginal.mp4&quot;
-}]
-</code></pre><ul>
-<li>Inputs: Key</li>
-</ul>
-<p>&#x8F6C;&#x7801;&#x539F;&#x6587;&#x4EF6;&#x540D;&#x3002;</p>
-<ul>
-<li>OutputKeyPrefix</li>
-</ul>
-<p>&#x8F6C;&#x7801;&#x540E;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x524D;&#x7F00;&#x3002;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x5C06;&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x5B58;&#x5165;&#x5355;&#x72EC;&#x76EE;&#x5F55;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E; OutputKeyPrefix &#x4E3A; <code>transcode_output/</code> &#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x5B58;&#x653E;&#x5728; <code>transcode_ouput</code> &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x5982;&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x524D;&#x7F00;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
-<ul>
-<li>(&#x53EF;&#x9009;) Outputs</li>
-</ul>
-<p>&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#x3002;Outputs &#x548C; Snapshots &#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x3002;</p>
-<ul>
-<li>Outputs: Key</li>
-</ul>
+}]</code></pre>
+<ul><li>Inputs: Key
+</li></ul>
+<p>&#x8F6C;&#x7801;&#x539F;&#x6587;&#x4EF6;&#x540D;&#x3002;</p><ul><li>OutputKeyPrefix
+</li></ul>
+<p>&#x8F6C;&#x7801;&#x540E;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x524D;&#x7F00;&#x3002;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x5C06;&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x5B58;&#x5165;&#x5355;&#x72EC;&#x76EE;&#x5F55;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E; OutputKeyPrefix &#x4E3A; <code>transcode_output/</code> &#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x5B58;&#x653E;&#x5728; <code>transcode_ouput</code> &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x5982;&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x524D;&#x7F00;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p><ul><li>(&#x53EF;&#x9009;) Outputs
+</li></ul>
+<p>&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#x3002;Outputs &#x548C; Snapshots &#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x3002;</p><ul><li>Outputs: Key
+</li></ul>
 <p>&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5C06;&#x4F1A;&#x4FDD;&#x5B58;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684; OutputBucket &#x4E2D;&#x3002;
-&#x6CE8;&#x610F;&#xFF1A;</p>
-<ul>
-<li>&#x5982;&#x679C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E8E;&#x5B58;&#x50A8;&#x4E2D;&#xFF0C;&#x539F;&#x6587;&#x4EF6;&#x5C06;&#x88AB;&#x672C;&#x6B21;&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x3002;</li>
-<li><p>&#x5982;&#x679C;&#x6A21;&#x677F;&#x4E2D;&#x7684;  Container &#x662F; <code>ts</code>&#xFF0C;&#x4E14; SegmentDuration &#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4F1A;&#x5728;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0; <code>00000.ts</code>&#x548C; <code>.m3u8</code> &#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x540E;&#x7F00; <code>.ts</code>&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x662F; <code>OutputKeyPrefixKey.ts00000.ts</code>&#x3002;</p>
+&#x6CE8;&#x610F;&#xFF1A;</p><ul><li>&#x5982;&#x679C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E8E;&#x5B58;&#x50A8;&#x4E2D;&#xFF0C;&#x539F;&#x6587;&#x4EF6;&#x5C06;&#x88AB;&#x672C;&#x6B21;&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x3002;
 </li>
-<li><p>Outputs: PresetId</p>
-</li>
-</ul>
-<p>&#x672C;&#x8F93;&#x51FA;&#x5E94;&#x7528;&#x7684;&#x8F6C;&#x7801;&#x6A21;&#x677F; ID&#x3002;</p>
-<ul>
-<li>(&#x53EF;&#x9009;&#x3001;TS &#x8F93;&#x51FA; Only) Outputs: SegmentDuration</li>
-</ul>
+<li><p>&#x5982;&#x679C;&#x6A21;&#x677F;&#x4E2D;&#x7684;  Container &#x662F; <code>ts</code>&#xFF0C;&#x4E14; SegmentDuration &#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4F1A;&#x5728;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0; <code>00000.ts</code>&#x548C; <code>.m3u8</code> &#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x540E;&#x7F00; <code>.ts</code>&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x662F; <code>OutputKeyPrefixKey.ts00000.ts</code>&#x3002;</p></li>
+<li><p>Outputs: PresetId</p></li></ul>
+<p>&#x672C;&#x8F93;&#x51FA;&#x5E94;&#x7528;&#x7684;&#x8F6C;&#x7801;&#x6A21;&#x677F; ID&#x3002;</p><ul><li>(&#x53EF;&#x9009;&#x3001;TS &#x8F93;&#x51FA; Only) Outputs: SegmentDuration
+</li></ul>
 <p>HLS &#x5207;&#x7247;&#x65F6;&#x957F;&#x3002;&#x53EF;&#x9009;&#x503C;&#xFF1A;1 - 60&#x3002;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#x3002;
-&#x6CE8;&#x610F; SegmentDuration &#x4EC5;&#x5BF9; Container &#x4E3A; <code>ts</code> &#x6709;&#x6548;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6; Container&#xFF0C; &#x5219;&#x81EA;&#x52A8;&#x5FFD;&#x7565;&#x6B64;&#x9879;&#x3002;</p>
-<ul>
-<li>(&#x53EF;&#x9009;) Outputs: Watermarks</li>
-</ul>
-<p>&#x89C6;&#x9891;&#x6C34;&#x5370;&#x3002;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8F6C;&#x7801;&#x6A21;&#x7248;&#x4E2D;&#x89C6;&#x9891;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4E0D;&#x80FD;&#x9009;&#x62E9;&quot;&#x4E0D;&#x53D8;&quot;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5355;&#x4E00;&#x6C34;&#x5370;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>&quot;Watermarks&quot;: [{
+&#x6CE8;&#x610F; SegmentDuration &#x4EC5;&#x5BF9; Container &#x4E3A; <code>ts</code> &#x6709;&#x6548;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6; Container&#xFF0C; &#x5219;&#x81EA;&#x52A8;&#x5FFD;&#x7565;&#x6B64;&#x9879;&#x3002;</p><ul><li>(&#x53EF;&#x9009;) Outputs: Watermarks
+</li></ul>
+<p>&#x89C6;&#x9891;&#x6C34;&#x5370;&#x3002;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8F6C;&#x7801;&#x6A21;&#x7248;&#x4E2D;&#x89C6;&#x9891;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4E0D;&#x80FD;&#x9009;&#x62E9;&quot;&#x4E0D;&#x53D8;&quot;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5355;&#x4E00;&#x6C34;&#x5370;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p><pre><code>&quot;Watermarks&quot;: [{
     &quot;InputKey&quot;: &quot;abc.png&quot;,
-}]
-</code></pre><p>&#x6C34;&#x5370;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x5728;&#x8F6C;&#x7801;&#x6A21;&#x7248;&#x4E2D;&#x914D;&#x7F6E;, &#x9ED8;&#x8BA4;&#x662F;&#x53F3;&#x4E0A;&#x89D2;&#x3002;
-&#x56FE;&#x7247;&#x683C;&#x5F0F;&#x4EC5;&#x652F;&#x6301;jpg&#xFF0C;png&#x3002;&quot;InputKey&quot;&#x8868;&#x793A;&#x5728;input bucket&#xFF08;&#x914D;&#x7F6E;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#xFF09;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;key&#xFF0C;&#x8BE5;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x3002;</p>
-<ul>
-<li>(&#x53EF;&#x9009;, hls&#x52A0;&#x5BC6;) Outputs: Encryption</li>
-</ul>
-<p>hls&#x5207;&#x7247;AES-128&#x52A0;&#x5BC6;&#x4FE1;&#x606F;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x53EA;&#x6709;&#x5728;hls&#x5207;&#x7247;&#x65F6;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
-<pre><code>&quot;Encryption&quot;: {
+}]</code></pre>
+<p>&#x6C34;&#x5370;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x5728;&#x8F6C;&#x7801;&#x6A21;&#x7248;&#x4E2D;&#x914D;&#x7F6E;, &#x9ED8;&#x8BA4;&#x662F;&#x53F3;&#x4E0A;&#x89D2;&#x3002;
+&#x56FE;&#x7247;&#x683C;&#x5F0F;&#x4EC5;&#x652F;&#x6301;jpg&#xFF0C;png&#x3002;&quot;InputKey&quot;&#x8868;&#x793A;&#x5728;input bucket&#xFF08;&#x914D;&#x7F6E;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#xFF09;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;key&#xFF0C;&#x8BE5;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x3002;</p><ul><li>(&#x53EF;&#x9009;, hls&#x52A0;&#x5BC6;) Outputs: Encryption
+</li></ul>
+<p>hls&#x5207;&#x7247;AES-128&#x52A0;&#x5BC6;&#x4FE1;&#x606F;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x53EA;&#x6709;&#x5728;hls&#x5207;&#x7247;&#x65F6;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p><pre><code>&quot;Encryption&quot;: {
     &quot;Mode&quot;: &quot;AES128&quot;,
     &quot;Key&quot;: &quot;string&quot;,
     &quot;KeyMd5&quot;: &quot;string&quot;,
     &quot;InitializationVector&quot;: &quot;string&quot;
-}
-</code></pre><p>&quot;Mode&quot;&#x9009;&#x9879;&#xFF1A;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&quot;AES128&quot;&#x3002;
+}</code></pre>
+<p>&quot;Mode&quot;&#x9009;&#x9879;&#xFF1A;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&quot;AES128&quot;&#x3002;
 &quot;Key&quot;&#x9009;&#x9879;&#xFF1A;json&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5305;&#x62EC;AES128&#x52A0;&#x5BC6;&#x89C6;&#x9891;&#x7684;&#x79D8;&#x94A5;&#xFF08;&#x5FC5;&#x987B;&#x662F;16&#x4E2A;&#x5B57;&#x8282;&#xFF09;&#x548C;&#x5BC6;&#x94A5;&#x7684;&#x8BBF;&#x95EE;url&#x3002;&#x5176;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;base64&#x7F16;&#x7801;&#x3002;
 &#x6BD4;&#x5982;&#xFF1A;&apos;{&quot;Url&quot;: &quot;<a href="http://ss.bscstorage.com/file.key" target="_blank">http://ss.bscstorage.com/file.key</a>&quot;, &quot;Key&quot;: &quot;1111111122222222&quot;}&apos;&#xFF0C;base64&#x7F16;&#x7801;&#x4E4B;&#x540E;&#x4E3A;&#xFF1A;&apos;eyJVcmwiOiAiaHR0cDovL3NzLmJzY3N0b3JhZ2UuY29tL2ZpbGUua2V5IiwgIktleSI6ICIxMTExMTExMTIyMjIyMjIyIn0=&apos;
 &quot;KeyMd5&quot;&#x9009;&#x9879;&#xFF1A;&#x672A;&#x7ECF;&#x8FC7;base64&#x7F16;&#x7801;&#x7684;key&#x7684;md5&#x503C;&#xFF0C;&#x5176;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;base64&#x7F16;&#x7801;&#x3002;
-&quot;InitializationVector&quot;&#x9009;&#x9879;&#xFF1A;&#x53EF;&#x9009;&#x914D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5411;&#x91CF;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;16&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5176;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;base64&#x7F16;&#x7801;&#x3002;</p>
-<ul>
-<li>(&#x53EF;&#x9009;, &#x89C6;&#x9891;&#x88C1;&#x526A;) Outputs: Composition</li>
-</ul>
-<p>&#x89C6;&#x9891;&#x88C1;&#x526A;&#x914D;&#x7F6E;&#xFF0C;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5355;&#x4E00;&#x88C1;&#x526A;&#x3002;</p>
-<pre><code>&quot;Composition&quot;: [{
+&quot;InitializationVector&quot;&#x9009;&#x9879;&#xFF1A;&#x53EF;&#x9009;&#x914D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5411;&#x91CF;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;16&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5176;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;base64&#x7F16;&#x7801;&#x3002;</p><ul><li>(&#x53EF;&#x9009;, &#x89C6;&#x9891;&#x88C1;&#x526A;) Outputs: Composition
+</li></ul>
+<p>&#x89C6;&#x9891;&#x88C1;&#x526A;&#x914D;&#x7F6E;&#xFF0C;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5355;&#x4E00;&#x88C1;&#x526A;&#x3002;</p><pre><code>&quot;Composition&quot;: [{
   &quot;TimeSpan&quot;: {
     &quot;StartTime&quot;: &quot;string&quot;,
     &quot;Duration&quot;: &quot;string&quot;
   }
-}]
-</code></pre><p>&quot;StartTime&quot;&#x9009;&#x9879;&#xFF1A;&#x88C1;&#x526A;&#x7684;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;
-&quot;Duration&quot;&#x9009;&#x9879;&#xFF1A;&#x88C1;&#x526A;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots</li>
-</ul>
-<p>&#x622A;&#x56FE;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;Outputs &#x548C; Snapshots &#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x3002;</p>
-<ul>
-<li>Snapshots: Format</li>
-</ul>
+}]</code></pre>
+<p>&quot;StartTime&quot;&#x9009;&#x9879;&#xFF1A;&#x88C1;&#x526A;&#x7684;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;
+&quot;Duration&quot;&#x9009;&#x9879;&#xFF1A;&#x88C1;&#x526A;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots
+</li></ul>
+<p>&#x622A;&#x56FE;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;Outputs &#x548C; Snapshots &#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x3002;</p><ul><li>Snapshots: Format
+</li></ul>
 <p>&#x622A;&#x56FE;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x3002;
-&#x53EF;&#x9009;&#x503C;&#xFF1A;png, jpg</p>
-<ul>
-<li>Snapshots: Key</li>
-</ul>
+&#x53EF;&#x9009;&#x503C;&#xFF1A;png, jpg</p><ul><li>Snapshots: Key
+</li></ul>
 <p>&#x8F93;&#x51FA;&#x622A;&#x56FE;&#x6587;&#x4EF6;&#x540D;&#x3002;
-&#x6CE8;&#x610F;&#x6269;&#x5C55;&#x540D;&#x4F1A;&#x81EA;&#x52A8;&#x6839;&#x636E; Format &#x6DFB;&#x52A0;&#x3002;</p>
-<ul>
-<li>Snapshots: Time</li>
-</ul>
-<p>&#x622A;&#x56FE;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x3002;&#x683C;&#x5F0F;&#x4E3A; s.S&#xFF08;s &#x4E3A;&#x79D2;&#xFF0C;S &#x4E3A;&#x6D6E;&#x70B9;&#x578B;&#x6BEB;&#x79D2;&#xFF09;&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Interval</li>
-</ul>
+&#x6CE8;&#x610F;&#x6269;&#x5C55;&#x540D;&#x4F1A;&#x81EA;&#x52A8;&#x6839;&#x636E; Format &#x6DFB;&#x52A0;&#x3002;</p><ul><li>Snapshots: Time
+</li></ul>
+<p>&#x622A;&#x56FE;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x3002;&#x683C;&#x5F0F;&#x4E3A; s.S&#xFF08;s &#x4E3A;&#x79D2;&#xFF0C;S &#x4E3A;&#x6D6E;&#x70B9;&#x578B;&#x6BEB;&#x79D2;&#xFF09;&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Interval
+</li></ul>
 <p>&#x622A;&#x56FE;&#x95F4;&#x9694;&#x3002;&#x683C;&#x5F0F;&#x4E3A; s.S&#xFF08;s &#x4E3A;&#x79D2;&#xFF0C;S &#x4E3A;&#x6D6E;&#x70B9;&#x578B;&#x6BEB;&#x79D2;&#xFF09;&#x3002;&#x53EA;&#x6709;&#x5F53; Number &gt; 1 &#x65F6;&#x624D;&#x4F1A;&#x8D77;&#x4F5C;&#x7528;&#x3002;
-&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x622A;&#x56FE;&#x95F4;&#x9694;&#xFF0C;&#x5219;&#x4F1A;&#x5728;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4E2D;&#x81EA;&#x52A8;&#x6DFB;&#x52A0; &#x56FE;&#x7247;&#x7D22;&#x5F15;&#xFF0C;&#x6BD4;&#x5982; <code>snapshot0000.png - snapshop0010.png</code>&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Number</li>
-</ul>
-<p>&#x622A;&#x56FE;&#x6700;&#x5927;&#x6570;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Resolution</li>
-</ul>
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x622A;&#x56FE;&#x95F4;&#x9694;&#xFF0C;&#x5219;&#x4F1A;&#x5728;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4E2D;&#x81EA;&#x52A8;&#x6DFB;&#x52A0; &#x56FE;&#x7247;&#x7D22;&#x5F15;&#xFF0C;&#x6BD4;&#x5982; <code>snapshot0000.png - snapshop0010.png</code>&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Number
+</li></ul>
+<p>&#x622A;&#x56FE;&#x6700;&#x5927;&#x6570;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: Resolution
+</li></ul>
 <p>&#x622A;&#x56FE;&#x5206;&#x8FA8;&#x7387;&#x3002;&#x683C;&#x5F0F;&#x4E3A; [width]x[height]&#x3002; &#x6BD4;&#x5982;: 1920x1080&#x3002;
-&#x9ED8;&#x8BA4;&#x4E3A;&#x539F;&#x89C6;&#x9891;&#x5206;&#x8FA8;&#x7387;&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: AspectRatio</li>
-</ul>
+&#x9ED8;&#x8BA4;&#x4E3A;&#x539F;&#x89C6;&#x9891;&#x5206;&#x8FA8;&#x7387;&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Snapshots: AspectRatio
+</li></ul>
 <p>&#x622A;&#x56FE;&#x5BBD;&#x9AD8;&#x6BD4;&#x3002;&#x53EF;&#x9009;&#x503C;&#x4E3A; [&quot;1:1&quot;, &quot;4:3&quot;, &quot;3:2&quot;, &quot;16:9&quot;]&#x3002;
-&#x9ED8;&#x8BA4;&#x4E3A;&#x539F;&#x89C6;&#x9891;&#x5BBD;&#x9AD8;&#x6BD4;&#x3002;</p>
-<ul>
-<li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Playlists</li>
-</ul>
-<p>&#x81EA;&#x9002;&#x5E94; HLS &#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p>
-<ul>
-<li>Playlists: Format</li>
-</ul>
+&#x9ED8;&#x8BA4;&#x4E3A;&#x539F;&#x89C6;&#x9891;&#x5BBD;&#x9AD8;&#x6BD4;&#x3002;</p><ul><li>&#xFF08;&#x53EF;&#x9009;&#xFF09;Playlists
+</li></ul>
+<p>&#x81EA;&#x9002;&#x5E94; HLS &#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p><ul><li>Playlists: Format
+</li></ul>
 <p>&#x81EA;&#x9002;&#x5E94;&#x8F6C;&#x7801;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x53EF;&#x9009;&#x503C;&#xFF1A;HLSv3&#x3001;HLSv4&#x3002;
-&#x5BF9;&#x4E8E;&#x81EA;&#x9002;&#x5E94;HLS&#x64AD;&#x653E;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;HLS&#x8F6C;&#x7801;</p>
-<ul>
-<li>HLSv3&#x8F6C;&#x7801;&#x4F1A;&#x751F;&#x6210;ts&#x5207;&#x7247;&#x6587;&#x4EF6;&#xFF08;video00000.ts, video00001.ts, ...&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;m3u8&#x64AD;&#x653E;&#x5217;&#x8868;&#x3002;</li>
-<li><p>HLSv4&#x8F6C;&#x7801;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;ts&#x6587;&#x4EF6;&#x548C;&#x4E00;&#x4E2A;m3u8&#x64AD;&#x653E;&#x5217;&#x8868;&#x3002;</p>
+&#x5BF9;&#x4E8E;&#x81EA;&#x9002;&#x5E94;HLS&#x64AD;&#x653E;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;HLS&#x8F6C;&#x7801;</p><ul><li>HLSv3&#x8F6C;&#x7801;&#x4F1A;&#x751F;&#x6210;ts&#x5207;&#x7247;&#x6587;&#x4EF6;&#xFF08;video00000.ts, video00001.ts, ...&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;m3u8&#x64AD;&#x653E;&#x5217;&#x8868;&#x3002;
 </li>
-<li><p>Playlists: Name</p>
-</li>
-</ul>
-<p>&#x81EA;&#x9002;&#x5E94;HLS&#x64AD;&#x653E;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6CE8;&#x610F;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0; <code>.m3u8</code> &#x6269;&#x5C55;&#x540D;&#x3002;</p>
-<p> Playlists: OutputKeys</p>
-<p>&#x5305;&#x542B;&#x5728;&#x81EA;&#x9002;&#x5E94; HLS &#x64AD;&#x653E;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6BCF;&#x4E2A;&#x88AB;&#x5305;&#x542B;&#x7684;&#x8F93;&#x51FA;&#x5FC5;&#x987B;&#x662F; HLS &#x8F93;&#x51FA;&#xFF08;Container &#x4E3A; <code>ts</code>&#xFF0C;&#x4E14;&#x63D0;&#x4F9B; SegmentDuration&#xFF09;&#xFF0C;&#x800C;&#x4E14; SegmentDuration &#x5FC5;&#x987B;&#x76F8;&#x540C;&#x3002;</p>
-<ul>
-<li>PipelineId</li>
-</ul>
-<p>&#x672C;&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;&#x7684;&#x7BA1;&#x9053; ID</p>
-<h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2>
-<pre><code>Status: 201 Created
+<li><p>HLSv4&#x8F6C;&#x7801;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;ts&#x6587;&#x4EF6;&#x548C;&#x4E00;&#x4E2A;m3u8&#x64AD;&#x653E;&#x5217;&#x8868;&#x3002;</p></li>
+<li><p>Playlists: Name</p></li></ul>
+<p>&#x81EA;&#x9002;&#x5E94;HLS&#x64AD;&#x653E;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6CE8;&#x610F;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0; <code>.m3u8</code> &#x6269;&#x5C55;&#x540D;&#x3002;</p><p>Playlists: OutputKeys</p><p>&#x5305;&#x542B;&#x5728;&#x81EA;&#x9002;&#x5E94; HLS &#x64AD;&#x653E;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6BCF;&#x4E2A;&#x88AB;&#x5305;&#x542B;&#x7684;&#x8F93;&#x51FA;&#x5FC5;&#x987B;&#x662F; HLS &#x8F93;&#x51FA;&#xFF08;Container &#x4E3A; <code>ts</code>&#xFF0C;&#x4E14;&#x63D0;&#x4F9B; SegmentDuration&#xFF09;&#xFF0C;&#x800C;&#x4E14; SegmentDuration &#x5FC5;&#x987B;&#x76F8;&#x540C;&#x3002;</p><ul><li>PipelineId
+</li></ul>
+<p>&#x672C;&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;&#x7684;&#x7BA1;&#x9053; ID</p><h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2><pre><code>Status: 201 Created
 Content-Type: application/json
 Content-Length: number of characters in the response
 Date: Mon, 14 Jan 2013 06:01:47 GMT
@@ -1208,9 +1155,8 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
           &quot;FinishTimeMillis&quot;:&quot;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5355;&#x4F4D;&#xFF1A;epoch milliseconds&quot;
       }
    }
-}
-</code></pre><h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
-<pre><code>{
+}</code></pre>
+<h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2><pre><code>{
    &quot;Inputs&quot;:[{
       &quot;Key&quot;:&quot;input/test.ts&quot;
    }],
@@ -1220,8 +1166,8 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
       &quot;PresetId&quot;:&quot;123&quot;,
    }],
    &quot;PipelineId&quot;:&quot;1000000000000000001&quot;
-}
-</code></pre>
+}</code></pre>
+
                                 
                                 </section>
                             
@@ -1260,7 +1206,7 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建任务","level":"1.7.3.1","depth":3,"next":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"previous":{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/create_job.md","mtime":"2018-03-27T12:47:35.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-27T12:47:38.932Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建任务","level":"1.7.3.1","depth":3,"next":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"previous":{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/create_job.md","mtime":"2018-05-15T06:21:44.141Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-15T06:21:46.106Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

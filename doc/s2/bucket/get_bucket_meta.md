@@ -11,7 +11,7 @@
 
 ```http
 GET /?meta&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -72,5 +72,5 @@ X-Requester: Your UserId
  - 请求示例：
 
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?meta&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/?meta&formatter=json"
 ```
