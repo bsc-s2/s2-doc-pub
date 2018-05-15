@@ -6,7 +6,7 @@
 
 ```http
 GET /?acl&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -15,7 +15,7 @@ Authorization: <authorization string> #请参照《签名算法》
 
 ```http
 GET /<Your-Bucket-Name>/?acl&formatter=json HTTP/1.1
-Host: s2.i.qingcdn.com
+Host: ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -72,17 +72,17 @@ X-Requester: Your UserId
  - 请求示例：
 
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?acl&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/?acl&formatter=json"
 ```
 
 或者
 
 ```
-curl -v "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?acl&KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v "http://<Your-Bucket-Name>.ss.bscstorage.com/?acl&KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
 或者
 
 ```
-curl -v "http://s2.i.qingcdn.com/<Your-Bucket-Name>/?acl&KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v "http://ss.bscstorage.com/<Your-Bucket-Name>/?acl&KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```

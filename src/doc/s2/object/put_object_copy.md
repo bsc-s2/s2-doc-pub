@@ -6,7 +6,7 @@
 
 ```http
 PUT /<ObjectName> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 x-amz-copy-source: </source-bucket/source-object>
 Authorization: <authorization string> #请参照《签名算法》
@@ -185,5 +185,5 @@ x-amz-s2-requester: <Your UserName>
 
 ```
 curl -v -X PUT -H "x-amz-copy-source: /bucket-123/path/to/file123.txt" -H "Date:
-Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/path/to/myfile.txt"
+Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/path/to/myfile.txt"
 ```

@@ -18,7 +18,7 @@
 
 ```
 PUT /<ObjectName> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Content-Length: <object data length>
 Content-Type: <mime-type>

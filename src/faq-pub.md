@@ -76,14 +76,14 @@
 - Object 名字最好不要用 '/' 开头
   比如： 需要上传一个叫file.txt文件，bucket 是 `sandbox`,
 
-  - object 设置为 `file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/file.txt` （推荐方式）
-  - object 如果设置为 `/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox//file.txt` （强烈不推荐）
+  - object 设置为 `file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/file.txt` （推荐方式）
+  - object 如果设置为 `/file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox//file.txt` （强烈不推荐）
 
 - Object 名字中最好不要有两个连续的 '/'
   比如： 需要在folder目录下上传一个叫file.txt文件，bucket 是 `sandbox`,
 
-  - object 设置为 `folder/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder/file.txt` （推荐方式）
-  - object 如果设置为 `folder//file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder//file.txt` （强烈不推荐）
+  - object 设置为 `folder/file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/folder/file.txt` （推荐方式）
+  - object 如果设置为 `folder//file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/folder//file.txt` （强烈不推荐）
   - 为什么白山云存储不建议在URL中带有2个'//'：某些CDN的cache server可能会把URL中两个连续的'//'合并为一个'/'来回源，这个时候就会出现验证失败或者404
 
 ### 如何删除一个目录?
@@ -217,8 +217,68 @@
 
 ---
 
-##  周边服务, 图片, 视频处理等
+## 视频处理
+### 转码对源文件格式有要求吗？
+一般是没有要求的，基本所有格式都是支持的。
 
+### 转码模版是描述输入文件还是输出文件？
+转码模版是配置输出文件的格式等信息，输入文件无需配置任何东西。
+
+### 转码模版都配置了什么？
+- 封装格式，flv,mp4,ts等
+- 视频编码格式，h265，h264，mpeg2等
+- 视频码率
+- 视频分辨率
+- 视频关键帧间隔
+- 视频帧率
+- 音频编码格式，aac，mp2，mp3等
+- 音频码率
+- 音频声道个数
+
+### 转码支持的输出格式？
+- flv
+- fmp4
+- mp4
+- ts
+- mp3
+- wma
+- wmv
+- mp2
+- aac
+- gif
+
+### 是否支持视频切片？
+支持，创建转码任务指定切片片段时长即可，前提是模版配置的封装格式ts。
+
+### 是否支持视频水印?
+支持，水印位置信息在转码模版中配置，创建转码任务添加水印图片即可。
+
+### 是否支持视频剪辑？
+支持，创建转码任务指定开始时间和持续时间即可。
+
+### hls切片是否支持AES128加密？
+支持，创建转码提供加密key、解密url、加密iv向量（可选）即可。
+
+### 是否支持4K转码？
+支持，模版中配置4k分辨率即可
+自动转码
+自动转码表示上传文件的同时针对这个文件系统自动创建转码任务。
+输出文件在存储的路径，比如源文件是a/b/xx.mp4
+若配置和源文件路径保持一致，文件后缀配置为foo.ts，在存储中的key就是a/b/xxfoo.ts
+若没有配置和源文件路径保持一致，文件后缀配置为foo.ts，在存储中key就是xxfoo.ts
+
+### 时长1h的视频转码需要多长时间？
+转码需要45min-60min左右，如果视频编码和音频编码不变（称为转封装，可以理解为只是后缀名字变了），需要3min-5min，这个只是预估时间，高分辨率和特殊格式时间需要更长。
+
+### 视频切片生成m3u8文件可否直接通过云存储直接播放？
+正常是无法播放的。m3u8文件存放的是一堆小ts文件的列表，播放的时候播放器需要从存储下载小ts文件，但是下载是需要签名的。
+将小 ts文件全部设置为匿名可访问，是可以播放的。
+通过cdn，云存储作为cdn的源站，是可以播放的。
+
+### 手动创建了转码任务，完成后找不到目标文件？
+有可能没有指定输出文件前缀，目标文件放到bucket根目录了
+
+## 图片处理
 ### 白山存储支持实时图片转换,旋转,缩放,剪切,打水印吗?
 
 - 支持，详见imgx_manual文档。
@@ -290,13 +350,13 @@
 
 ```
 如果要测试通过CDN进行下载加速的情况，需要将用户要访问的已备案的域名CNAME到CDN给出的域名，<br/>
-例如www.qq.com.i.qingcdn.com，CDN回源至s2.i.qingcdn.com。
+例如www.qq.com.i.qingcdn.com，CDN回源至ss.bscstorage.com。
 
 创建bucket的建议：
 1、以用户域名创建同名的bucket。
 例如用户网站域名www.qq.com，那么创建www.qq.com这样一个bucket，这时CDN配置加速时，无需修改host
 2、用户自定义bucket的名字：
-例如用户网站域名www.qq.com，用户要创建一个qq的bucket，那么CDN在配置加速时，用户访问www.qq.com.s2.i.qingcdn.com，回源时，需要将host修改成qq.s2.i.qingcdn.com
+例如用户网站域名www.qq.com，用户要创建一个qq的bucket，那么CDN在配置加速时，用户访问www.qq.com.ss.bscstorage.com，回源时，需要将host修改成qq.ss.bscstorage.com
 ```
 
 ### https是否支持? 如何使用?
@@ -376,12 +436,17 @@
 -   [s3cmd][s3cmd]
 -   [boto][boto]
 
- 白山云存储不支持 ftp 或 rsync 协议. 因为 amazon s3 对文件权限的控制粒度上更精细.
-
--   对图形界面的 ftp 替代品可以使用 Mac 下的 [cyberduck][cyberduck]
-    或 Windows 下的[s3browser][s3browser].
--   对命令行方式的 ftp 或 rsync 的替代品可以使用 [s3cmd][s3cmd]
+白山云存储不支持 ftp 或 rsync 协议. 因为amazon s3对文件权限的控制粒度上更精细.
+图形界面的ftp替代品可以使用Mac下的cyberduck和crossftp或Windows下的s3browser和crossftp.
+命令行方式的ftp 或 rsync 的替代品可以使用 [s3cmd][s3cmd]
 或[aws cli](https://aws.amazon.com/cn/cli/)
+
+存储是否支持将bucket挂载到linux主机上，可以像访问本地文件一样访问bucket中的文件？
+可以使用第三方工具
+- s3fs
+- riofs
+- googys
+
 ---
 
 [s3cmd]:        http://s3tools.org/s3cmd

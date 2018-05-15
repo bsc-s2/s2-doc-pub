@@ -6,7 +6,7 @@
 
 ```http
 DELETE /<ObjectName> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -25,6 +25,6 @@ x-amz-s2-requester: <Your UserName>
  - 请求示例：
 
 ```
-curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/path/to/my/file.txt"
+curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/path/to/my/file.txt"
 ```
 

@@ -9,7 +9,7 @@
 ## 第二步
 点击Accounts下的Add New Account，弹出如下界面，注意Storage Type选择S3
 Compatible Storage，REST
-Endpoint填s2.i.qingcdn.com。输入账号、AccessKey和SecretKey就可以点击添加一个新账户了。
+Endpoint填ss.bscstorage.com。输入账号、AccessKey和SecretKey就可以点击添加一个新账户了。
 
 ![](pic/s3-browser/step2.png)
 

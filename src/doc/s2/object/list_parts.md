@@ -6,7 +6,7 @@
 
 ```http
 GET /<ObjectName>?uploadId=<UploadId> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```

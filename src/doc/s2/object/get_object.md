@@ -6,7 +6,7 @@
  
 ```http
 GET /<ObjectName> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 Range: bytes=<byte_range> #支持断点下载
@@ -147,7 +147,7 @@ x-amz-meta-foo2: <value2> #自定义meta：foo2
  - 请求示例：
 
 ```
-curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/<Object-Name>"
+curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/<Object-Name>"
 ```
 
  - 应用举例：
@@ -156,7 +156,7 @@ curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Au
   
 ```http
 GET /my_bucket/path/to/my/file.txt HTTP/1.1
-Host: s2.i.qingcdn.com
+Host: ss.bscstorage.com
 Date: Sun, 1 Jan 2006 12:00:00 GMT
 Authorization: AWS AccessKey:ssig
 Range: bytes=100-2048
@@ -189,7 +189,7 @@ file_content
 
 ```http
 GET /path/to/my/file.txt?AWSAccessKeyId=<AccessKey>&Expires=<1175139620>&Signature=<your_sign> HTTP/1.1
-Host: my_bucket.s2.i.qingcdn.com
+Host: my_bucket.ss.bscstorage.com
 Date: date
 Range: bytes=byte_range
 ```

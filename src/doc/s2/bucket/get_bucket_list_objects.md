@@ -7,7 +7,7 @@
 
 ```http
 GET /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -16,7 +16,7 @@ Authorization: <authorization string> #请参照《签名算法》
 
 ```http
 GET /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: s2.i.qingcdn.com
+Host: ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -240,7 +240,7 @@ sai/readme.txt
 
 ```http
 GET /?prefix=join/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -262,7 +262,7 @@ Contents:
 
 ```http
 GET /?delimiter=/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -282,7 +282,7 @@ CommonPrefix:
 
 ```http
 GET /?prefix=join/&delimiter=/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -304,7 +304,7 @@ CommonPrefix:
 
 ```http
 GET /?prefix=join/&delimiter=/&max-keys=4&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -326,7 +326,7 @@ CommonPrefix:
 
 ```http
 GET /?prefix=join/&delimiter=/&max-keys=4&marker=join/userlist.txt&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```

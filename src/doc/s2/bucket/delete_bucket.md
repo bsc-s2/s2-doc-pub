@@ -8,7 +8,7 @@
 
 ```http
 DELETE /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -17,7 +17,7 @@ Authorization: <authorization string> #请参照《签名算法》
 
 ```http
 DELETE /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: s2.i.qingcdn.com
+Host: ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -36,17 +36,17 @@ X-Requester: Your UserId
  - 请求示例：
 
 ```
-curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?formatter=json"
+curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/?formatter=json"
 ```
 
 或者
 
 ```
-curl -v -X DELETE "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X DELETE "http://<Your-Bucket-Name>.ss.bscstorage.com/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
 或者
 
 ```
-curl -v -X DELETE "http://s2.i.qingcdn.com/<Your-Bucket-Name>/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X DELETE "http://ss.bscstorage.com/<Your-Bucket-Name>/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```

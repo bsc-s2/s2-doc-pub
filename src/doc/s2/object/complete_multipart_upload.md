@@ -6,7 +6,7 @@
 
 ```http
 POST /<ObjectName>?uploadId=<UploadId> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Content-Type: text/json
 Authorization: <authorization string> #请参照《签名算法》
@@ -38,7 +38,7 @@ x-amz-s2-requester: <Your UserName>
 
 <?xml version="1.0" encoding="UTF-8"?>
 <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-    <Location>http://Example-Bucket.s2.i.qingcdn.com/Example-Object</Location>
+    <Location>http://Example-Bucket.ss.bscstorage.com/Example-Object</Location>
     <Bucket>Example-Bucket</Bucket>
     <Key>Example-Object</Key>
     <ETag>"3858f62230ac3c915f300c664312c11f-9"</ETag>

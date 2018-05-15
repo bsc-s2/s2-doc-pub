@@ -7,7 +7,7 @@
 
 ```http
 HEAD /<ObjectName> HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -143,5 +143,5 @@ x-amz-meta-foo2: <value2> #自定义meta：foo2
  - 请求示例：
 
 ```
-curl -v -X HEAD -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/<Object-Name>"
+curl -v -X HEAD -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: AWS <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/<Object-Name>"
 ```

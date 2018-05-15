@@ -25,7 +25,7 @@ http://<bucket>.imgx-ss.bscstorage.com/<处理指令>/<文件路径>?<签名保�
 
 
 ## 举例
-例如：原始图片在云存储中的url为：http://s2.i.qingcdn.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773061&Signature=jFVHRSrOLeg5e3nIR00UE2vik0A%3D
+例如：原始图片在云存储中的url为：http://ss.bscstorage.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464773061&Signature=jFVHRSrOLeg5e3nIR00UE2vik0A%3D
 可以看出：
 
  - bucket为：imgx-test
@@ -1113,12 +1113,12 @@ print resp
     </thead>
     <tbody>
         <tr>
-            <td><img src="http://s2.i.qingcdn.com/imgx-test/imgx/l/icon_v.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848305&Signature=xlPiRJyVFwdViWHgbsj5yiTYl%2Bk%3D" /></td>
+            <td><img src="http://ss.bscstorage.com/imgx-test/imgx/l/icon_v.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848305&Signature=xlPiRJyVFwdViWHgbsj5yiTYl%2Bk%3D" /></td>
             <td><i>imgx/overlay/icon_v.png</i></td>
             <td><code>l_icon_v</code></td>
         </tr>
         <tr>
-            <td><img src="http://s2.i.qingcdn.com/imgx-test/imgx/l/bs_logo.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848350&Signature=H37eufIimTWyx240GDCspIUzAQM%3D" /></td>
+            <td><img src="http://ss.bscstorage.com/imgx-test/imgx/l/bs_logo.png?AWSAccessKeyId=acc_drdrxp&Expires=2464848350&Signature=H37eufIimTWyx240GDCspIUzAQM%3D" /></td>
             <td><i>imgx/overlay/bs_logo.png</i></td>
             <td><code>l_bs_logo</code></td>
         </tr>
@@ -1474,11 +1474,11 @@ http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/3.jpg?<签名>
 > 查询字体的API：http://imgx-ss.bscstorage.com/fonts
 
 
-  [1]: http://s2.i.qingcdn.com/imgx-test/demo/charles.png?AWSAccessKeyId=acc_drdrxp&Expires=2464851871&Signature=9Nb4uSsCdGbdhYdL05QNJMBOUDI%3D
-  [2]: http://s2.i.qingcdn.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464852096&Signature=krRDPWUXPGYWKaQ0FcrHOLh9w20=
-  [3]: http://s2.i.qingcdn.com/imgx-test/demo/3.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852128&Signature=UitAP/HXvS2T6Y9AAs7TGPJGwzU=
-  [4]: http://s2.i.qingcdn.com/imgx-test/demo/4.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852159&Signature=yvaPahyPoYUpLYaEE9br44JNAuw=
-  [5]: http://s2.i.qingcdn.com/imgx-test/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852222&Signature=6TpoUspMxFaB5rnKT4VzhiaWcLg%3D
-  [6]: http://s2.i.qingcdn.com/imgx-test/demo/horses.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852280&Signature=jxH/VEABVAiIEc3ZE7GYSrj6LAw=
-  [7]: http://s2.i.qingcdn.com/imgx-test/avatar.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852327&Signature=47wCMMxlDj8lP4JMaZ99NXl50%2bE=
-  [8]: http://s2.i.qingcdn.com/imgx-test/bsc_logo.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2470638306&Signature=M4FHkWtF%2FEz%2FDlu5ru5DOahuRtQ%3D
+  [1]: http://ss.bscstorage.com/imgx-test/demo/charles.png?AWSAccessKeyId=acc_drdrxp&Expires=2464851871&Signature=9Nb4uSsCdGbdhYdL05QNJMBOUDI%3D
+  [2]: http://ss.bscstorage.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2464852096&Signature=krRDPWUXPGYWKaQ0FcrHOLh9w20=
+  [3]: http://ss.bscstorage.com/imgx-test/demo/3.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852128&Signature=UitAP/HXvS2T6Y9AAs7TGPJGwzU=
+  [4]: http://ss.bscstorage.com/imgx-test/demo/4.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852159&Signature=yvaPahyPoYUpLYaEE9br44JNAuw=
+  [5]: http://ss.bscstorage.com/imgx-test/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852222&Signature=6TpoUspMxFaB5rnKT4VzhiaWcLg%3D
+  [6]: http://ss.bscstorage.com/imgx-test/demo/horses.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852280&Signature=jxH/VEABVAiIEc3ZE7GYSrj6LAw=
+  [7]: http://ss.bscstorage.com/imgx-test/avatar.png?AWSAccessKeyId=acc_drdrxp&Expires=2464852327&Signature=47wCMMxlDj8lP4JMaZ99NXl50%2bE=
+  [8]: http://ss.bscstorage.com/imgx-test/bsc_logo.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2470638306&Signature=M4FHkWtF%2FEz%2FDlu5ru5DOahuRtQ%3D

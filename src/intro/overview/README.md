@@ -181,13 +181,13 @@
 ### CDN-X和云存储的配置方法：
 
 如果要测试通过CDN进行下载加速的情况，需要将用户要访问的已备案的域名CNAME到CDN给出的域名。
-例如www.qq.com.i.qingcdn.com，CDN回源至s2.i.qingcdn.com。
+例如www.qq.com.i.qingcdn.com，CDN回源至ss.bscstorage.com。
 
 创建bucket的建议：
 
 1. 以用户域名创建同名的bucket。例如用户网站域名www.baishancloud.com，那么创建www.baishancloud.com这样一个bucket，这时CDN配置加速时，无需修改host。
 
-1. 用户自定义bucket的名称：例如用户网站域名www.baishancloud.com，用户要创建一个qq的bucket，那么CDN在配置加速时，用户访问www.baishancloud.com.s2.i.baishancloud.com，回源时，需要将host修改成qq.s2.i.qingcdn.com。
+1. 用户自定义bucket的名称：例如用户网站域名www.baishancloud.com，用户要创建一个qq的bucket，那么CDN在配置加速时，用户访问www.baishancloud.com.s2.i.baishancloud.com，回源时，需要将host修改成qq.ss.bscstorage.com。
 
 ### 404回源的方法及如何拉取文件：
 
@@ -248,14 +248,14 @@
 - Object 名字最好不要用 '/' 开头
   比如： 需要上传一个叫file.txt文件，bucket 是 `sandbox`,
 
-  - object 设置为 `file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/file.txt` （推荐方式）
-  - object 如果设置为 `/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox//file.txt` （强烈不推荐）
+  - object 设置为 `file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/file.txt` （推荐方式）
+  - object 如果设置为 `/file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox//file.txt` （强烈不推荐）
 
 - Object 名字中最好不要有两个连续的 '/'
   比如： 需要在folder目录下上传一个叫file.txt文件，bucket 是 `sandbox`,
 
-  - object 设置为 `folder/file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder/file.txt` （推荐方式）
-  - object 如果设置为 `folder//file.txt`, 访问的时候应该是 `http://s2.i.qingcdn.com/sandbox/folder//file.txt` （强烈不推荐）
+  - object 设置为 `folder/file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/folder/file.txt` （推荐方式）
+  - object 如果设置为 `folder//file.txt`, 访问的时候应该是 `http://ss.bscstorage.com/sandbox/folder//file.txt` （强烈不推荐）
   - 为什么白山云存储不建议在URL中带有2个'//'：某些CDN的cache server可能会把URL中两个连续的'//'合并为一个'/'来回源，这个时候就会出现验证失败或者404
 
 ### 如何删除白山云存储中的目录：

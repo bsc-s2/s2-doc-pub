@@ -6,7 +6,7 @@
 
 ```http
 POST / HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Content-Length: <length>
 
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundary1dIjDASRYXQm6DNA

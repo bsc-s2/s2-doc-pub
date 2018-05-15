@@ -3,8 +3,8 @@
 
 # 动漫
 
-## [原图 1920x1080，573KB](http://s2.i.qingcdn.com/imgx-test/demo/commic.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/commic.jpg" width="400" height="225">
+## [原图 1920x1080，573KB](http://ss.bscstorage.com/imgx-test/demo/commic.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/commic.jpg" width="400" height="225">
 
 ## [缩略图 宽度400，等比缩放，质量100%，114KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/commic.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/commic.jpg">
@@ -20,8 +20,8 @@
 
 
 # 影视
-## [原图 1920x1080，367KB](http://s2.i.qingcdn.com/imgx-test/demo/film.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/film.jpg" width="400" height="225">
+## [原图 1920x1080，367KB](http://ss.bscstorage.com/imgx-test/demo/film.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/film.jpg" width="400" height="225">
 
 ## [缩略图 宽度400，等比缩放，质量100%，90KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/film.jpg)
 
@@ -38,8 +38,8 @@
 
 
 # 室内
-## [原图 1920x1080，337KB](http://s2.i.qingcdn.com/imgx-test/demo/indoor.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/indoor.jpg" width="400" height="225">
+## [原图 1920x1080，337KB](http://ss.bscstorage.com/imgx-test/demo/indoor.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/indoor.jpg" width="400" height="225">
 
 ## [缩略图 宽度400，等比缩放，质量100%，102KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/indoor.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/indoor.jpg">
@@ -55,8 +55,8 @@
 
 
 # 海报
-## [原图 1024x1541，594KB](http://s2.i.qingcdn.com/imgx-test/demo/poster.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/poster.jpg" width="400" height="600">
+## [原图 1024x1541，594KB](http://ss.bscstorage.com/imgx-test/demo/poster.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/poster.jpg" width="400" height="600">
 
 ## [缩略图 宽度400，等比缩放，质量100%，190KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/poster.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/poster.jpg">
@@ -72,8 +72,8 @@
 
 
 # 产品
-## [原图 1920x1080，911KB](http://s2.i.qingcdn.com/imgx-test/demo/product.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/product.jpg" width="400" height="225">
+## [原图 1920x1080，911KB](http://ss.bscstorage.com/imgx-test/demo/product.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/product.jpg" width="400" height="225">
 
 ## [缩略图 宽度400，等比缩放，质量100%，113KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/product.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/product.jpg">
@@ -89,8 +89,8 @@
 
 
 # 人物
-## [原图 805x618，78KB](http://s2.i.qingcdn.com/imgx-test/demo/profile.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/profile.jpg" width="400" height="308">
+## [原图 805x618，78KB](http://ss.bscstorage.com/imgx-test/demo/profile.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/profile.jpg" width="400" height="308">
 
 ## [缩略图 宽度400，等比缩放，质量100%，74KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/profile.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/profile.jpg">
@@ -106,8 +106,8 @@
 
 
 # 风景
-## [原图 1920x1080，343KB](http://s2.i.qingcdn.com/imgx-test/demo/scenery.jpg)
-  <img src="http://s2.i.qingcdn.com/imgx-test/demo/scenery.jpg" width="400" height="225">
+## [原图 1920x1080，343KB](http://ss.bscstorage.com/imgx-test/demo/scenery.jpg)
+  <img src="http://ss.bscstorage.com/imgx-test/demo/scenery.jpg" width="400" height="225">
 
 ## [缩略图 宽度400，等比缩放，质量100%，85KB](http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/scenery.jpg)
   <img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,w_400,q_100/demo/scenery.jpg">

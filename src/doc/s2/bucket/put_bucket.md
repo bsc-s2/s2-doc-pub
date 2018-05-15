@@ -6,7 +6,7 @@
 
 ```http
 PUT /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.s2.i.qingcdn.com
+Host: <Your-Bucket-Name>.ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 x-amz-acl: <Canned-ACL> #请参照[《ACL》](../acl/acl.md)
@@ -16,7 +16,7 @@ x-amz-acl: <Canned-ACL> #请参照[《ACL》](../acl/acl.md)
 
 ```http
 PUT /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: s2.i.qingcdn.com
+Host: ss.bscstorage.com
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 x-amz-acl: <Canned-ACL> #请参照[《ACL》](../acl/acl.md)
@@ -57,17 +57,17 @@ X-Requester: Your UserId
  - 请求示例：
 
 ```
-curl -v -X PUT -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?formatter=json"
+curl -v -X PUT -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: Baishan <access_key>:<ssig>" "http://<Your-Bucket-Name>.ss.bscstorage.com/?formatter=json"
 ```
 
 或者
 
 ```
-curl -v -X PUT "http://<Your-Bucket-Name>.s2.i.qingcdn.com/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X PUT "http://<Your-Bucket-Name>.ss.bscstorage.com/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
 或者
 
 ```
-curl -v -X PUT "http://s2.i.qingcdn.com/<Your-Bucket-Name>/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X PUT "http://ss.bscstorage.com/<Your-Bucket-Name>/?KID=baishan,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
