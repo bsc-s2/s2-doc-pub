@@ -21,7 +21,7 @@ All public doc about S2, including API, demo, FAQ etc.
     Then
 
     ```
-    sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
+    sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
     ```
 
 ## Build
