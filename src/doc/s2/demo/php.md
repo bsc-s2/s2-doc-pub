@@ -66,7 +66,7 @@ $cmd = $cli->getCommand('GetObject', [
     'Bucket' => 'test-bucket-xxx',
     'Key' => 'test-key-xxx',
 ]);
-$req = $s3->createPresignedRequest($cmd, '+10 seconds');
+$req = $cli->createPresignedRequest($cmd, '+10 seconds');
 $url = (string) $req->getUri();
 ```
 
