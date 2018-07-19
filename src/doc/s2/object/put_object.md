@@ -41,8 +41,7 @@ x-amz-s2-requester: <Your UserName>
           <tr>
             <td>Expires</td>
             <td>
-            	文件过期时间，到期系统将自动清除文件（非即时，清除时间不定期），格式参考：http://www.w3.org/Protocols/rfc2616/
-                rfc2616-sec14.html#sec14.21.
+            	文件过期时间，到期系统将自动清除文件（非即时，清除时间不定期），格式参考：http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21
             </td>
             <td>No</td>
           </tr>    
