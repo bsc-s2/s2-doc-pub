@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>GET Object · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GET Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -962,22 +962,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#get-object">GET Object</a>
-</li></ul>
+<ul>
+<li><a href="#get-object">GET Object</a></li>
+</ul>
 <!-- mdtoc end   -->
-
-
-<h3 id="get-object">GET Object</h3><ul><li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;Object&#xFF08;&#x4E0B;&#x8F7D;&#xFF09;&#x3002;</p></li>
-<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p></li></ul>
+<h3 id="get-object">GET Object</h3>
+<ul>
+<li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;Object&#xFF08;&#x4E0B;&#x8F7D;&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p>
+</li>
+</ul>
 <pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/&lt;ObjectName&gt;</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: &lt;date&gt;
 <span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
-<span class="hljs-attribute">Range</span>: bytes=&lt;byte_range&gt; #&#x652F;&#x6301;&#x65AD;&#x70B9;&#x4E0B;&#x8F7D;</code></pre>
-<ul><li>&#x54CD;&#x5E94;&#xFF1A;
-</li></ul>
+<span class="hljs-attribute">Range</span>: bytes=&lt;byte_range&gt; #&#x652F;&#x6301;&#x65AD;&#x70B9;&#x4E0B;&#x8F7D;
+</code></pre>
+<ul>
+<li>&#x54CD;&#x5E94;&#xFF1A;</li>
+</ul>
 <pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">200</span> OK
 <span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
 <span class="hljs-attribute">Connection</span>: keep-alive
@@ -991,9 +995,11 @@
 <span class="hljs-attribute">x-amz-meta-foo2</span>: &lt;value2&gt; #&#x81EA;&#x5B9A;&#x4E49;meta&#xFF1A;foo2
 
 <span class="apache"><span class="hljs-comment">#&#x6587;&#x4EF6;&#x5185;&#x5BB9;</span>
-<span class="hljs-section">&lt;BODY&gt;</span></span></code></pre>
-<ul><li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;
-</li></ul>
+<span class="hljs-section">&lt;BODY&gt;</span>
+</span></code></pre>
+<ul>
+<li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;</li>
+</ul>
 <table class="table table-condensed">
         <thead>
           <tr>
@@ -1062,10 +1068,9 @@
         </tbody>
 </table>
 
-
-
-<ul><li>Response Headers&#xFF08;&#x54CD;&#x5E94;&#x5934;&#xFF09;&#xFF1A;
-</li></ul>
+<ul>
+<li>Response Headers&#xFF08;&#x54CD;&#x5E94;&#x5934;&#xFF09;&#xFF1A;</li>
+</ul>
 <table class="table table-condensed">
         <thead>
           <tr>
@@ -1107,21 +1112,25 @@
         </tbody>
 </table>
 
-
-
-<ul><li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;
-</li></ul>
-<pre><code>curl -v -H &quot;Range: bytes=0-1024&quot; -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/&lt;Object-Name&gt;&quot;</code></pre>
-<ul><li><p>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;</p><ul><li>&#x6807;&#x51C6;&#x793A;&#x4F8B;&#xFF1A;
-</li></ul>
-</li></ul>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code>curl -v -H &quot;Range: bytes=0-1024&quot; -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/&lt;Object-Name&gt;&quot;
+</code></pre><ul>
+<li><p>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>&#x6807;&#x51C6;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+</li>
+</ul>
 <pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/my_bucket/path/to/my/file.txt</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: Sun, 1 Jan 2006 12:00:00 GMT
 <span class="hljs-attribute">Authorization</span>: AWS AccessKey:ssig
-<span class="hljs-attribute">Range</span>: bytes=100-2048</code></pre>
-<pre><code>-    &#x54CD;&#x5E94;&#xFF1A;</code></pre>
-<pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">206</span> Partial Content
+<span class="hljs-attribute">Range</span>: bytes=100-2048
+</code></pre>
+<pre><code>-    &#x54CD;&#x5E94;&#xFF1A;
+</code></pre><pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">206</span> Partial Content
 <span class="hljs-attribute">Server</span>: openresty/1.9.7.4
 <span class="hljs-attribute">Content-Type</span>: application/xml
 <span class="hljs-attribute">Connection</span>: keep-alive
@@ -1139,14 +1148,17 @@
 file_content
 ...
 </span></code></pre>
-<ul><li>&#x4F7F;&#x7528;&#x5404;&#x79CD;&#x9A8C;&#x8BC1;&#x63AA;&#x65BD;&#x7684;&#x4E0B;&#x8F7D;&#x65B9;&#x5F0F;&#xFF1A;
-</li></ul>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5404;&#x79CD;&#x9A8C;&#x8BC1;&#x63AA;&#x65BD;&#x7684;&#x4E0B;&#x8F7D;&#x65B9;&#x5F0F;&#xFF1A;</li>
+</ul>
 <pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/path/to/my/file.txt?AWSAccessKeyId=&lt;AccessKey&gt;&amp;Expires=&lt;1175139620&gt;&amp;Signature=&lt;your_sign&gt;</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: my_bucket.ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: date
-<span class="hljs-attribute">Range</span>: bytes=byte_range</code></pre>
-<ul><li>&#x54CD;&#x5E94;&#xFF1A;
-</li></ul>
+<span class="hljs-attribute">Range</span>: bytes=byte_range
+</code></pre>
+<ul>
+<li>&#x54CD;&#x5E94;&#xFF1A;</li>
+</ul>
 <pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">206</span> Partial Content
 <span class="hljs-attribute">Server</span>: openresty/1.9.7.4
 <span class="hljs-attribute">Content-Type</span>: application/xml
@@ -1166,6 +1178,7 @@ file_content
 ...
 </span></code></pre>
 <p><strong><em>&#x4EE5;&#x4E0A;&#x793A;&#x4F8B;&#x4E2D;QueryString&#x7684;&#x542B;&#x4E49;&#x8BF7;&#x53C2;&#x7167;[&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;][1]&#x4E2D;&#x7684;&#x5173;&#x4E8E; &#x8BA4;&#x8BC1;&#x65B9;&#x5F0F; &#x7684;&#x8BF4;&#x660E;&#x3002;</em></strong></p>
+
                                 
                                 </section>
                             
@@ -1208,7 +1221,7 @@ file_content
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GET Object","level":"1.4.7.2","depth":3,"next":{"title":"PUT Object","level":"1.4.7.3","depth":3,"path":"doc/s2/object/put_object.md","ref":"doc/s2/object/put_object.md","articles":[]},"previous":{"title":"HEAD Object","level":"1.4.7.1","depth":3,"path":"doc/s2/object/head_object.md","ref":"doc/s2/object/head_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/get_object.md","mtime":"2018-07-19T12:27:47.802Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-19T12:27:50.972Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GET Object","level":"1.4.7.2","depth":3,"next":{"title":"PUT Object","level":"1.4.7.3","depth":3,"path":"doc/s2/object/put_object.md","ref":"doc/s2/object/put_object.md","articles":[]},"previous":{"title":"HEAD Object","level":"1.4.7.1","depth":3,"path":"doc/s2/object/head_object.md","ref":"doc/s2/object/head_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/get_object.md","mtime":"2018-08-07T07:44:32.932Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-07T07:44:35.349Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

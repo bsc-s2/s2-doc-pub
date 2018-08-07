@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>列出指定管道的任务 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>列出指定管道的任务 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -962,22 +962,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;">&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;</a>
-<ul><li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a>
+<ul>
+<li><a href="#&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;">&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;</a><ul>
+<li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a></li>
+<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a></li>
+<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a></li>
+<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a></li>
+</ul>
 </li>
-<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a>
-</li>
-<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a>
-</li>
-<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a>
-</li></ul>
-</li></ul>
+</ul>
 <!-- mdtoc end   -->
-
-
-<h1 id="&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;">&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;</h1><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2><p>&#x53D1;&#x9001; GET &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/jobsByPipeline/pipelineId</code> &#x4EE5;&#x5217;&#x51FA;&#x5206;&#x914D;&#x5728;&#x6307;&#x5B9A;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p><h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2><pre><code>GET /2012-09-25/jobsByPipeline/pipelineId?PageToken=12345678 HTTP/1.1
+<h1 id="&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;">&#x5217;&#x51FA;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;</h1>
+<h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x53D1;&#x9001; GET &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/jobsByPipeline/pipelineId</code> &#x4EE5;&#x5217;&#x51FA;&#x5206;&#x914D;&#x5728;&#x6307;&#x5B9A;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2>
+<pre><code>GET /2012-09-25/jobsByPipeline/pipelineId?PageToken=12345678 HTTP/1.1
 Content-Type: charset=UTF-8
 Accept: */*
 Host: transcoder-ss.bscstorage.com
@@ -985,10 +984,14 @@ x-amz-date: 20170726T174952Z
 Authorization: AWS4-HMAC-SHA256
                Credential=AccessKeyID/request-date/Transcoder endpoint/elastictranscoder/aws4_request,
                SignedHeaders=host;x-amz-date;x-amz-target,
-               Signature=calculated-signature</code></pre>
-<h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2><ul><li>PageToken
-</li></ul>
-<p>&#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E2D;&#x51FA;&#x73B0; NextPageToken,  &#x5219;&#x8BF4;&#x660E;&#x7ED3;&#x679C;&#x6CA1;&#x6709;&#x5217;&#x5B8C;&#x5168;&#x3002;&#x9700;&#x8981;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x4E2D;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B21;&#x7ED3;&#x679C;&#x4E2D;&#x7684; NextPageToken &#x505A;&#x4E3A;PageToken&#xFF0C;&#x6765;&#x7EE7;&#x7EED;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x3002;</p><h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2><pre><code>Status: 200 OK
+               Signature=calculated-signature
+</code></pre><h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2>
+<ul>
+<li>PageToken</li>
+</ul>
+<p>&#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E2D;&#x51FA;&#x73B0; NextPageToken,  &#x5219;&#x8BF4;&#x660E;&#x7ED3;&#x679C;&#x6CA1;&#x6709;&#x5217;&#x5B8C;&#x5168;&#x3002;&#x9700;&#x8981;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x4E2D;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B21;&#x7ED3;&#x679C;&#x4E2D;&#x7684; NextPageToken &#x505A;&#x4E3A;PageToken&#xFF0C;&#x6765;&#x7EE7;&#x7EED;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x3002;</p>
+<h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2>
+<pre><code>Status: 200 OK
 Content-Type: application/json
 Content-Length: number of characters in the response
 Date: Mon, 14 Jan 2013 06:01:47 GMT
@@ -1032,8 +1035,8 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
    },
    {...}],
   &quot;NextPageToken&quot;: &quot;1234567890&quot;
-}</code></pre>
-
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1076,7 +1079,7 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"next":{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]},"previous":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","mtime":"2018-07-19T12:27:49.104Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-19T12:27:50.972Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"next":{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]},"previous":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","mtime":"2018-08-07T07:44:34.013Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-07T07:44:35.349Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

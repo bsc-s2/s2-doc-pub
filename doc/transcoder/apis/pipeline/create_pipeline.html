@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>创建管道 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>创建管道 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -960,22 +960,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#&#x521B;&#x5EFA;&#x7BA1;&#x9053;">&#x521B;&#x5EFA;&#x7BA1;&#x9053;</a>
-<ul><li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a>
+<ul>
+<li><a href="#&#x521B;&#x5EFA;&#x7BA1;&#x9053;">&#x521B;&#x5EFA;&#x7BA1;&#x9053;</a><ul>
+<li><a href="#&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</a></li>
+<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a></li>
+<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a></li>
+<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a></li>
+</ul>
 </li>
-<li><a href="#&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</a>
-</li>
-<li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a>
-</li>
-<li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a>
-</li></ul>
-</li></ul>
+</ul>
 <!-- mdtoc end   -->
-
-
-<h1 id="&#x521B;&#x5EFA;&#x7BA1;&#x9053;">&#x521B;&#x5EFA;&#x7BA1;&#x9053;</h1><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2><p>&#x53D1;&#x9001; POST &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/pipelines/</code> &#x4EE5;&#x521B;&#x5EFA;&#x7BA1;&#x9053;&#x3002;</p><h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2><pre><code>POST /2012-09-25/pipelines HTTP/1.1
+<h1 id="&#x521B;&#x5EFA;&#x7BA1;&#x9053;">&#x521B;&#x5EFA;&#x7BA1;&#x9053;</h1>
+<h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x53D1;&#x9001; POST &#x8BF7;&#x6C42;&#x5230; <code>/2012-09-25/pipelines/</code> &#x4EE5;&#x521B;&#x5EFA;&#x7BA1;&#x9053;&#x3002;</p>
+<h2 id="&#x8BF7;&#x6C42;">&#x8BF7;&#x6C42;</h2>
+<pre><code>POST /2012-09-25/pipelines HTTP/1.1
 Content-Type: application/json; charset=UTF-8
 Accept: */*
 Host: transcoder-ss.bscstorage.com
@@ -1005,22 +1004,33 @@ Content-Length: number of characters in the JSON string
    },
    &quot;SuccessCallbackUrl&quot;: &quot;&#x63A5;&#x53D7;&#x4EFB;&#x52A1;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x7684; URL&quot;,
    &quot;FailureCallbackUrl&quot;: &quot;&#x63A5;&#x53D7;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x7684; URL&quot;,
-}</code></pre>
-<h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2><ul><li>Name
-</li></ul>
+}
+</code></pre><h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h2>
+<ul>
+<li>Name</li>
+</ul>
 <p>&#x7BA1;&#x9053;&#x540D;&#x79F0;&#x3002;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x60A8;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x7BA1;&#x9053;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x5F3A;&#x8FEB;&#x3002;
-&#x7BA1;&#x9053;&#x540D;&#x79F0;&#x6700;&#x957F;40&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p><ul><li>InputBucket
-</li></ul>
-<p>&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8F6C;&#x7801;&#x6E90;&#x6587;&#x4EF6;&#x7684; Bucket &#x540D;&#x79F0;&#x3002;&#x8BF7;&#x786E;&#x8BA4;&#x8F93;&#x5165;&#x7684; Bucket &#x5B58;&#x5728;&#x4E8E;&#x60A8;&#x7684;&#x8D26;&#x53F7;&#x4E2D;&#x3002;</p><ul><li>OutputBucket
-</li></ul>
-<p>&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684; Bucket &#x540D;&#x79F0;&#x3002;&#x8BF7;&#x786E;&#x8BA4;&#x8F93;&#x5165;&#x7684; Bucket &#x5B58;&#x5728;&#x4E8E;&#x60A8;&#x7684;&#x8D26;&#x53F7;&#x4E2D;&#x3002;</p><ul><li>(&#x53EF;&#x9009;&#x7684;) ContentConfig: Permissions
-</li></ul>
+&#x7BA1;&#x9053;&#x540D;&#x79F0;&#x6700;&#x957F;40&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<ul>
+<li>InputBucket</li>
+</ul>
+<p>&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8F6C;&#x7801;&#x6E90;&#x6587;&#x4EF6;&#x7684; Bucket &#x540D;&#x79F0;&#x3002;&#x8BF7;&#x786E;&#x8BA4;&#x8F93;&#x5165;&#x7684; Bucket &#x5B58;&#x5728;&#x4E8E;&#x60A8;&#x7684;&#x8D26;&#x53F7;&#x4E2D;&#x3002;</p>
+<ul>
+<li>OutputBucket</li>
+</ul>
+<p>&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684; Bucket &#x540D;&#x79F0;&#x3002;&#x8BF7;&#x786E;&#x8BA4;&#x8F93;&#x5165;&#x7684; Bucket &#x5B58;&#x5728;&#x4E8E;&#x60A8;&#x7684;&#x8D26;&#x53F7;&#x4E2D;&#x3002;</p>
+<ul>
+<li>(&#x53EF;&#x9009;&#x7684;) ContentConfig: Permissions</li>
+</ul>
 <p>&#x5B9A;&#x4E49;&#x4E86;&#x54EA;&#x4E9B;&#x7528;&#x6237;&#x6216;&#x8005;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x7528;&#x6237;&#x7EC4;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6216;&#x4FEE;&#x6539;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x3002;
 &#x5982;&#x679C;&#x60A8;&#x8BBE;&#x7F6E;&#x4E86; Permissions&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x5C06;&#x5BF9;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x4EC5;&#x6388;&#x4E88;&#x60A8;&#x6307;&#x5B9A;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x6240;&#x6709;&#x8005;&#x6388;&#x4E88;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x6743;&#x9650;&#x3002;
-&#x5982;&#x679C;&#x60A8;&#x5FFD;&#x7565;&#x4E86;&#x6B64;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x5C06;&#x5BF9;&#x6240;&#x6709;&#x8005;&#x6388;&#x4E88;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x6743;&#x9650;&#x3002;</p><ul><li>(&#x53EF;&#x9009;&#x7684;) SuccessCallbackUrl
-</li></ul>
+&#x5982;&#x679C;&#x60A8;&#x5FFD;&#x7565;&#x4E86;&#x6B64;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x5C06;&#x5BF9;&#x6240;&#x6709;&#x8005;&#x6388;&#x4E88;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x6743;&#x9650;&#x3002;</p>
+<ul>
+<li>(&#x53EF;&#x9009;&#x7684;) SuccessCallbackUrl</li>
+</ul>
 <p>&#x63A5;&#x53D7;&#x4EFB;&#x52A1;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x7684; URL&#x3002;&#x4EC5;&#x652F;&#x6301; HTTP &#x534F;&#x8BAE;&#x7684; URL&#x3002;
-&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x6210;&#x529F;&#x540E;&#x7CFB;&#x7EDF;&#x4F1A;&#x5411;&#x8BE5; URL &#x53D1;&#x9001;&#x4E00;&#x4E2A; POST &#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42; JSON &#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p><pre><code>{
+&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x6210;&#x529F;&#x540E;&#x7CFB;&#x7EDF;&#x4F1A;&#x5411;&#x8BE5; URL &#x53D1;&#x9001;&#x4E00;&#x4E2A; POST &#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42; JSON &#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code>{
     &quot;result&quot;: &quot;success&quot;,
     &quot;input_bucket&quot;: &quot;in_bucket_name&quot;,
     &quot;input_key&quot;: &quot;test.mp4&quot;,
@@ -1072,18 +1082,21 @@ Content-Length: number of characters in the JSON string
         },
         &quot;test_300K.m3u8: { ... }
     }
-}</code></pre>
-<ul><li>(&#x53EF;&#x9009;&#x7684;) FailureCallbackUrl
-</li></ul>
+}
+</code></pre><ul>
+<li>(&#x53EF;&#x9009;&#x7684;) FailureCallbackUrl</li>
+</ul>
 <p>&#x63A5;&#x53D7;&#x4EFB;&#x52A1;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x7684; URL&#x3002;&#x4EC5;&#x652F;&#x6301; HTTP &#x534F;&#x8BAE;&#x7684; URL&#x3002;
-&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x540E;&#x7CFB;&#x7EDF;&#x4F1A;&#x5411;&#x8BE5; URL &#x53D1;&#x9001;&#x4E00;&#x4E2A; POST &#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42; JSON &#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p><pre><code>{
+&#x8F6C;&#x7801;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x540E;&#x7CFB;&#x7EDF;&#x4F1A;&#x5411;&#x8BE5; URL &#x53D1;&#x9001;&#x4E00;&#x4E2A; POST &#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42; JSON &#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code>{
     &quot;result&quot;: &quot;failure&quot;,
     &quot;input_bucket&quot;: &quot;in_bucket_name&quot;,
     &quot;input_key&quot;: &quot;test.mp4&quot;,
     &quot;error_type&quot;: &quot;InternalError&quot;,
     &quot;error_message&quot;: &quot;...&quot;,
-}</code></pre>
-<h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2><pre><code>Status: 201 Created
+}
+</code></pre><h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2>
+<pre><code>Status: 201 Created
 Content-Type: application/json
 Content-Length: number of characters in the response
 Date: Mon, 14 Jun 2017 06:01:47 GMT
@@ -1107,8 +1120,8 @@ Date: Mon, 14 Jun 2017 06:01:47 GMT
        &quot;FailureCallbackUrl&quot;: &quot;http://mydomain.com/cb&quot;,
        &quot;Status&quot;: &quot;Active|Paused&quot;,
     }
-}</code></pre>
-
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1147,7 +1160,7 @@ Date: Mon, 14 Jun 2017 06:01:47 GMT
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建管道","level":"1.7.2.1","depth":3,"next":{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},"previous":{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/pipeline/create_pipeline.md","mtime":"2018-07-19T12:27:48.710Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-19T12:27:50.972Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建管道","level":"1.7.2.1","depth":3,"next":{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},"previous":{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/pipeline/create_pipeline.md","mtime":"2018-08-07T07:44:33.716Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-07T07:44:35.349Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
