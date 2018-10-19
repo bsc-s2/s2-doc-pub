@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>PHP · GitBook</title>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -975,52 +975,59 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-<ul>
-<li><a href="#php-demo">PHP Demo</a><ul>
-<li><a href="#&#x5B89;&#x88C5;aws-sdk-for-php">&#x5B89;&#x88C5;AWS SDK for PHP</a></li>
-<li><a href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a><ul>
-<li><a href="#&#x4E0A;&#x4F20;&#x6587;&#x4EF6;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</a></li>
-<li><a href="#&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;">&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</a></li>
-<li><a href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;url">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;URL</a></li>
-<li><a href="#&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6;</a></li>
-<li><a href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;acl">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;ACL</a></li>
-<li><a href="#&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;ACL</a><ul>
-<li><a href="#&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL</a></li>
-</ul>
+
+
+<ul><li><a href="#php-demo">PHP Demo</a>
+<ul><li><a href="#&#x5B89;&#x88C5;aws-sdk-for-php">&#x5B89;&#x88C5;AWS SDK for PHP</a>
 </li>
-</ul>
+<li><a href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a>
+<ul><li><a href="#&#x4E0A;&#x4F20;&#x6587;&#x4EF6;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</a>
 </li>
-<li><a href="#&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a><ul>
-<li><a href="#&#x521B;&#x5EFA;&#x6876;">&#x521B;&#x5EFA;&#x6876;</a></li>
-<li><a href="#&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;-&#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;, &#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;</a></li>
-<li><a href="#&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;</a></li>
-<li><a href="#&#x5220;&#x9664;&#x6876;">&#x5220;&#x9664;&#x6876;</a></li>
-<li><a href="#&#x83B7;&#x53D6;&#x6876;&#x7684;acl">&#x83B7;&#x53D6;&#x6876;&#x7684;ACL</a></li>
-<li><a href="#&#x8BBE;&#x7F6E;&#x6876;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6876;&#x7684;ACL</a><ul>
-<li><a href="#&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl&#xFF1A;">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL&#xFF1A;</a></li>
-</ul>
+<li><a href="#&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;">&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</a>
 </li>
-</ul>
+<li><a href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;url">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;URL</a>
 </li>
-<li><a href="#&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a><ul>
-<li><a href="#&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;</a></li>
-</ul>
+<li><a href="#&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6;</a>
 </li>
-</ul>
+<li><a href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;acl">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;ACL</a>
 </li>
-</ul>
+<li><a href="#&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;ACL</a>
+<ul><li><a href="#&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</a>
+</li>
+<li><a href="#&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul><li><a href="#&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a>
+<ul><li><a href="#&#x521B;&#x5EFA;&#x6876;">&#x521B;&#x5EFA;&#x6876;</a>
+</li>
+<li><a href="#&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;-&#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;, &#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;</a>
+</li>
+<li><a href="#&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;</a>
+</li>
+<li><a href="#&#x5220;&#x9664;&#x6876;">&#x5220;&#x9664;&#x6876;</a>
+</li>
+<li><a href="#&#x83B7;&#x53D6;&#x6876;&#x7684;acl">&#x83B7;&#x53D6;&#x6876;&#x7684;ACL</a>
+</li>
+<li><a href="#&#x8BBE;&#x7F6E;&#x6876;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6876;&#x7684;ACL</a>
+<ul><li><a href="#&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</a>
+</li>
+<li><a href="#&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl&#xFF1A;">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL&#xFF1A;</a>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul><li><a href="#&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</a>
+<ul><li><a href="#&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;</a>
+</li></ul>
+</li></ul>
 <!-- mdtoc end   -->
-<h2 id="php-demo">PHP Demo</h2>
-<p>&#x7CFB;&#x7EDF;&#x9700;&#x6C42;&#xFF1A;</p>
-<ul>
-<li>PHP &gt;= 5.5.0</li>
-</ul>
-<h3 id="&#x5B89;&#x88C5;aws-sdk-for-php">&#x5B89;&#x88C5;AWS SDK for PHP</h3>
-<pre><code>curl -O http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar
-</code></pre><p>&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8BBE;&#x7F6E;&#x5E10;&#x53F7;&#x4FE1;&#x606F;&#x548C;&#x57DF;&#x540D;</p>
-<pre><code class="lang-php">
+
+
+<h2 id="php-demo">PHP Demo</h2><p>&#x7CFB;&#x7EDF;&#x9700;&#x6C42;&#xFF1A;</p><ul><li>PHP &gt;= 5.5.0
+</li></ul>
+<h3 id="&#x5B89;&#x88C5;aws-sdk-for-php">&#x5B89;&#x88C5;AWS SDK for PHP</h3><pre><code>curl -O http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8BBE;&#x7F6E;&#x5E10;&#x53F7;&#x4FE1;&#x606F;&#x548C;&#x57DF;&#x540D;</p><pre><code class="lang-php">
 <span class="hljs-keyword">require</span> <span class="hljs-string">&apos;aws.phar&apos;</span>;
 $cli = <span class="hljs-keyword">new</span> Aws\S3\S3Client([
     <span class="hljs-string">&apos;version&apos;</span> =&gt; <span class="hljs-string">&apos;latest&apos;</span>,
@@ -1032,59 +1039,40 @@ $cli = <span class="hljs-keyword">new</span> Aws\S3\S3Client([
     <span class="hljs-string">&apos;endpoint&apos;</span> =&gt; <span class="hljs-string">&apos;http://ss.bscstorage.com&apos;</span>,
 ]);
 </code></pre>
-<h3 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3>
-<h4 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</h4>
-<p>ACL&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;&apos;private&apos; &#x6216; &apos;public-read&apos; &#x6216; &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;
+<h3 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3><h4 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</h4><p>ACL&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;&apos;private&apos; &#x6216; &apos;public-read&apos; &#x6216; &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;
 &#x5982;&#x679C;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x5728;&#x5185;&#x5B58;&#x4E2D;,&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&apos;Body&apos;&#x6307;&#x5B9A;&#x3002;
-&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&apos;SourceFile&apos;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x2019;Body&#x2018;&#x548C;&apos;SourceFile&apos;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;putObject([
+&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&apos;SourceFile&apos;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x2019;Body&#x2018;&#x548C;&apos;SourceFile&apos;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;</p><pre><code class="lang-php">$resp = $cli-&gt;putObject([
     <span class="hljs-string">&apos;ACL&apos;</span> =&gt; <span class="hljs-string">&apos;public-read&apos;</span>,
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
     <span class="hljs-string">&apos;ContentType&apos;</span> =&gt; <span class="hljs-string">&apos;image/jpeg&apos;</span>,  <span class="hljs-comment">//&#x8BF7;&#x66FF;&#x6362;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;</span>
     <span class="hljs-string">&apos;Body&apos;</span> =&gt; <span class="hljs-string">&apos;file content as a string&apos;</span>,
     <span class="hljs-comment">//&apos;SourceFile&apos; =&gt; &apos;/root/test.jpg&apos;,</span>
-]);
-</code></pre>
-<h4 id="&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;">&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;getObject([
+]);</code></pre>
+<h4 id="&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;">&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</h4><pre><code class="lang-php">$resp = $cli-&gt;getObject([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;url">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;URL</h4>
-<p>&#x83B7;&#x53D6;&#x5DF2;&#x7B7E;&#x540D;&#x7684;URL&#x7528;&#x6765;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x7B7E;&#x540D;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;</p>
-<pre><code class="lang-php">$cmd = $cli-&gt;getCommand(<span class="hljs-string">&apos;GetObject&apos;</span>, [
+]);</code></pre>
+<h4 id="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;url">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;URL</h4><p>&#x83B7;&#x53D6;&#x5DF2;&#x7B7E;&#x540D;&#x7684;URL&#x7528;&#x6765;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x7B7E;&#x540D;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;</p><pre><code class="lang-php">$cmd = $cli-&gt;getCommand(<span class="hljs-string">&apos;GetObject&apos;</span>, [
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
 ]);
 $req = $cli-&gt;createPresignedRequest($cmd, <span class="hljs-string">&apos;+10 seconds&apos;</span>);
-$url = (string) $req-&gt;getUri();
-</code></pre>
-<h4 id="&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6;</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;deleteObject([
+$url = (string) $req-&gt;getUri();</code></pre>
+<h4 id="&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6;</h4><pre><code class="lang-php">$resp = $cli-&gt;deleteObject([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;acl">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;ACL</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;getObjectAcl([
+]);</code></pre>
+<h4 id="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;acl">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;ACL</h4><pre><code class="lang-php">$resp = $cli-&gt;getObjectAcl([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;ACL</h4>
-<h5 id="&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</h5>
-<p>&#x652F;&#x6301;&#x7684;&#x9884;&#x5B9A;&#x4E49;ACL&#x6709;&#xFF1A;&apos;private&apos;, &apos;public-read&apos;, &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;putObjectAcl([
+]);</code></pre>
+<h4 id="&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;ACL</h4><h5 id="&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</h5><p>&#x652F;&#x6301;&#x7684;&#x9884;&#x5B9A;&#x4E49;ACL&#x6709;&#xFF1A;&apos;private&apos;, &apos;public-read&apos;, &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p><pre><code class="lang-php">$resp = $cli-&gt;putObjectAcl([
     <span class="hljs-string">&apos;ACL&apos;</span> =&gt; <span class="hljs-string">&apos;public-read-write&apos;</span>,
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
-]);
-</code></pre>
-<h5 id="&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL</h5>
-<p>&#x53EF;&#x6307;&#x5B9A;&#x7684;Permission&#x5305;&#x62EC;&#xFF1A;&apos;FULL_CONTROL&apos;, &apos;WRITE&apos;, &apos;WRITE_ACP&apos;, &apos;READ&apos;, &apos;READ_ACP&apos;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;putObjectAcl([
+]);</code></pre>
+<h5 id="&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL</h5><p>&#x53EF;&#x6307;&#x5B9A;&#x7684;Permission&#x5305;&#x62EC;&#xFF1A;&apos;FULL_CONTROL&apos;, &apos;WRITE&apos;, &apos;WRITE_ACP&apos;, &apos;READ&apos;, &apos;READ_ACP&apos;</p><pre><code class="lang-php">$resp = $cli-&gt;putObjectAcl([
     <span class="hljs-string">&apos;AccessControlPolicy&apos;</span> =&gt; [
         <span class="hljs-string">&apos;Grants&apos;</span> =&gt; [
             [
@@ -1109,25 +1097,17 @@ $url = (string) $req-&gt;getUri();
     ],
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Key&apos;</span> =&gt; <span class="hljs-string">&apos;test-key-xxx&apos;</span>,
-]);
-</code></pre>
-<h3 id="&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3>
-<h4 id="&#x521B;&#x5EFA;&#x6876;">&#x521B;&#x5EFA;&#x6876;</h4>
-<p>ACL&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;&apos;private&apos; &#x6216; &apos;public-read&apos; &#x6216; &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;createBucket([
+]);</code></pre>
+<h3 id="&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x6876;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3><h4 id="&#x521B;&#x5EFA;&#x6876;">&#x521B;&#x5EFA;&#x6876;</h4><p>ACL&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;&apos;private&apos; &#x6216; &apos;public-read&apos; &#x6216; &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p><pre><code class="lang-php">$resp = $cli-&gt;createBucket([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;ACL&apos;</span> =&gt; <span class="hljs-string">&apos;public-read&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;-&#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;, &#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;listObjects([
+]);</code></pre>
+<h4 id="&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;-&#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;, &#x6BCF;&#x6B21;&#x6700;&#x591A;&#x8FD4;&#x56DE;1000&#x4E2A;&#x6587;&#x4EF6;</h4><pre><code class="lang-php">$resp = $cli-&gt;listObjects([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
     <span class="hljs-string">&apos;Prefix&apos;</span> =&gt; <span class="hljs-string">&apos;&apos;</span>,
     <span class="hljs-string">&apos;Marker&apos;</span> =&gt; <span class="hljs-string">&apos;&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;</h4>
-<pre><code class="lang-php">$marker = <span class="hljs-string">&apos;&apos;</span>;
+]);</code></pre>
+<h4 id="&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;">&#x5217;&#x51FA;&#x6876;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;</h4><pre><code class="lang-php">$marker = <span class="hljs-string">&apos;&apos;</span>;
 <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>):
     $resp = $cli-&gt;listObjects([
         <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
@@ -1144,29 +1124,18 @@ $url = (string) $req-&gt;getUri();
         var_dump($content[<span class="hljs-string">&apos;Key&apos;</span>]);
         $marker = $content[<span class="hljs-string">&apos;Key&apos;</span>];
     }
-<span class="hljs-keyword">endwhile</span>;
-</code></pre>
-<h4 id="&#x5220;&#x9664;&#x6876;">&#x5220;&#x9664;&#x6876;</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;deleteBucket([
+<span class="hljs-keyword">endwhile</span>;</code></pre>
+<h4 id="&#x5220;&#x9664;&#x6876;">&#x5220;&#x9664;&#x6876;</h4><pre><code class="lang-php">$resp = $cli-&gt;deleteBucket([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x6876;&#x7684;acl">&#x83B7;&#x53D6;&#x6876;&#x7684;ACL</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;getBucketAcl([
+]);</code></pre>
+<h4 id="&#x83B7;&#x53D6;&#x6876;&#x7684;acl">&#x83B7;&#x53D6;&#x6876;&#x7684;ACL</h4><pre><code class="lang-php">$resp = $cli-&gt;getBucketAcl([
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
-]);
-</code></pre>
-<h4 id="&#x8BBE;&#x7F6E;&#x6876;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6876;&#x7684;ACL</h4>
-<h5 id="&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</h5>
-<p>&#x652F;&#x6301;&#x7684;&#x9884;&#x5B9A;&#x4E49;ACL&#x6709;&#xFF1A;&apos;private&apos;, &apos;public-read&apos;, &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;putBucketAcl([
+]);</code></pre>
+<h4 id="&#x8BBE;&#x7F6E;&#x6876;&#x7684;acl">&#x8BBE;&#x7F6E;&#x6876;&#x7684;ACL</h4><h5 id="&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;acl">&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x7684;ACL</h5><p>&#x652F;&#x6301;&#x7684;&#x9884;&#x5B9A;&#x4E49;ACL&#x6709;&#xFF1A;&apos;private&apos;, &apos;public-read&apos;, &apos;public-read-write&apos; &#x6216; &apos;authenticated-read&apos;</p><pre><code class="lang-php">$resp = $cli-&gt;putBucketAcl([
     <span class="hljs-string">&apos;ACL&apos;</span> =&gt; <span class="hljs-string">&apos;public-read-write&apos;</span>,
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
-]);
-</code></pre>
-<h5 id="&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl&#xFF1A;">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL&#xFF1A;</h5>
-<p>&#x53EF;&#x6307;&#x5B9A;&#x7684;Permission&#x5305;&#x62EC;&#xFF1A;&apos;FULL_CONTROL&apos;, &apos;WRITE&apos;, &apos;WRITE_ACP&apos;, &apos;READ&apos;, &apos;READ_ACP&apos;</p>
-<pre><code class="lang-php">$resp = $cli-&gt;putBucketAcl([
+]);</code></pre>
+<h5 id="&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;acl&#xFF1A;">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;ACL&#xFF1A;</h5><p>&#x53EF;&#x6307;&#x5B9A;&#x7684;Permission&#x5305;&#x62EC;&#xFF1A;&apos;FULL_CONTROL&apos;, &apos;WRITE&apos;, &apos;WRITE_ACP&apos;, &apos;READ&apos;, &apos;READ_ACP&apos;</p><pre><code class="lang-php">$resp = $cli-&gt;putBucketAcl([
     <span class="hljs-string">&apos;AccessControlPolicy&apos;</span> =&gt; [
         <span class="hljs-string">&apos;Grants&apos;</span> =&gt; [
             [
@@ -1190,16 +1159,11 @@ $url = (string) $req-&gt;getUri();
         ],
     ],
     <span class="hljs-string">&apos;Bucket&apos;</span> =&gt; <span class="hljs-string">&apos;test-bucket-xxx&apos;</span>,
-]);
-</code></pre>
-<h3 id="&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3>
-<h4 id="&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;</h4>
-<pre><code class="lang-php">$resp = $cli-&gt;listBuckets([
-]);
-</code></pre>
+]);</code></pre>
+<h3 id="&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;">&#x670D;&#x52A1;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;</h3><h4 id="&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6876;</h4><pre><code class="lang-php">$resp = $cli-&gt;listBuckets([
+]);</code></pre>
 <p>AWS &#x5B98;&#x65B9; SDK <a href="https://aws.amazon.com/sdk-for-php/" target="_blank">aws-sdk-php</a>
 &#x63A5;&#x53E3;&#x8BE6;&#x7EC6;&#x6587;&#x6863; <a href="http://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.S3.S3Client.html" target="_blank">api-reference</a></p>
-
                                 
                                 </section>
                             
@@ -1242,7 +1206,7 @@ $url = (string) $req-&gt;getUri();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PHP","level":"1.4.1.2","depth":3,"next":{"title":"PHPV2","level":"1.4.1.3","depth":3,"path":"doc/s2/demo/phpv2.md","ref":"doc/s2/demo/phpv2.md","articles":[]},"previous":{"title":"Python","level":"1.4.1.1","depth":3,"path":"doc/s2/demo/python.md","ref":"doc/s2/demo/python.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/demo/php.md","mtime":"2018-09-17T05:20:20.840Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-09-17T05:20:23.541Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PHP","level":"1.4.1.2","depth":3,"next":{"title":"PHPV2","level":"1.4.1.3","depth":3,"path":"doc/s2/demo/phpv2.md","ref":"doc/s2/demo/phpv2.md","articles":[]},"previous":{"title":"Python","level":"1.4.1.1","depth":3,"path":"doc/s2/demo/python.md","ref":"doc/s2/demo/python.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/demo/php.md","mtime":"2018-10-19T08:40:05.769Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-10-19T08:40:09.710Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
