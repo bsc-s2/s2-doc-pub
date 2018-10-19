@@ -424,7 +424,7 @@
 
 ### 白山云存储是否提供web管理界面让用户管理自己的文件?
 
-提供，管理界面登陆地址：http://console.bscstorage.com
+提供，管理界面登陆地址：https://cwn-ss.portal.baishancloud.com
 
 
 ### 如何上传文件? 是否可以通过 ftp 或 rsync 的方式上传? 是否有客户端?
