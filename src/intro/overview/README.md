@@ -1,4 +1,4 @@
-![](http://imgx-test.heheapp.com/w_300/bsc_logo.jpg)
+![](http://ss.bscstorage.com/imgx-test/bsc_logo.jpg?AWSAccessKeyId=acc_drdrxp&Expires=2470638306&Signature=M4FHkWtF%2FEz%2FDlu5ru5DOahuRtQ%3D)
 <br/>
 <br/>
 <br/>
