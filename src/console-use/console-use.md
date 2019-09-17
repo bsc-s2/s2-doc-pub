@@ -21,7 +21,7 @@
 
 # 1. 功能特性
 ## 1. 用户登录
-用户登录网站：http://console.bscstorage.com/，输入用户名及密码登录。
+用户登录网站：http://cwn-ss.bscstorage.com/，输入用户名及密码登录。
 ![](console/1.png)
  
 在登录操作界面后，右上角可以选择退出登入。

@@ -94,7 +94,7 @@
 
 ### 创建转码模板
 
-在存储控制台的[视频处理->转码模板](http://console.bscstorage.com/#/video/template)模块中，通过 UI 来创建转码模板。
+在存储控制台的[视频处理->转码模板](http://cwn-ss.bscstorage.com/#/video/template)模块中，通过 UI 来创建转码模板。
 
 ### 创建管道
 
