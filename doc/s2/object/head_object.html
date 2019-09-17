@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>HEAD Object · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HEAD Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -240,6 +240,19 @@
             
                     
                     Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../demo/dotnet.html">
+            
+                <a href="../demo/dotnet.html">
+            
+                    
+                    Dotnet
             
                 </a>
             
@@ -975,21 +988,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#head-object">HEAD Object</a>
-</li></ul>
+<ul>
+<li><a href="#head-object">HEAD Object</a></li>
+</ul>
 <!-- mdtoc end   -->
-
-
-<h3 id="head-object">HEAD Object</h3><ul><li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x4F7F;&#x7528;HEAD&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;Object&#x7684;Metadata&#x3002;</p></li>
-<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p></li></ul>
+<h3 id="head-object">HEAD Object</h3>
+<ul>
+<li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x4F7F;&#x7528;HEAD&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;Object&#x7684;Metadata&#x3002;</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p>
+</li>
+</ul>
 <pre><code class="lang-http"><span class="hljs-keyword">HEAD</span> <span class="hljs-string">/&lt;ObjectName&gt;</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: &lt;date&gt;
-<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;</code></pre>
-<ul><li>&#x54CD;&#x5E94;&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;
-</li></ul>
+<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
+</code></pre>
+<ul>
+<li>&#x54CD;&#x5E94;&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;</li>
+</ul>
 <pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">200</span> OK
 <span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
 <span class="hljs-attribute">Connection</span>: keep-alive
@@ -1000,9 +1017,11 @@
 <span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
 <span class="hljs-attribute">x-amz-s2-requester</span>: &lt;Your UserName&gt;
 <span class="hljs-attribute">x-amz-meta-foo1</span>: &lt;value1&gt; #&#x81EA;&#x5B9A;&#x4E49;meta&#xFF1A;foo1
-<span class="hljs-attribute">x-amz-meta-foo2</span>: &lt;value2&gt; #&#x81EA;&#x5B9A;&#x4E49;meta&#xFF1A;foo2</code></pre>
-<ul><li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;
-</li></ul>
+<span class="hljs-attribute">x-amz-meta-foo2</span>: &lt;value2&gt; #&#x81EA;&#x5B9A;&#x4E49;meta&#xFF1A;foo2
+</code></pre>
+<ul>
+<li>Request Headers&#xFF08;&#x8BF7;&#x6C42;&#x5934;&#xFF09;&#xFF1A;</li>
+</ul>
 <table class="table table-condensed">
         <thead>
           <tr>
@@ -1071,10 +1090,9 @@
         </tbody>
     </table>
 
-
-
-<ul><li>Response Headers&#xFF08;&#x54CD;&#x5E94;&#x5934;&#xFF09;&#xFF1A;
-</li></ul>
+<ul>
+<li>Response Headers&#xFF08;&#x54CD;&#x5E94;&#x5934;&#xFF09;&#xFF1A;</li>
+</ul>
 <table class="table table-condensed">
         <thead>
           <tr>
@@ -1116,12 +1134,11 @@
         </tbody>
 </table>
 
-
-
-<ul><li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;
-</li></ul>
-<pre><code>curl -v -X HEAD -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/&lt;Object-Name&gt;&quot;</code></pre>
-
+<ul>
+<li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code>curl -v -X HEAD -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/&lt;Object-Name&gt;&quot;
+</code></pre>
                                 
                                 </section>
                             
@@ -1164,7 +1181,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HEAD Object","level":"1.4.7.1","depth":3,"next":{"title":"GET Object","level":"1.4.7.2","depth":3,"path":"doc/s2/object/get_object.md","ref":"doc/s2/object/get_object.md","articles":[]},"previous":{"title":"Object","level":"1.4.7","depth":2,"path":"doc/s2/object/README.md","ref":"doc/s2/object/README.md","articles":[{"title":"HEAD Object","level":"1.4.7.1","depth":3,"path":"doc/s2/object/head_object.md","ref":"doc/s2/object/head_object.md","articles":[]},{"title":"GET Object","level":"1.4.7.2","depth":3,"path":"doc/s2/object/get_object.md","ref":"doc/s2/object/get_object.md","articles":[]},{"title":"PUT Object","level":"1.4.7.3","depth":3,"path":"doc/s2/object/put_object.md","ref":"doc/s2/object/put_object.md","articles":[]},{"title":"APPEND Object","level":"1.4.7.4","depth":3,"path":"doc/s2/object/append_object.md","ref":"doc/s2/object/append_object.md","articles":[]},{"title":"POST Object","level":"1.4.7.5","depth":3,"path":"doc/s2/object/post_object.md","ref":"doc/s2/object/post_object.md","articles":[]},{"title":"PUT Object - Copy","level":"1.4.7.6","depth":3,"path":"doc/s2/object/put_object_copy.md","ref":"doc/s2/object/put_object_copy.md","articles":[]},{"title":"DELETE Object","level":"1.4.7.7","depth":3,"path":"doc/s2/object/delete_object.md","ref":"doc/s2/object/delete_object.md","articles":[]},{"title":"GET Object ACL","level":"1.4.7.8","depth":3,"path":"doc/s2/object/get_object_acl.md","ref":"doc/s2/object/get_object_acl.md","articles":[]},{"title":"PUT Object ACL","level":"1.4.7.9","depth":3,"path":"doc/s2/object/put_object_acl.md","ref":"doc/s2/object/put_object_acl.md","articles":[]},{"title":"Initiate Multipart Upload","level":"1.4.7.10","depth":3,"path":"doc/s2/object/initiate_multipart_upload.md","ref":"doc/s2/object/initiate_multipart_upload.md","articles":[]},{"title":"Upload Part","level":"1.4.7.11","depth":3,"path":"doc/s2/object/upload_part.md","ref":"doc/s2/object/upload_part.md","articles":[]},{"title":"Upload Part copy","level":"1.4.7.12","depth":3,"path":"doc/s2/object/upload_part_copy.md","ref":"doc/s2/object/upload_part_copy.md","articles":[]},{"title":"Complete Multipart Upload","level":"1.4.7.13","depth":3,"path":"doc/s2/object/complete_multipart_upload.md","ref":"doc/s2/object/complete_multipart_upload.md","articles":[]},{"title":"List Parts","level":"1.4.7.14","depth":3,"path":"doc/s2/object/list_parts.md","ref":"doc/s2/object/list_parts.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/head_object.md","mtime":"2018-10-24T10:16:22.240Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-10-24T10:16:25.367Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HEAD Object","level":"1.4.7.1","depth":3,"next":{"title":"GET Object","level":"1.4.7.2","depth":3,"path":"doc/s2/object/get_object.md","ref":"doc/s2/object/get_object.md","articles":[]},"previous":{"title":"Object","level":"1.4.7","depth":2,"path":"doc/s2/object/README.md","ref":"doc/s2/object/README.md","articles":[{"title":"HEAD Object","level":"1.4.7.1","depth":3,"path":"doc/s2/object/head_object.md","ref":"doc/s2/object/head_object.md","articles":[]},{"title":"GET Object","level":"1.4.7.2","depth":3,"path":"doc/s2/object/get_object.md","ref":"doc/s2/object/get_object.md","articles":[]},{"title":"PUT Object","level":"1.4.7.3","depth":3,"path":"doc/s2/object/put_object.md","ref":"doc/s2/object/put_object.md","articles":[]},{"title":"APPEND Object","level":"1.4.7.4","depth":3,"path":"doc/s2/object/append_object.md","ref":"doc/s2/object/append_object.md","articles":[]},{"title":"POST Object","level":"1.4.7.5","depth":3,"path":"doc/s2/object/post_object.md","ref":"doc/s2/object/post_object.md","articles":[]},{"title":"PUT Object - Copy","level":"1.4.7.6","depth":3,"path":"doc/s2/object/put_object_copy.md","ref":"doc/s2/object/put_object_copy.md","articles":[]},{"title":"DELETE Object","level":"1.4.7.7","depth":3,"path":"doc/s2/object/delete_object.md","ref":"doc/s2/object/delete_object.md","articles":[]},{"title":"GET Object ACL","level":"1.4.7.8","depth":3,"path":"doc/s2/object/get_object_acl.md","ref":"doc/s2/object/get_object_acl.md","articles":[]},{"title":"PUT Object ACL","level":"1.4.7.9","depth":3,"path":"doc/s2/object/put_object_acl.md","ref":"doc/s2/object/put_object_acl.md","articles":[]},{"title":"Initiate Multipart Upload","level":"1.4.7.10","depth":3,"path":"doc/s2/object/initiate_multipart_upload.md","ref":"doc/s2/object/initiate_multipart_upload.md","articles":[]},{"title":"Upload Part","level":"1.4.7.11","depth":3,"path":"doc/s2/object/upload_part.md","ref":"doc/s2/object/upload_part.md","articles":[]},{"title":"Upload Part copy","level":"1.4.7.12","depth":3,"path":"doc/s2/object/upload_part_copy.md","ref":"doc/s2/object/upload_part_copy.md","articles":[]},{"title":"Complete Multipart Upload","level":"1.4.7.13","depth":3,"path":"doc/s2/object/complete_multipart_upload.md","ref":"doc/s2/object/complete_multipart_upload.md","articles":[]},{"title":"List Parts","level":"1.4.7.14","depth":3,"path":"doc/s2/object/list_parts.md","ref":"doc/s2/object/list_parts.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/head_object.md","mtime":"2019-09-17T08:05:21.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T08:05:23.762Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

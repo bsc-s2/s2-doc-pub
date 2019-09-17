@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>DELETE Bucket · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DELETE Bucket · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -240,6 +240,19 @@
             
                     
                     Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../demo/dotnet.html">
+            
+                <a href="../demo/dotnet.html">
+            
+                    
+                    Dotnet
             
                 </a>
             
@@ -975,38 +988,49 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#delete-bucket">DELETE Bucket</a>
-</li></ul>
+<ul>
+<li><a href="#delete-bucket">DELETE Bucket</a></li>
+</ul>
 <!-- mdtoc end   -->
-
-
-<h3 id="delete-bucket">DELETE Bucket</h3><ul><li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;Bucket&#x3002;</p></li>
-<li><p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x5220;&#x9664;&#x975E;&#x7A7A;Bucket&#x3002;</p></li>
-<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p></li></ul>
+<h3 id="delete-bucket">DELETE Bucket</h3>
+<ul>
+<li><p>&#x63CF;&#x8FF0;&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;Bucket&#x3002;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x5220;&#x9664;&#x975E;&#x7A7A;Bucket&#x3002;</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#xFF1A;</p>
+</li>
+</ul>
 <pre><code class="lang-http"><span class="hljs-keyword">DELETE</span> <span class="hljs-string">/?formatter=json</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: &lt;date&gt;
-<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;</code></pre>
-<p>&#x6216;&#x8005;</p><pre><code class="lang-http"><span class="hljs-keyword">DELETE</span> <span class="hljs-string">/&lt;Your-Bucket-Name&gt;/?formatter=json</span> HTTP/1.1
+<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
+</code></pre>
+<p>&#x6216;&#x8005;</p>
+<pre><code class="lang-http"><span class="hljs-keyword">DELETE</span> <span class="hljs-string">/&lt;Your-Bucket-Name&gt;/?formatter=json</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: ss.bscstorage.com
 <span class="hljs-attribute">Date</span>: &lt;date&gt;
-<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;</code></pre>
-<ul><li>&#x54CD;&#x5E94;&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;
-</li></ul>
+<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #&#x8BF7;&#x53C2;&#x7167;&#x300A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x300B;
+</code></pre>
+<ul>
+<li>&#x54CD;&#x5E94;&#xFF08;&#x65E0;HTTP Body&#xFF09;&#xFF1A;</li>
+</ul>
 <pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">204</span> No Content
 <span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
 <span class="hljs-attribute">Content-Length</span>: 0
 <span class="hljs-attribute">Connection</span>: keep-alive
 <span class="hljs-attribute">X-RequestId</span>: 00078d50-1404-0810-5947-782bcb10b128
-<span class="hljs-attribute">X-Requester</span>: Your UserId</code></pre>
-<ul><li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;
-</li></ul>
-<pre><code>curl -v -X DELETE -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: Baishan &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/?formatter=json&quot;</code></pre>
-<p>&#x6216;&#x8005;</p><pre><code>curl -v -X DELETE &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/?KID=baishan,&lt;access_key&gt;&amp;Expires=1398873316&amp;ssig=&lt;ssig&gt;&amp;formatter=json&quot;</code></pre>
-<p>&#x6216;&#x8005;</p><pre><code>curl -v -X DELETE &quot;http://ss.bscstorage.com/&lt;Your-Bucket-Name&gt;/?KID=baishan,&lt;access_key&gt;&amp;Expires=1398873316&amp;ssig=&lt;ssig&gt;&amp;formatter=json&quot;</code></pre>
-
+<span class="hljs-attribute">X-Requester</span>: Your UserId
+</code></pre>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code>curl -v -X DELETE -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: Baishan &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/?formatter=json&quot;
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>curl -v -X DELETE &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/?KID=baishan,&lt;access_key&gt;&amp;Expires=1398873316&amp;ssig=&lt;ssig&gt;&amp;formatter=json&quot;
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>curl -v -X DELETE &quot;http://ss.bscstorage.com/&lt;Your-Bucket-Name&gt;/?KID=baishan,&lt;access_key&gt;&amp;Expires=1398873316&amp;ssig=&lt;ssig&gt;&amp;formatter=json&quot;
+</code></pre>
                                 
                                 </section>
                             
@@ -1049,7 +1073,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DELETE Bucket","level":"1.4.6.3","depth":3,"next":{"title":"PUT Bucket ACL","level":"1.4.6.4","depth":3,"path":"doc/s2/bucket/put_bucket_acl.md","ref":"doc/s2/bucket/put_bucket_acl.md","articles":[]},"previous":{"title":"PUT Bucket","level":"1.4.6.2","depth":3,"path":"doc/s2/bucket/put_bucket.md","ref":"doc/s2/bucket/put_bucket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/bucket/delete_bucket.md","mtime":"2018-10-24T10:16:21.719Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-10-24T10:16:25.367Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DELETE Bucket","level":"1.4.6.3","depth":3,"next":{"title":"PUT Bucket ACL","level":"1.4.6.4","depth":3,"path":"doc/s2/bucket/put_bucket_acl.md","ref":"doc/s2/bucket/put_bucket_acl.md","articles":[]},"previous":{"title":"PUT Bucket","level":"1.4.6.2","depth":3,"path":"doc/s2/bucket/put_bucket.md","ref":"doc/s2/bucket/put_bucket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/bucket/delete_bucket.md","mtime":"2019-09-17T08:05:21.113Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T08:05:23.762Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

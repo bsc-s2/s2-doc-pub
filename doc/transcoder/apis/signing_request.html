@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>请求签名 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>请求签名 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -238,6 +238,19 @@
             
                     
                     Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../s2/demo/dotnet.html">
+            
+                <a href="../../s2/demo/dotnet.html">
+            
+                    
+                    Dotnet
             
                 </a>
             
@@ -973,18 +986,20 @@
                                 <section class="normal markdown-section">
                                 
                                 <!-- mdtoc start -->
-
-
-<ul><li><a href="#transcoder-&#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;">Transcoder &#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;</a>
-</li></ul>
+<ul>
+<li><a href="#transcoder-&#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;">Transcoder &#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;</a></li>
+</ul>
 <!-- mdtoc end   -->
+<h1 id="transcoder-&#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;">Transcoder &#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;</h1>
+<p>Transcoder API &#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x5747;&#x9700;&#x8981;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x3002;
+Transcoder &#x670D;&#x52A1;&#x76EE;&#x524D;&#x652F;&#x6301; AWS V4 &#x7B7E;&#x540D;&#x65B9;&#x5F0F;&#x3002;&#x5305;&#x62EC;&#x4E0B;&#x5217;&#x56DB;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA; Canonical Request</li>
+<li>&#x521B;&#x5EFA; String to Sign &#xFF08;&#x8BF7;&#x6CE8;&#x610F;&#x4F7F;&#x7528; <code>elastictranscoder</code> &#x670D;&#x52A1;&#x540D;&#xFF09;</li>
+<li>&#x4F7F;&#x7528; HMAC &#x65B9;&#x6CD5;&#x751F;&#x6210;&#x7B7E;&#x540D;&#x3002;</li>
+</ol>
+<p>&#x5177;&#x4F53; V4 &#x7B7E;&#x540D;&#x6B65;&#x9AA4;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;<a href="../../s2/signature/signature.html#&#x6DFB;&#x52A0;version-4-&#x7B7E;&#x540D;&#xFF1A;">&#x7B7E;&#x540D;&#x7B97;&#x6CD5;</a></p>
 
-
-<h1 id="transcoder-&#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;">Transcoder &#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x65B9;&#x5F0F;</h1><p>Transcoder API &#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x5747;&#x9700;&#x8981;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x3002;
-Transcoder &#x670D;&#x52A1;&#x76EE;&#x524D;&#x652F;&#x6301; AWS V4 &#x7B7E;&#x540D;&#x65B9;&#x5F0F;&#x3002;&#x5305;&#x62EC;&#x4E0B;&#x5217;&#x56DB;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;
-1. &#x521B;&#x5EFA; Canonical Request
-2. &#x521B;&#x5EFA; String to Sign &#xFF08;&#x8BF7;&#x6CE8;&#x610F;&#x4F7F;&#x7528; <code>elastictranscoder</code> &#x670D;&#x52A1;&#x540D;&#xFF09;
-3. &#x4F7F;&#x7528; HMAC &#x65B9;&#x6CD5;&#x751F;&#x6210;&#x7B7E;&#x540D;&#x3002;</p><p>&#x5177;&#x4F53; V4 &#x7B7E;&#x540D;&#x6B65;&#x9AA4;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;<a href="../../s2/signature/signature.html#&#x6DFB;&#x52A0;version-4-&#x7B7E;&#x540D;&#xFF1A;">&#x7B7E;&#x540D;&#x7B97;&#x6CD5;</a></p>
                                 
                                 </section>
                             
@@ -1023,7 +1038,7 @@ Transcoder &#x670D;&#x52A1;&#x76EE;&#x524D;&#x652F;&#x6301; AWS V4 &#x7B7E;&#x54
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"请求签名","level":"1.7.1","depth":2,"next":{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},"previous":{"title":"视音频处理","level":"1.7","depth":1,"path":"doc/transcoder/README.md","ref":"doc/transcoder/README.md","articles":[{"title":"请求签名","level":"1.7.1","depth":2,"path":"doc/transcoder/apis/signing_request.md","ref":"doc/transcoder/apis/signing_request.md","articles":[]},{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},{"title":"音视频元信息","level":"1.7.4","depth":2,"path":"doc/transcoder/apis/metadata.md","ref":"doc/transcoder/apis/metadata.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/signing_request.md","mtime":"2018-10-24T10:16:23.213Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-10-24T10:16:25.367Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"请求签名","level":"1.7.1","depth":2,"next":{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},"previous":{"title":"视音频处理","level":"1.7","depth":1,"path":"doc/transcoder/README.md","ref":"doc/transcoder/README.md","articles":[{"title":"请求签名","level":"1.7.1","depth":2,"path":"doc/transcoder/apis/signing_request.md","ref":"doc/transcoder/apis/signing_request.md","articles":[]},{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},{"title":"音视频元信息","level":"1.7.4","depth":2,"path":"doc/transcoder/apis/metadata.md","ref":"doc/transcoder/apis/metadata.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/signing_request.md","mtime":"2019-09-17T08:05:22.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T08:05:23.762Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
