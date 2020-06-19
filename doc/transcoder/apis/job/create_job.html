@@ -993,6 +993,7 @@
 <li><a href="#&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</a></li>
 <li><a href="#&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</a></li>
 <li><a href="#&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</a></li>
+<li><a href="#&#x901A;&#x8FC7;sdk&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x901A;&#x8FC7;SDK&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</a></li>
 </ul>
 </li>
 </ul>
@@ -1084,7 +1085,7 @@ Content-Length: number of characters in the JSON string
 &#x6CE8;&#x610F;&#xFF1A;</p>
 <ul>
 <li>&#x5982;&#x679C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E8E;&#x5B58;&#x50A8;&#x4E2D;&#xFF0C;&#x539F;&#x6587;&#x4EF6;&#x5C06;&#x88AB;&#x672C;&#x6B21;&#x8F6C;&#x7801;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x3002;</li>
-<li><p>&#x5982;&#x679C;&#x6A21;&#x677F;&#x4E2D;&#x7684;  Container &#x662F; <code>ts</code>&#xFF0C;&#x4E14; SegmentDuration &#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4F1A;&#x5728;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0; <code>00000.ts</code>&#x548C; <code>.m3u8</code> &#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x540E;&#x7F00; <code>.ts</code>&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x662F; <code>OutputKeyPrefixKey.ts00000.ts</code>&#x3002;</p>
+<li><p>&#x5982;&#x679C;&#x6A21;&#x677F;&#x4E2D;&#x7684;  Container &#x662F; <code>ts</code>&#xFF0C;&#x4E14; SegmentDuration &#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x4F1A;&#x5728;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0; <code>uuid00000.ts</code>&#x548C; <code>.m3u8</code> &#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x540E;&#x7F00; <code>.ts</code>&#xFF0C;&#x5219;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x662F; <code>OutputKeyPrefixKey.tsuuid00000.ts</code>&#xFF0C;<code>uuid</code>&#x8868;&#x793A;&#x672C;&#x6B21;&#x8F6C;&#x7801;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x6240;&#x6709;&#x7684;<code>ts</code>&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x643A;&#x5E26;&#xFF0C;&#x7C7B;&#x4F3C;<code>471c1c6e620c45debe9e3b3388749017</code>&#x3002;</p>
 </li>
 <li><p>Outputs: PresetId</p>
 </li>
@@ -1247,7 +1248,65 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
    }],
    &quot;PipelineId&quot;:&quot;1000000000000000001&quot;
 }
+</code></pre><h2 id="&#x901A;&#x8FC7;sdk&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x901A;&#x8FC7;SDK&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</h2>
+<p>python</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> boto3
+<span class="hljs-keyword">from</span> botocore.client <span class="hljs-keyword">import</span> Config
+
+
+config = Config(signature_version=<span class="hljs-string">&apos;s3v4&apos;</span>)
+cli = boto3.client(<span class="hljs-string">&apos;elastictranscoder&apos;</span>,
+                   config=config,
+                   region_name=<span class="hljs-string">&apos;us-west-2&apos;</span>,
+                   endpoint_url=<span class="hljs-string">&apos;http://transcoder-ss.bscstorage.com&apos;</span>,
+                   aws_access_key_id=<span class="hljs-string">&quot;accesskey&quot;</span>,
+                   aws_secret_access_key=<span class="hljs-string">&quot;secretkey&quot;</span>)
+
+inputs = [{
+   <span class="hljs-string">&apos;Key&apos;</span>: <span class="hljs-string">&quot;sample.mp4&quot;</span>,
+}]
+
+outputs = [{
+   <span class="hljs-string">&apos;Key&apos;</span>: <span class="hljs-string">&quot;sample.m3u8&quot;</span>,
+   <span class="hljs-comment"># &#x8F6C;&#x7801;&#x6A21;&#x677F;id&#xFF0C;&#x9700;&#x8981;&#x9884;&#x5148;&#x914D;&#x7F6E;</span>
+   <span class="hljs-string">&apos;PresetId&apos;</span>: <span class="hljs-string">&quot;1000&quot;</span>,
+   <span class="hljs-string">&apos;SegmentDuration&apos;</span>: <span class="hljs-string">&quot;10&quot;</span>,
+}]
+
+<span class="hljs-keyword">print</span> cli.create_job(
+   <span class="hljs-comment"># &#x7BA1;&#x9053;id&#xFF0C;&#x8BF7;&#x9884;&#x5148;&#x521B;&#x5EFA;</span>
+   PipelineId=<span class="hljs-string">&apos;pipelineid&apos;</span>,
+   Inputs=inputs,
+   Outputs=outputs,
+)
 </code></pre>
+<p>java</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">create_job</span><span class="hljs-params">()</span> </span>{
+   BasicAWSCredentials awsCreds = <span class="hljs-keyword">new</span> BasicAWSCredentials(<span class="hljs-string">&quot;accessKey&quot;</span>, <span class="hljs-string">&quot;secretKey&quot;</span>);
+
+   ClientConfiguration clientconfiguration = <span class="hljs-keyword">new</span> ClientConfiguration();
+   clientconfiguration.setSocketTimeout(<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>); <span class="hljs-comment">// in milliseconds</span>
+   clientconfiguration.setConnectionTimeout(<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>); <span class="hljs-comment">// in milliseconds</span>
+
+   AmazonElasticTranscoder client = <span class="hljs-keyword">new</span> AmazonElasticTranscoderClient(awsCreds, clientconfiguration);
+   client.setEndpoint(<span class="hljs-string">&quot;http://transcoder-ss.bscstorage.com&quot;</span>);
+
+   JobInput input = <span class="hljs-keyword">new</span> JobInput().withKey(<span class="hljs-string">&quot;sample.mp4&quot;</span>);
+
+   List&lt;JobInput&gt; inputs = Arrays.asList(input);
+
+   CreateJobOutput out1 = <span class="hljs-keyword">new</span> CreateJobOutput().withKey(<span class="hljs-string">&quot;output.mp4&quot;</span>).withPresetId(<span class="hljs-string">&quot;1000&quot;</span>);
+
+   List&lt;CreateJobOutput&gt; outputs = Arrays.asList(out1);
+
+   CreateJobRequest createJobRequest = <span class="hljs-keyword">new</span> CreateJobRequest().withPipelineId(<span class="hljs-string">&quot;pipelineid&quot;</span>)
+            .withInputs(inputs).withOutputs(outputs);
+
+   Job j = client.createJob(createJobRequest).getJob();
+   System.out.printf(<span class="hljs-string">&quot;task id: %s\n&quot;</span>, j.getId());
+}
+</code></pre>
+
                                 
                                 </section>
                             
@@ -1286,7 +1345,7 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建任务","level":"1.7.3.1","depth":3,"next":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"previous":{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/create_job.md","mtime":"2019-09-17T08:05:22.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T08:05:23.762Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建任务","level":"1.7.3.1","depth":3,"next":{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},"previous":{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/transcoder/apis/job/create_job.md","mtime":"2020-06-19T08:45:39.931Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-19T08:45:41.371Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
