@@ -97,6 +97,12 @@ putObjectrequest.setCannedAcl(CannedAccessControlList.PublicReadWrite);
 PutObjectResult putObjectResult = s3.putObject(putObjectrequest);
 ```
 
+#### copy文件
+
+```java
+CopyObjectResult res = s3.copyObject("srcBucketName", "srcKey", "dstBucketName", "dstKey");
+```
+
 #### 下载文件
 
 ```java

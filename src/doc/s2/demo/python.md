@@ -61,6 +61,29 @@ resp = cli.upload_file(
 )
 ```
 
+#### copy文件
+
+copy源bucket中所有以`aa`前缀的文件到目标bucket中
+
+```python
+marker = ''
+
+while True:
+    resp = s3.list_objects(
+        Bucket='src-bucket',
+        Prefix='aa',
+        Marker=marker,
+    )
+
+    if 'Contents' not in resp:
+        break
+
+    for content in resp['Contents']:
+        s3.copy_object(Bucket='dst-bucket', Key=content['key'], CopySource='/%s/%s' % ('src-bucket', content['key']))
+
+    marker = resp['Contents'][-1]['Key']
+```
+
 #### 下载文件
 
 ```python

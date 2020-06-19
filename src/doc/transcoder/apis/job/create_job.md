@@ -94,7 +94,7 @@ Content-Length: number of characters in the JSON string
 转码输出文件名。输出的文件将会保存在管道中设置的 OutputBucket 中。
 注意：
 - 如果输出文件名已经存在于存储中，原文件将被本次转码输出文件覆盖。
-- 如果模板中的  Container 是 `ts`，且 SegmentDuration 不为空，则最终输出文件名会在所提供的输出文件名的基础上增加 `00000.ts`和 `.m3u8` 。所以如果所提供的输出文件名已经包含后缀 `.ts`，则最终的结果会是 `OutputKeyPrefixKey.ts00000.ts`。
+- 如果模板中的  Container 是 `ts`，且 SegmentDuration 不为空，则最终输出文件名会在所提供的输出文件名的基础上增加 `uuid00000.ts`和 `.m3u8` 。所以如果所提供的输出文件名已经包含后缀 `.ts`，则最终的结果会是 `OutputKeyPrefixKey.tsuuid00000.ts`，`uuid`表示本次转码的唯一标识，所有的`ts`文件都会携带，类似`471c1c6e620c45debe9e3b3388749017`。
 
 - Outputs: PresetId
 
@@ -258,6 +258,7 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
 ```
 
 ## 例子
+
 ```
 {
    "Inputs":[{
@@ -269,5 +270,70 @@ Date: Mon, 14 Jan 2013 06:01:47 GMT
       "PresetId":"123",
    }],
    "PipelineId":"1000000000000000001"
+}
+```
+
+## 通过SDK创建任务
+
+python
+
+```python
+import boto3
+from botocore.client import Config
+
+
+config = Config(signature_version='s3v4')
+cli = boto3.client('elastictranscoder',
+                   config=config,
+                   region_name='us-west-2',
+                   endpoint_url='http://transcoder-ss.bscstorage.com',
+                   aws_access_key_id="accesskey",
+                   aws_secret_access_key="secretkey")
+
+inputs = [{
+   'Key': "sample.mp4",
+}]
+
+outputs = [{
+   'Key': "sample.m3u8",
+   # 转码模板id，需要预先配置
+   'PresetId': "1000",
+   'SegmentDuration': "10",
+}]
+
+print cli.create_job(
+   # 管道id，请预先创建
+   PipelineId='pipelineid',
+   Inputs=inputs,
+   Outputs=outputs,
+)
+```
+
+java
+
+```java
+public static void create_job() {
+   BasicAWSCredentials awsCreds = new BasicAWSCredentials("accessKey", "secretKey");
+
+   ClientConfiguration clientconfiguration = new ClientConfiguration();
+   clientconfiguration.setSocketTimeout(60 * 60 * 1000); // in milliseconds
+   clientconfiguration.setConnectionTimeout(60 * 60 * 1000); // in milliseconds
+
+   AmazonElasticTranscoder client = new AmazonElasticTranscoderClient(awsCreds, clientconfiguration);
+   client.setEndpoint("http://transcoder-ss.bscstorage.com");
+
+   JobInput input = new JobInput().withKey("sample.mp4");
+
+   List<JobInput> inputs = Arrays.asList(input);
+
+   CreateJobOutput out1 = new CreateJobOutput().withKey("output.mp4").withPresetId("1000");
+
+   List<CreateJobOutput> outputs = Arrays.asList(out1);
+
+   CreateJobRequest createJobRequest = new CreateJobRequest().withPipelineId("pipelineid")
+            .withInputs(inputs).withOutputs(outputs);
+
+   Job j = client.createJob(createJobRequest).getJob();
+   System.out.printf("task id: %s\n", j.getId());
 }
 ```

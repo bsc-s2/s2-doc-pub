@@ -27,6 +27,56 @@ bucket名字
 
 获取元信息的音视频文件的key
 
+## 如何使用SDK接口
+
+python
+
+```python
+import boto3
+from botocore.client import Config
+import json
+
+
+cli = boto3.client(
+    's3',
+    use_ssl=False,
+    aws_access_key_id='accesskey',
+    aws_secret_access_key='secretkey',
+    endpoint_url='http://transcoder-ss.bscstorage.com/metadata',
+    config=Config(s3={'addressing_style': 'path'})
+)
+
+res = cli.get_object(Bucket='your bucket', Key="sample.mp4")
+res_json = json.loads(res['Body'].read())
+print repr(res_json)
+```
+
+java
+
+```java
+public static void get_meta() {
+    BasicAWSCredentials awsCreds = new BasicAWSCredentials("accesskey", "secretkey");
+    ClientConfiguration clientconfiguration = new ClientConfiguration();
+    clientconfiguration.setSocketTimeout(60 * 60 * 1000); // in milliseconds
+    clientconfiguration.setConnectionTimeout(60 * 60 * 1000); // in milliseconds
+
+    AmazonS3 client = new AmazonS3Client(awsCreds, clientconfiguration);
+    client.setEndpoint("http://transcoder-ss.bscstorage.com/metadata");
+
+    S3ClientOptions opt = S3ClientOptions.builder().setPathStyleAccess(true).build();
+    client.setS3ClientOptions(opt);
+
+    S3Object s3Object = client.getObject("your bucket", "sample.mp4");
+    byte[] buf = new byte[10240];
+    try {
+        s3Object.getObjectContent().read(buf, 0, 10240);
+        System.out.println(new String(buf, "UTF-8"));
+    } catch (IOException e) {
+        System.out.println("errr");
+    }
+}
+```
+
 ## 返回
 
 ```
