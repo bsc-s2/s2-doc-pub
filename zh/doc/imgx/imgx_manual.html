@@ -1,0 +1,2473 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>图片实时处理API imgx · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../transcoder/" />
+    
+    
+    <link rel="prev" href="../offline/offline-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../intro/overview/">
+            
+                <a href="../../intro/overview/">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../faq-pub.html">
+            
+                <a href="../../faq-pub.html">
+            
+                    
+                    常见问题 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../s2/">
+            
+                <a href="../s2/">
+            
+                    
+                    对象存储 Object Storage Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../s2/demo/">
+            
+                <a href="../s2/demo/">
+            
+                    
+                    实例 兼容Amazon SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../s2/demo/python.html">
+            
+                <a href="../s2/demo/python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../s2/demo/php.html">
+            
+                <a href="../s2/demo/php.html">
+            
+                    
+                    PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../s2/demo/phpv2.html">
+            
+                <a href="../s2/demo/phpv2.html">
+            
+                    
+                    PHPV2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../s2/demo/browser.html">
+            
+                <a href="../s2/demo/browser.html">
+            
+                    
+                    Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../s2/demo/nodejs.html">
+            
+                <a href="../s2/demo/nodejs.html">
+            
+                    
+                    Nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../s2/demo/java.html">
+            
+                <a href="../s2/demo/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../s2/demo/go.html">
+            
+                <a href="../s2/demo/go.html">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../s2/demo/dotnet.html">
+            
+                <a href="../s2/demo/dotnet.html">
+            
+                    
+                    Dotnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../s2/limitation/limit.html">
+            
+                <a href="../s2/limitation/limit.html">
+            
+                    
+                    约束与限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../s2/signature/signature.html">
+            
+                <a href="../s2/signature/signature.html">
+            
+                    
+                    签名算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../s2/acl/acl.html">
+            
+                <a href="../s2/acl/acl.html">
+            
+                    
+                    ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../s2/service/">
+            
+                <a href="../s2/service/">
+            
+                    
+                    Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../s2/service/buckets_list.html">
+            
+                <a href="../s2/service/buckets_list.html">
+            
+                    
+                    LIST Buckets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../s2/bucket/">
+            
+                <a href="../s2/bucket/">
+            
+                    
+                    Bucket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../s2/bucket/get_bucket_list_objects.html">
+            
+                <a href="../s2/bucket/get_bucket_list_objects.html">
+            
+                    
+                    GET Bucket or List Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../s2/bucket/put_bucket.html">
+            
+                <a href="../s2/bucket/put_bucket.html">
+            
+                    
+                    PUT Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../s2/bucket/delete_bucket.html">
+            
+                <a href="../s2/bucket/delete_bucket.html">
+            
+                    
+                    DELETE Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../s2/bucket/put_bucket_acl.html">
+            
+                <a href="../s2/bucket/put_bucket_acl.html">
+            
+                    
+                    PUT Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../s2/bucket/get_bucket_acl.html">
+            
+                <a href="../s2/bucket/get_bucket_acl.html">
+            
+                    
+                    GET Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../s2/object/">
+            
+                <a href="../s2/object/">
+            
+                    
+                    Object
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../s2/object/head_object.html">
+            
+                <a href="../s2/object/head_object.html">
+            
+                    
+                    HEAD Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../s2/object/get_object.html">
+            
+                <a href="../s2/object/get_object.html">
+            
+                    
+                    GET Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../s2/object/put_object.html">
+            
+                <a href="../s2/object/put_object.html">
+            
+                    
+                    PUT Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../s2/object/append_object.html">
+            
+                <a href="../s2/object/append_object.html">
+            
+                    
+                    APPEND Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../s2/object/post_object.html">
+            
+                <a href="../s2/object/post_object.html">
+            
+                    
+                    POST Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.6" data-path="../s2/object/put_object_copy.html">
+            
+                <a href="../s2/object/put_object_copy.html">
+            
+                    
+                    PUT Object - Copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.7" data-path="../s2/object/delete_object.html">
+            
+                <a href="../s2/object/delete_object.html">
+            
+                    
+                    DELETE Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.8" data-path="../s2/object/get_object_acl.html">
+            
+                <a href="../s2/object/get_object_acl.html">
+            
+                    
+                    GET Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.9" data-path="../s2/object/put_object_acl.html">
+            
+                <a href="../s2/object/put_object_acl.html">
+            
+                    
+                    PUT Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.10" data-path="../s2/object/initiate_multipart_upload.html">
+            
+                <a href="../s2/object/initiate_multipart_upload.html">
+            
+                    
+                    Initiate Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.11" data-path="../s2/object/upload_part.html">
+            
+                <a href="../s2/object/upload_part.html">
+            
+                    
+                    Upload Part
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.12" data-path="../s2/object/upload_part_copy.html">
+            
+                <a href="../s2/object/upload_part_copy.html">
+            
+                    
+                    Upload Part copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.13" data-path="../s2/object/complete_multipart_upload.html">
+            
+                <a href="../s2/object/complete_multipart_upload.html">
+            
+                    
+                    Complete Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.14" data-path="../s2/object/list_parts.html">
+            
+                <a href="../s2/object/list_parts.html">
+            
+                    
+                    List Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../s2/sts/sts.html">
+            
+                <a href="../s2/sts/sts.html">
+            
+                    
+                    临时签名:STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../offline/offline-api.html">
+            
+                <a href="../offline/offline-api.html">
+            
+                    
+                    离线下载 Offline Downloader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="imgx_manual.html">
+            
+                <a href="imgx_manual.html">
+            
+                    
+                    图片实时处理API imgx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../transcoder/">
+            
+                <a href="../transcoder/">
+            
+                    
+                    视音频处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../transcoder/apis/signing_request.html">
+            
+                <a href="../transcoder/apis/signing_request.html">
+            
+                    
+                    请求签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    管道相关接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../transcoder/apis/pipeline/create_pipeline.html">
+            
+                <a href="../transcoder/apis/pipeline/create_pipeline.html">
+            
+                    
+                    创建管道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../transcoder/apis/pipeline/get_pipeline.html">
+            
+                <a href="../transcoder/apis/pipeline/get_pipeline.html">
+            
+                    
+                    获取管道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../transcoder/apis/pipeline/list_pipelines.html">
+            
+                <a href="../transcoder/apis/pipeline/list_pipelines.html">
+            
+                    
+                    列管道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                <a href="../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                    
+                    删除管道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="../transcoder/apis/pipeline/update_pipeline.html">
+            
+                <a href="../transcoder/apis/pipeline/update_pipeline.html">
+            
+                    
+                    更新管道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    任务相关接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../transcoder/apis/job/create_job.html">
+            
+                <a href="../transcoder/apis/job/create_job.html">
+            
+                    
+                    创建任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../transcoder/apis/job/get_job.html">
+            
+                <a href="../transcoder/apis/job/get_job.html">
+            
+                    
+                    获取任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                <a href="../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                    
+                    列出指定管道的任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../transcoder/apis/job/cancel_job.html">
+            
+                <a href="../transcoder/apis/job/cancel_job.html">
+            
+                    
+                    取消任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../transcoder/apis/metadata.html">
+            
+                <a href="../transcoder/apis/metadata.html">
+            
+                    
+                    音视频元信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../toolkit/">
+            
+                <a href="../../toolkit/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../toolkit/s3-browser.html">
+            
+                <a href="../../toolkit/s3-browser.html">
+            
+                    
+                    windows 图形界面存储管理工具 s3-browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../console-use/">
+            
+                <a href="../../console-use/">
+            
+                    
+                    控制台使用手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../console-use/console-use.html">
+            
+                <a href="../../console-use/console-use.html">
+            
+                    
+                    白山云存储控制台操作手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../all-in-one.html">
+            
+                <a href="../../all-in-one.html">
+            
+                    
+                    All-in-One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >图片实时处理API imgx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- mdtoc start -->
+<ul>
+<li><a href="#imgx&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x8BF4;&#x660E;">Imgx(&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;)&#x4F7F;&#x7528;&#x8BF4;&#x660E;</a><ul>
+<li><a href="#url&#x683C;&#x5F0F;">URL&#x683C;&#x5F0F;</a></li>
+<li><a href="#&#x4E3E;&#x4F8B;">&#x4E3E;&#x4F8B;</a></li>
+<li><a href="#&#x6307;&#x4EE4;&#x683C;&#x5F0F;">&#x6307;&#x4EE4;&#x683C;&#x5F0F;</a></li>
+<li><a href="#&#x7B7E;&#x540D;">&#x7B7E;&#x540D;</a></li>
+<li><a href="#&#x7F13;&#x5B58;--cdn">&#x7F13;&#x5B58; &amp; CDN</a></li>
+<li><a href="#&#x56FE;&#x7247;&#x5904;&#x7406;&#x6307;&#x4EE4;">&#x56FE;&#x7247;&#x5904;&#x7406;&#x6307;&#x4EE4;</a></li>
+<li><a href="#&#x4F7F;&#x7528;aws-sdk&#x8BBF;&#x95EE;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;">&#x4F7F;&#x7528;AWS-SDK&#x8BBF;&#x95EE;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;</a></li>
+<li><a href="#&#x6C34;&#x5370;&#x529F;&#x80FD;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;">&#x6C34;&#x5370;&#x529F;&#x80FD;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</a><ul>
+<li><a href="#&#x56FE;&#x7247;&#x6C34;&#x5370;">&#x56FE;&#x7247;&#x6C34;&#x5370;</a></li>
+<li><a href="#&#x6587;&#x5B57;&#x6C34;&#x5370;">&#x6587;&#x5B57;&#x6C34;&#x5370;</a><ul>
+<li><a href="#&#x793A;&#x4F8B;1&#xFF1A;">&#x793A;&#x4F8B;1&#xFF1A;</a></li>
+<li><a href="#&#x793A;&#x4F8B;2&#xFF1A;">&#x793A;&#x4F8B;2&#xFF1A;</a></li>
+<li><a href="#&#x793A;&#x4F8B;3&#xFF1A;">&#x793A;&#x4F8B;3&#xFF1A;</a></li>
+<li><a href="#&#x793A;&#x4F8B;4&#xFF1A;">&#x793A;&#x4F8B;4&#xFF1A;</a></li>
+<li><a href="#&#x793A;&#x4F8B;5&#xFF1A;">&#x793A;&#x4F8B;5&#xFF1A;</a></li>
+<li><a href="#&#x793A;&#x4F8B;6&#xFF1A;">&#x793A;&#x4F8B;6&#xFF1A;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x4F7F;&#x7528;&#x201C;&#x6307;&#x4EE4;&#x96C6;&#x201D;">&#x4F7F;&#x7528;&#x201C;&#x6307;&#x4EE4;&#x96C6;&#x201D;</a></li>
+<li><a href="#&#x5B57;&#x4F53;-fontfamily">&#x5B57;&#x4F53; (font_family)</a></li>
+</ul>
+</li>
+</ul>
+<!-- mdtoc end   -->
+<p><img src="http://imgx-ss.bscstorage.com/imgx-test/w_300/bsc_logo.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=1504489369&amp;Signature=hzOLDt69E94WpxQP69FEsvWJWbU%3D%" alt=""></p>
+<h1 id="imgx&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x8BF4;&#x660E;">Imgx(&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;)&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h1>
+<p>&#x6807;&#x7B7E;&#xFF1A; &#x56FE;&#x7247;&#x5904;&#x7406; imgx &#x767D;&#x5C71;&#x4E91; &#x5B58;&#x50A8;&#x670D;&#x52A1;</p>
+<hr>
+<h2 id="url&#x683C;&#x5F0F;">URL&#x683C;&#x5F0F;</h2>
+<pre><code>http://imgx-ss.bscstorage.com/&lt;bucket&gt;/&lt;&#x5904;&#x7406;&#x6307;&#x4EE4;&gt;/&lt;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&gt;?&lt;&#x7B7E;&#x540D;&#x4FDD;&#x62A4;&gt;
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>http://&lt;bucket&gt;.imgx-ss.bscstorage.com/&lt;&#x5904;&#x7406;&#x6307;&#x4EE4;&gt;/&lt;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&gt;?&lt;&#x7B7E;&#x540D;&#x4FDD;&#x62A4;&gt;
+</code></pre><ul>
+<li><code>bucket</code> : &#x60A8;&#x5728;&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x4E2D;&#x7684;bucket&#x540D;&#x79F0;&#xFF1B;</li>
+<li><code>&#x5904;&#x7406;&#x6307;&#x4EE4;</code> : &#x5BF9;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x7684;&#x5904;&#x7406;&#x6307;&#x4EE4;&#xFF0C;&#x4E0B;&#x9762;&#x6709;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF1B;</li>
+<li><code>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</code> : &#x539F;&#x59CB;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5728;&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#xFF1B;</li>
+<li><code>&#x7B7E;&#x540D;&#x4FDD;&#x62A4;</code> : &#x4E3B;&#x8981;&#x662F;&#x7B7E;&#x540D;&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;&#xFF1B;</li>
+</ul>
+<h2 id="&#x4E3E;&#x4F8B;">&#x4E3E;&#x4F8B;</h2>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x5728;&#x4E91;&#x5B58;&#x50A8;&#x4E2D;&#x7684;url&#x4E3A;&#xFF1A;<a href="http://ss.bscstorage.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464773061&amp;Signature=jFVHRSrOLeg5e3nIR00UE2vik0A%3D" target="_blank">http://ss.bscstorage.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464773061&amp;Signature=jFVHRSrOLeg5e3nIR00UE2vik0A%3D</a>
+&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF1A;</p>
+<ul>
+<li>bucket&#x4E3A;&#xFF1A;imgx-test</li>
+<li>&#x5728;bucket&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x4E3A;&#xFF1A;demo/1.jpg</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x4E0B;&#x5217;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x88C1;&#x526A;&#x4EBA;&#x8138;&#x533A;&#x57DF;, &#x5E76;&#x5C06;&#x56FE;&#x7247;&#x7F29;&#x7565;&#xFF1A;400x400&#xFF1A;<code>c_thumb,g_face,w_400,h_400</code></li>
+<li>&#x5C06;&#x56FE;&#x7247;&#x53D8;&#x6210;&#x5706;&#x89D2;&#xFF0C;&#x534A;&#x5F84;&#x4E3A;&#x6700;&#x5927;(&#x6B63;&#x5706;)&#xFF1A;<code>r_max</code></li>
+<li>&#x5C06;&#x56FE;&#x7247;&#x4EAE;&#x5EA6;&#x589E;&#x52A0;8%&#xFF1A;<code>e_brightness:8</code></li>
+<li>&#x5C06;&#x56FE;&#x7247;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;png&#x683C;&#x5F0F;&#xFF1A;<code>f_png</code></li>
+</ul>
+<p>&#x5904;&#x7406;&#x6307;&#x4EE4;&#x4E3A;&#xFF1A;<code>c_thumb,g_face,w_400,h_400,r_max,e_brightness:8,f_png</code>
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;URL&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF1A;</p>
+<pre><code>http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464773122&amp;Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>http://imgx-test.imgx-ss.bscstorage.com/c_thumb,g_face,w_400,h_400,r_max,e_brightness%3A8,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464773122&amp;Signature=4cwxt1e%2Fg2NL1OfsldaVsa8SD9s%3D
+</code></pre><p>&#x6216;&#x8005;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;json&#x6587;&#x4EF6;(&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x60F3;&#x5C06;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x66B4;&#x9732;&#x5728;URL&#x4E2D;)&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-string">&quot;crop&quot;</span> : <span class="hljs-string">&quot;thumb&quot;</span>,
+        <span class="hljs-string">&quot;gravity&quot;</span> : <span class="hljs-string">&quot;face&quot;</span>,
+        <span class="hljs-string">&quot;width&quot;</span> : <span class="hljs-number">400</span>,
+        <span class="hljs-string">&quot;height&quot;</span> : <span class="hljs-number">400</span>,
+        <span class="hljs-string">&quot;radius&quot;</span> : <span class="hljs-string">&quot;max&quot;</span>,
+        <span class="hljs-string">&quot;effect&quot;</span> : <span class="hljs-string">&quot;brightness:8&quot;</span>,
+        <span class="hljs-string">&quot;format&quot;</span> : <span class="hljs-string">&quot;png&quot;</span>
+    }
+]
+</code></pre>
+<p>&#x5C06;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;&#x60A8;&#x5BF9;&#x5E94;&#x7684;bucket&#x4E0B;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code>imgx/cmd_template/my_thumb.json    #&#x5176;&#x4E2D;&#x6587;&#x4EF6;&#x540D;(my_thumb)&#x662F;&#x60A8;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x201C;&#x6307;&#x4EE4;&#x96C6;&#x540D;&#x79F0;&#x201D;&#xFF0C;&#x7C7B;&#x4F3C;css&#x4E2D;&#x7684;class
+</code></pre><p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;URL&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x653E;&#x5728;URL&#x4E2D;&#xFF0C;&#x76F4;&#x63A5;&#x9690;&#x85CF;&#x5230;&#x60A8;&#x81EA;&#x5B9A;&#x4E49;&#x7684;json&#x6587;&#x4EF6;&#x4E2D;&#xFF09;&#xFF1A;</p>
+<pre><code>http://imgx-ss.bscstorage.com/imgx-test/t_my_thumb/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464773563&amp;Signature=WIMaNLacGaPRAlA6fl%2BGAsStfoQ%3D
+</code></pre><h2 id="&#x6307;&#x4EE4;&#x683C;&#x5F0F;">&#x6307;&#x4EE4;&#x683C;&#x5F0F;</h2>
+<ul>
+<li>&#x6307;&#x4EE4;&#x540D;&#x548C;&#x6307;&#x4EE4;&#x503C;&#x4E4B;&#x95F4;&#x7528;&#x201C;_&#x201D;&#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#xFF1A;<code>c_fit</code></li>
+<li>&#x76F8;&#x5173;&#x6307;&#x4EE4;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x201C;,&#x201D; &#x5982;&#xFF1A; <code>c_fit,w_100,h_100,g_face</code></li>
+<li>&#x591A;&#x7EC4;&#x6307;&#x4EE4;&#x4E4B;&#x95F4;&#x7528;&#x201C;--&#x201D;&#x9694;&#x5F00;&#xFF0C;&#x5982;&#xFF1A; <code>c_fit,w_100,h_100,g_face,r_max--l_text:my_font:hello+word,w_100,h_40</code></li>
+</ul>
+<h2 id="&#x7B7E;&#x540D;">&#x7B7E;&#x540D;</h2>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x62A4;&#x60A8;&#x7684;&#x539F;&#x56FE;&#x4E0D;&#x88AB;&#x76D7;&#x53D6;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x4E0D;&#x88AB;&#x6076;&#x610F;&#x6EE5;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x7B7E;&#x540D;&#x4FDD;&#x62A4;&#xFF0C;&#x7B7E;&#x540D;&#x5F62;&#x5F0F;&#x5B8C;&#x5168;&#x517C;&#x5BB9;AWS-V2&#x8BA4;&#x8BC1;&#xFF0C;&#x4EE5;&#x4E0B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x4EE3;&#x7B7E;&#x540D;URL&#x7684;php&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-php"><span class="hljs-comment">/**
+* Get a query string authenticated URL
+*
+* <span class="hljs-doctag">@param</span> string $accessKey AccessKey
+* <span class="hljs-doctag">@param</span> string $secretKey SecretKey
+* <span class="hljs-doctag">@param</span> string $bucket Bucket name
+* <span class="hljs-doctag">@param</span> string $uri Object URI
+* <span class="hljs-doctag">@param</span> integer $lifetime Lifetime in seconds
+* <span class="hljs-doctag">@param</span> boolean $hostBucket Use the bucket name as the hostname
+* <span class="hljs-doctag">@param</span> boolean $https Use HTTPS ($hostBucket should be false for SSL verification)
+* <span class="hljs-doctag">@return</span> string
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAuthenticatedURL</span><span class="hljs-params">($accessKey, $secretKey, $bucket, $uri, $lifetime, $hostBucket = false, $https = false, $endpoint = <span class="hljs-string">&apos;imgx-ss.bscstorage.com&apos;</span>)</span> </span>{
+
+    $expires = time() + $lifetime;
+    $uri = str_replace(<span class="hljs-keyword">array</span>(<span class="hljs-string">&apos;%2F&apos;</span>, <span class="hljs-string">&apos;%2B&apos;</span>, <span class="hljs-string">&apos;%2C&apos;</span>, <span class="hljs-string">&apos;%3A&apos;</span>, <span class="hljs-string">&apos;%20&apos;</span>), <span class="hljs-keyword">array</span>(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-string">&apos;+&apos;</span>, <span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos;:&apos;</span>, <span class="hljs-string">&apos;+&apos;</span>), rawurlencode($uri));
+    <span class="hljs-keyword">return</span> sprintf(($https ? <span class="hljs-string">&apos;https&apos;</span> : <span class="hljs-string">&apos;http&apos;</span>).<span class="hljs-string">&apos;://%s/%s?AWSAccessKeyId=%s&amp;Expires=%u&amp;Signature=%s&apos;</span>,
+    $hostBucket ? $bucket : $endpoint.<span class="hljs-string">&apos;/&apos;</span>.$bucket, $uri, $accessKey, $expires,
+    urlencode(base64_encode(hash_hmac(<span class="hljs-string">&apos;sha1&apos;</span>, <span class="hljs-string">&quot;GET\n\n\n{$expires}\n/{$bucket}/{$uri}&quot;</span>, $secretKey, <span class="hljs-keyword">true</span>))));
+}
+<span class="hljs-comment">//&#x7528;&#x6CD5;&#x5F88;&#x7B80;&#x5355;</span>
+<span class="hljs-keyword">echo</span> getAuthenticatedURL(<span class="hljs-string">&apos;&#x60A8;&#x7684;accessKey&apos;</span>, <span class="hljs-string">&apos;&#x60A8;&#x7684;secretKey&apos;</span>, <span class="hljs-string">&apos;&#x60A8;&#x7684;bucket&apos;</span>, <span class="hljs-string">&apos;&#x6307;&#x4EE4;/&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&apos;</span>, <span class="hljs-string">&apos;&#x591A;&#x4E45;&#x4EE5;&#x540E;&#x8FC7;&#x671F;(&#x79D2;)&apos;</span>);
+<span class="hljs-comment"># &#x5EFA;&#x8BAE;$lifetime&#x8BBE;&#x7F6E;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;1000000000</span>
+</code></pre>
+<h2 id="&#x7F13;&#x5B58;--cdn">&#x7F13;&#x5B58; &amp; CDN</h2>
+<ul>
+<li>&#x5904;&#x7406;&#x540E;&#x7684;&#x56FE;&#x7247;&#x751F;&#x6210;&#x7F13;&#x5B58;&#xFF0C;&#x4E0B;&#x6B21;&#x8BF7;&#x6C42;&#x4E0D;&#x5728;&#x91CD;&#x590D;&#x751F;&#x6210;&#xFF0C;&#x9ED8;&#x8BA4;&#x7F13;&#x5B58;2&#x5929;</li>
+<li>&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;CDN&#xFF0C;&#x5904;&#x7406;&#x540E;&#x7684;&#x56FE;&#x7247;&#x4F1A;&#x81EA;&#x52A8;&#x63A8;&#x9001;&#x5230;CDN&#x8282;&#x70B9;</li>
+</ul>
+<h2 id="&#x56FE;&#x7247;&#x5904;&#x7406;&#x6307;&#x4EE4;">&#x56FE;&#x7247;&#x5904;&#x7406;&#x6307;&#x4EE4;</h2>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x4ECB;&#x7ECD;&#x5177;&#x4F53;&#x5904;&#x7406;&#x6307;&#x4EE4;&#xFF0C;&#x7528;&#x4E0B;&#x5217;&#x51E0;&#x5F20;&#x539F;&#x56FE;&#x4E3A;&#x4F8B;&#xFF0C;&#x65B9;&#x4FBF;&#x60A8;&#x5BF9;&#x7167;&#xFF1A;</p>
+<ol>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464851871&amp;Signature=9Nb4uSsCdGbdhYdL05QNJMBOUDI%3D" target="_blank">demo/charles.png</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852096&amp;Signature=krRDPWUXPGYWKaQ0FcrHOLh9w20=" target="_blank">demo/1.jpg</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852128&amp;Signature=UitAP/HXvS2T6Y9AAs7TGPJGwzU=" target="_blank">demo/3.png</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852159&amp;Signature=yvaPahyPoYUpLYaEE9br44JNAuw=" target="_blank">demo/4.png</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852222&amp;Signature=6TpoUspMxFaB5rnKT4VzhiaWcLg%3D" target="_blank">demo/sheep.png</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852280&amp;Signature=jxH/VEABVAiIEc3ZE7GYSrj6LAw=" target="_blank">demo/horses.png</a></li>
+<li><a href="http://ss.bscstorage.com/imgx-test/avatar.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464852327&amp;Signature=47wCMMxlDj8lP4JMaZ99NXl50%2bE=" target="_blank">avatar.png</a></li>
+</ol>
+</blockquote>
+<table>
+    <thead>
+        <tr>
+            <th width="57px"><i>&#x6307;&#x4EE4;&#x540D;</i></th>
+            <th width="46px"><i>&#x6307;&#x4EE4;</i></th>
+            <th width="130px"><i>Value</i></th>
+            <th width="386px"><i>&#x793A;&#x4F8B;</i></th>
+            <th width="186px"><i>&#x63CF;&#x8FF0;</i></th>
+        </tr>
+        <tr>
+            <th>crop</th>
+            <th><b>c</b></th>
+            <th><i>mode</i></th>
+            <th></th>
+            <th>&#x88C1;&#x526A;&#x65B9;&#x5F0F;&#xFF0C;&#x6307;&#x5B9A;&#x56FE;&#x50CF;&#x88C1;&#x526A;&#x6216;&#x653E;&#x7F29;&#x7684;&#x65B9;&#x5F0F;&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>scale</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_scale,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775245&amp;Signature=U8cS78xlQH0EZArL2WJMZx9mHNY%3D"></td>
+            <td>&#x6539;&#x53D8;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5;&#x5339;&#x914D;&#x7ED9;&#x5B9A;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;&#x6240;&#x6709;&#x539F;&#x59CB;&#x56FE;&#x50CF;&#x7684;&#x90E8;&#x5206;&#x5C06;&#x662F;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x62C9;&#x4F38;&#x800C;&#x53D8;&#x5F62;&#x3002;
+                <br><br><code>c_scale,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>fill</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775280&amp;Signature=3%2ByB4vbW4XesbrNCssGY7LexDhU%3D"></td>
+            <td>&#x88C1;&#x526A;&#x56FE;&#x50CF;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x7559;&#x539F;&#x6709;&#x6BD4;&#x4F8B;&#x3002;
+                <br><br><code>c_fill,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>lfill</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_lfill,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775301&amp;Signature=cFPJah0EXgrFkV%2F%2B1KjE5vedmHo%3D"></td>
+            <td>&#x540C; <i>fill</i> &#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x9650;&#x5236;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;&#x4E0D;&#x5927;&#x4E8E;&#x539F;&#x56FE;
+                <br><br><code>c_lfill,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>fit</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fit,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775325&amp;Signature=dzwxaEl%2FTA2qsDSGfcv%2FG5Gs9%2F8%3D"></td>
+            <td>&#x6539;&#x53D8;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5;&#x5339;&#x914D;&#x7ED9;&#x5B9A;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x7559;&#x539F;&#x6709;&#x6BD4;&#x4F8B;&#xFF0C;&#x6240;&#x6709;&#x539F;&#x59CB;&#x56FE;&#x50CF;&#x7684;&#x90E8;&#x5206;&#x5C06;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;&#x7B49;&#x6BD4;&#x653E;&#x7F29;&#xFF0C;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x62C9;&#x4F38;&#x800C;&#x53D8;&#x5F62;&#x3002;
+                <br><br><code>c_fit,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>mfit</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_mfit,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775342&amp;Signature=yEhC4KixIMt4RrtnKMpN%2F9jp4CM%3D"></td>
+            <td>&#x540C; <i>fit</i> &#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x9650;&#x5236;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;&#x4E0D;&#x5C0F;&#x4E8E;&#x539F;&#x56FE;
+                <br><br><code>c_mfit,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>limit</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_limit,h_80,w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775503&amp;Signature=ne3LQQQl92ExCHy3LAUM3m9jMo4%3D"></td>
+            <td>&#x540C; <i>fit</i>&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x9650;&#x5236;&#x56FE;&#x7247;&#x5C3A;&#xFF0C;&#x5904;&#x7406;&#x540E;&#x7684;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;&#x539F;&#x56FE;&#x3002;
+                <br><br><code>c_limit,h_80,w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>pad</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_pad,h_80,w_80,g_center,b_dddddd/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775599&amp;Signature=pEv4icz3BrvbkjvTQHAOXce3Tvo%3D"></td>
+            <td>&#x6307;&#x5B9A;&#x56FE;&#x50CF;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x7559;&#x539F;&#x6709;&#x6BD4;&#x4F8B;&#x3002;&#x5982;&#x679C;&#x539F;&#x56FE;&#x6BD4;&#x4F8B;&#x4E0D;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x5C06;&#x88AB;&#x586B;&#x5145;&#x4E3A;&#x80CC;&#x666F;&#x989C;&#x8272;&#x3002;
+                <br><br><code>c_pad,h_80,w_80,g_center,b_dddddd</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>lpad</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_lpad,h_640,w_640,g_center,b_dddddd/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775619&amp;Signature=ZY8kJ8xsAo4lTbcyY8unWndaKEI%3D"></td>
+            <td>&#x540C; <i>pad</i> &#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x4E8E;&#x539F;&#x56FE;&#xFF0C;&#x5C06;&#x4E0D;&#x6269;&#x5927;&#x539F;&#x56FE;
+                <br><br><code>c_lpad,h_640,w_640,g_center,b_dddddd</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>mpad</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_mpad,h_80,w_80,g_center,b_dddddd/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775641&amp;Signature=e5eohM2MOtqMsXCUKOmRop2iQIE%3D"></td>
+            <td>&#x540C; <i>pad</i> &#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x9650;&#x5236;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;&#x4E0D;&#x5C0F;&#x4E8E;&#x539F;&#x56FE;
+                <br><br><code>c_mpad,h_80,w_80,g_center,b_dddddd</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>crop</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,h_210,w_210,g_face/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775755&amp;Signature=QkEGM0VA2nhfOQ3JlvWCAfsGiFw%3D"></td>
+            <td>&#x6307;&#x5B9A;&#x5C3A;&#x5BF8;&#x548C;&#x4F4D;&#x7F6E;&#xFF0C;&#x7528;&#x4E8E;&#x4ECE;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x88C1;&#x526A;&#x51FA;&#x4E00;&#x90E8;&#x5206;&#x3002;
+                <br><br><code>c_crop,h_210,w_210,g_face</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>thumb</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,h_250,w_250,g_face/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775849&amp;Signature=%2FVEIEuisY%2FNYzT52s2P%2BnIwe8Mk%3D"></td>
+            <td>&#x5B9A;&#x4F4D;&#x4EBA;&#x8138;&#xFF08;&#x7ED3;&#x5408;&apos;face&apos;&#x6216;&apos;faces&apos;&#x91CD;&#x529B;&#x53C2;&#x6570;&#xFF09;&#x5E76;&#x751F;&#x6210;&#x7F29;&#x7565;&#x56FE;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x5934;&#x50CF;&#x3002;
+                <br><br><code>c_thumb,h_250,w_250,g_face</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>width</th>
+            <th><b>w</b></th>
+            <th><i>&#x50CF;&#x7D20;&#x6216;&#x8005;&#x767E;&#x5206;&#x6BD4;</i></th>
+            <th></th>
+            <th>&#x5BBD;&#x5EA6;&#x53C2;&#x6570;&#xFF0C;&#x7ED3;&#x5408; <i>&#x88C1;&#x526A;&#x65B9;&#x5F0F;(crop)</i> &#x6216;&#x8005; <i>&#x6C34;&#x5370;(overlay)</i> &#x4F7F;&#x7528; </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>80</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/w_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775890&amp;Signature=3O7sB36S5fxARIRIXma0EDwrUM0%3D"></td>
+            <td>&#x8C03;&#x6574;&#x5BBD;&#x5EA6;&#x4E3A;80&#x50CF;&#x7D20;
+                <br><br><code>w_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>0.1</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/w_0.1/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775909&amp;Signature=UGZpnvF3kXfVN9JlYsKq4J1DMcc%3D"></td>
+            <td>&#x8C03;&#x6574;&#x56FE;&#x50CF;&#x5230;&#x5176;&#x539F;&#x59CB;&#x5C3A;&#x5BF8;&#x7684;10&#xFF05;&#x3002;
+                <br><br><code>w_0.1</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>height</th>
+            <th><b>h</b></th>
+            <th><i>&#x50CF;&#x7D20;&#x6216;&#x8005;&#x767E;&#x5206;&#x6BD4;</i></th>
+            <th></th>
+            <th>&#x9AD8;&#x5EA6;&#x53C2;&#x6570;&#xFF0C;&#x7ED3;&#x5408; <i>&#x88C1;&#x526A;&#x65B9;&#x5F0F;(crop)</i> &#x6216;&#x8005; <i>&#x6C34;&#x5370;(overlay)</i> &#x4F7F;&#x7528; </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>80</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/h_80/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775931&amp;Signature=iZkes%2BXqVFnIUa3AR5vIRugTcy8%3D"></td>
+            <td>&#x8C03;&#x6574;&#x9AD8;&#x5EA6;&#x4E3A;80&#x50CF;&#x7D20;
+                <br><br><code>h_80</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>0.1</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/h_0.1/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464775993&amp;Signature=kppwJvaUOgNOacxgOX7pZCMwDDs%3D"></td>
+            <td>&#x8C03;&#x6574;&#x56FE;&#x50CF;&#x5230;&#x5176;&#x539F;&#x59CB;&#x5C3A;&#x5BF8;&#x7684;10&#xFF05;&#x3002;
+                <br><br><code>h_0.1</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>gravity</th>
+            <th><b>g</b></th>
+            <th><i>&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x65B9;&#x5411;</i></th>
+            <th></th>
+            <th>1. &#x7528;&#x4E8E; <i>&apos;crop&apos;, &apos;pad&apos;, &apos;fill&apos;</i> &#x7684;&#x88C1;&#x526A;&#x65B9;&#x5F0F;&#xFF1B; <br>2. &#x7528;&#x4E8E;&#x6307;&#x5B9A; <i>&#x6C34;&#x5370;(overlay)</i> &#x7684;&#x4F4D;&#x7F6E;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>north_west</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_north_west,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778155&amp;Signature=UExeDYZxS7Wf2J1nMK4KTwtPIyU%3D"></td>
+            <td>&#x5DE6;&#x4E0A;&#x4F4D;&#x7F6E;
+                <br><br><code>c_crop,g_north_west,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>north</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_north,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778249&amp;Signature=plyAm8ZvqawOF3ohDLxCLsmpUQc%3D"></td>
+            <td>&#x6B63;&#x4E0A;&#x4F4D;&#x7F6E;&#xFF0C;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x5C45;&#x4E2D;
+                <br><br><code>c_crop,g_north,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>north_east</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_north_east,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778268&amp;Signature=O%2FtX9DTxsjLpF7Q3cJagA8o3l9Y%3D"></td>
+            <td>&#x53F3;&#x4E0A;&#x4F4D;&#x7F6E;
+                <br><br><code>c_crop,g_north_east,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>west</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_west,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778292&amp;Signature=eFTNVmXxhn9hScGUWcpmwnx%2Fkio%3D"></td>
+            <td>&#x5DE6;&#x8FB9;&#xFF0C;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x5C45;&#x4E2D;
+                <br><br><code>c_crop,g_west,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>center</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_center,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778308&amp;Signature=M%2FTeVwmYdINeqp4%2BxxAYMe452g0%3D"></td>
+            <td>&#x6B63;&#x4E2D;
+                <br><br><code>c_crop,g_center,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>east</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_east,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778324&amp;Signature=Qb1%2BDyldQ%2FOxx7JJmdQz%2Bglrark%3D"></td>
+            <td>&#x53F3;&#x8FB9;&#xFF0C;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x5C45;&#x4E2D;
+                <br><br><code>c_crop,g_east,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>south_west</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_south_west,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778343&amp;Signature=AsJdVwQgL7obQ3lGfKF0RDOHrmM%3D"></td>
+            <td>&#x5DE6;&#x4E0B;&#x4F4D;&#x7F6E;
+                <br><br><code>c_crop,g_south_west,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>south</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_south,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778363&amp;Signature=ImwO39IKfypIoAB442JWj9ogq%2Fg%3D"></td>
+            <td>&#x6B63;&#x4E0B;&#x4F4D;&#x7F6E;&#xFF0C;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x5C45;&#x4E2D;
+                <br><br><code>c_crop,g_south,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>south_east</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_south_east,h_200,w_200/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778397&amp;Signature=sKbISWjFnnsu5B6UrnrmNTEe%2FZo%3D"></td>
+            <td>&#x53F3;&#x4E0B;&#x4F4D;&#x7F6E;
+                <br><br><code>c_crop,g_south_east,h_200,w_200</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>xy_center</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_xy_center,h_400,w_400,x_245,y_240/demo/4.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778421&amp;Signature=iWwhFozXKF5m8CO5qhpYT6bcJP8%3D"></td>
+            <td>&#x6307;&#x5B9A;&#x7684;x,y&#x5750;&#x6807;&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;&#x4E2D;&#x5FC3;&#x70B9;
+                <br><br><code>c_crop,g_xy_center,
+                h_400,w_400,x_245,y_240</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>face</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,g_face,h_140,w_140/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778446&amp;Signature=AwK%2BJlJi%2FWMa5m8TDQiqn3z97As%3D"></td>
+            <td>&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x4EBA;&#x8138;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x5F20;&#x8138;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x5BB9;&#x6613;&#x8BC6;&#x522B;&#x7684;&#x4E00;&#x4E2A;
+                <br><br><code>c_crop,g_face,h_140,w_140</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td>face (thumb)</td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,h_130,w_140,f_png/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464778466&amp;Signature=qSOky2UqHn3tgrQU2bE0BZEjrM8%3D"></td>
+            <td>&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x4EBA;&#x8138;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x5C3A;&#x5BF8;&#x751F;&#x6210;&#x7F29;&#x7565;&#x56FE;&#x3002;&#x5982;&#x679C;&#x6709;&#x591A;&#x5F20;&#x8138;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x5BB9;&#x6613;&#x8BC6;&#x522B;&#x7684;&#x4E00;&#x4E2A;
+                <br><br><code>c_thumb,g_face,h_130,w_140,f_png</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>faces</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_faces,h_220,w_600,e_brightness%3A18/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779681&amp;Signature=WjBH1Jz2AhdWlQno%2BieOONMHjfk%3D"></td>
+            <td>&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x591A;&#x5F20;&#x4EBA;&#x8138;&#x7684;&#x4F4D;&#x7F6E;
+                <br><br><code>c_thumb,g_faces,h_220,w_600,
+                e_brightness:18</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>face:center</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face%3Acenter,h_140,w_140/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779711&amp;Signature=IpqPP16HCxCoPEZRTb%2BPAwh9bfw%3D"></td>
+            <td>&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x4EBA;&#x8138;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x4EBA;&#x8138;&#x5219;&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x5230;&#x539F;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;
+                <br><br><code>c_thumb,g_face:center,h_140,w_140</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>faces:center</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_faces%3Acenter,h_120,w_330,e_brightness%3A18/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779729&amp;Signature=MpE5J2LsxhCu1K5%2FB2h9i%2F8VZXA%3D"></td>
+            <td>&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x591A;&#x5F20;&#x4EBA;&#x8138;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x4EBA;&#x8138;&#x5219;&#x81EA;&#x52A8;&#x5B9A;&#x4F4D;&#x5230;&#x539F;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;
+                <br><br><code>c_thumb,g_faces:center,
+                h_120,w_330,e_brightness:18</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>x</th>
+            <th><b>x</b></th>
+            <th><i>&#x50CF;&#x7D20;</i></th>
+            <th></th>
+            <th>&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x56FE;&#x7247;&#x88C1;&#x526A;&#x6216;&#x8005;&#x6C34;&#x5370;&#x7684;&#x6A2A;&#x5411;&#x5750;&#x6807;&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>110</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,h_180,w_180,x_110/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464851108&amp;Signature=qkUt0EBiRH1hL%2FdTSbS%2BvbdS060%3D"></td>
+            <td>&#x88C1;&#x526A;&#x56FE;&#x50CF;180x180&#x50CF;&#x7D20;&#xFF0C;&#x4ECE;&#x5DE6;&#x8FB9;110&#x50CF;&#x7D20;&#x5F00;&#x59CB;
+                <br><br><code>c_crop,h_180,w_180,x_110</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>y</th>
+            <th><b>y</b></th>
+            <th><i>&#x50CF;&#x7D20;</i></th>
+            <th></th>
+            <th>&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x56FE;&#x7247;&#x88C1;&#x526A;&#x6216;&#x8005;&#x6C34;&#x5370;&#x7684;&#x7EB5;&#x5411;&#x5750;&#x6807;&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>230</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_crop,h_180,w_180,x_180,y_230/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464851257&amp;Signature=KbWMmZBansdeH7ELNlGu0yIqbXo%3D"></td>
+            <td>&#x88C1;&#x526A;&#x56FE;&#x50CF;180x180&#x50CF;&#x7D20;&#xFF0C;&#x4ECE;&#x9876;&#x90E8;230&#x50CF;&#x7D20;&#x5F00;&#x59CB;&#x3002;
+                <br><br><code>c_crop,h_180,w_180,x_180,y_230</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>quality</th>
+            <th><b>q</b></th>
+            <th><i>&#x767E;&#x5206;&#x6BD4;</i></th>
+            <th></th>
+            <th>&#x63A7;&#x5236;JPG&#x6216;&#x8005;WEBP&#x683C;&#x5F0F;&#x56FE;&#x7247;&#x7684;&#x538B;&#x7F29;&#x8D28;&#x91CF;&#x3002;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E3A;100&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>100</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,h_130,w_140,q_100/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779812&amp;Signature=AgnTF%2BLL6kJCwfQsqxvZrRmaXzk%3D"></td>
+            <td>&#x56FE;&#x7247;&#x8D28;&#x91CF;&#x4E3A;100%&#xFF0C;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x4E3A;14.3KB&#x3002;
+                <br><br><code>c_thumb,g_face,h_130,w_140,q_100</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>10</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,h_130,w_140,q_10/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779833&amp;Signature=ngDnb0IJts9p8tlLPAmkI9uK9zk%3D"></td>
+            <td>&#x56FE;&#x7247;&#x8D28;&#x91CF;&#x4E3A;10%&#xFF0C;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x964D;&#x4F4E;&#x5230;1.5KB&#x3002;
+                <br><br><code>c_thumb,g_face,h_130,w_140,q_10</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>radius</th>
+            <th><b>r</b></th>
+            <th><i>&#x50CF;&#x7D20;&#x503C;&#x6216;&#x8005;&apos;max&apos;</i></th>
+            <th></th>
+            <th>&#x6307;&#x5B9A;&#x534A;&#x5F84;&#xFF0C;&#x751F;&#x6210;&#x5706;&#x89D2;&#x6216;&#x5B8C;&#x5168;&#x53D8;&#x6210;&#x5706;&#x5F62;&#xFF08;&#x692D;&#x5706;&#xFF09;&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>30</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,h_140,w_140,f_png,r_30/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779854&amp;Signature=3gVOrVBxma72lG0RRCd%2BrbVzbVY%3D"></td>
+            <td>&#x751F;&#x6210;30&#x50CF;&#x7D20;&#x534A;&#x5F84;&#x7684;&#x5706;&#x89D2;
+                <br><br><code>c_thumb,g_face,h_140,w_140,f_png,r_30</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>max</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,h_140,w_140,f_png,r_max/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779872&amp;Signature=bLoCnVoXjhycDcmBssoC185tyLY%3D"></td>
+            <td>&#x4F7F;&#x7528;&#x6700;&#x5927;&#x534A;&#x5F84;&#x751F;&#x6210;&#x5706;&#x89D2;
+                <br><br><code>c_thumb,g_face,h_140,w_140,f_png,r_max</code></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>angle</th>
+            <th><b>a</b></th>
+            <th><i>&#x89D2;&#x5EA6;&#x6216;&#x8005;&#x7FFB;&#x8F6C;&#x6A21;&#x5F0F;</i></th>
+            <th></th>
+            <th>&#x7FFB;&#x8F6C;&#x6216;&#x8005;&#x65CB;&#x8F6C;&#x56FE;&#x50CF;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>90</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80,a_90/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779895&amp;Signature=9tqwZW7SthjhR2dm950jAn9ZjDI%3D"></td>
+            <td>&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;90&#x5EA6;
+                <br><br><code>c_fill,h_80,w_80,a_90</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>10</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80,a_10/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779911&amp;Signature=zwPmqKWWUZj9D4gPqnWfWscy8F8%3D"></td>
+            <td>&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;10&#x5EA6;
+                <br><br><code>c_fill,h_80,w_80,a_10</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>-20</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80,a_-20/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779926&amp;Signature=eE1xWIAlkx4XZAnQ2ww6P8bAVPM%3D"></td>
+            <td>&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;20&#x5EA6;
+                <br><br><code>c_fill,h_80,w_80,a_-20</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>vflip</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80,a_vflip/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779944&amp;Signature=%2Bca1r1SJSn%2Bs9ocufpuBDty1LeA%3D"></td>
+            <td>&#x5782;&#x76F4;&#x7FFB;&#x8F6C;
+                <br><br><code>c_fill,h_80,w_80,a_vflip</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>hflip</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_80,w_80,a_hflip/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779960&amp;Signature=2hSuIkpVhahTCyV53W27sxFXu3E%3D"></td>
+            <td>&#x6C34;&#x5E73;&#x7FFB;&#x8F6C;
+                <br><br><code>c_fill,h_80,w_80,a_hflip</code></td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>effect</th>
+            <th><b>e</b></th>
+            <th><i>name and value</i></th>
+            <th></th>
+            <th>&#x4F7F;&#x7528;&#x6EE4;&#x955C;&#x6216;&#x8005;&#x7279;&#x6548;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>grayscale</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_grayscale/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464779995&amp;Signature=szrfdWnBYaDbF9mDpEYYQSmHjvc%3D"></td>
+            <td>&#x7070;&#x5EA6;
+                <br><br><code>c_fill,h_380,w_380,e_grayscale</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>oil_paint</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_oil_paint/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780024&amp;Signature=Qq%2Fn2GdugVX2E91mKFi2OBl%2FQzA%3D"></td>
+            <td>&#x6CB9;&#x753B;&#x6548;&#x679C;
+                <br><br><code>c_fill,h_380,w_380,e_oil_paint</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>oil_paint:2</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_oil_paint%3A2/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780041&amp;Signature=8cfjtMELUFb0ABNn55M2Zdj%2FEj4%3D"></td>
+            <td>
+                &#x4F7F;&#x7528;&#x6CB9;&#x753B;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;level&#x503C;&#x4E3A;2&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;1&#x5230;8&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;4
+                <br><br><code>c_fill,h_380,w_380,e_oil_paint:2</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>negate</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_negate%3A2/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780058&amp;Signature=3qG45TiVOSNwQom%2FpCRANKTFQbY%3D"></td>
+            <td>
+                &#x53CD;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_negate:2</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>brightness:28</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_brightness%3A28/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780075&amp;Signature=PjBqfmVBGLYq5K65Rj95MYLjomg%3D"></td>
+            <td>
+                &#x8C03;&#x6574;&#x56FE;&#x7247;&#x7684;&#x4EAE;&#x5EA6;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x503C;&#x4E3A;28&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;-100&#x5230;100&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;30
+                <br><br><code>c_fill,h_380,w_380,e_brightness:28</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>brightness:-28</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_brightness%3A-20/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780093&amp;Signature=MDGQX78ccpE0nYpSt3s0YFSftqE%3D"></td>
+            <td>
+                &#x8C03;&#x6574;&#x56FE;&#x7247;&#x7684;&#x4EAE;&#x5EA6;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x503C;&#x4E3A;-20&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;-100&#x5230;100&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;30
+                <br><br><code>c_fill,h_380,w_380,e_brightness:-20</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>blur</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_blur/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780111&amp;Signature=kZHLSOF2dZDUr%2B6%2F5I7qVYg2qbc%3D"></td>
+            <td>
+                &#x6A21;&#x7CCA;&#x6548;&#x679C;
+                <br><br><code>c_fill,h_380,w_380,e_blur</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>blur:300</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_blur%3A300/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780133&amp;Signature=1TqlkiM8qhIIGUCCbIihSJtoTDA%3D"></td>
+            <td>
+                &#x4F7F;&#x7528;&#x6A21;&#x7CCA;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;level&#x503C;&#x4E3A;300&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;1&#x5230;2000&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;100
+                <br><br><code>c_fill,h_380,w_380,e_blur:300</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>pixelate</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_pixelate%3A20/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780147&amp;Signature=CiVrSg5tbpF0S3kWamgfbvKkPsQ%3D"></td>
+            <td>
+                &#x50CF;&#x7D20;&#x5316;
+                <br><br><code>c_fill,h_380,w_380,e_pixelate:20</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>pixelate:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_pixelate%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780426&amp;Signature=hjoTMD2jgmLPydz5NF5NnaNlauw%3D"></td>
+            <td>
+                &#x4F7F;&#x7528;&#x50CF;&#x7D20;&#x5316;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;level&#x503C;&#x4E3A;40&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;5
+                <br><br><code>c_fill,h_380,w_380,e_pixelate:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>sharpen</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_sharpen/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780445&amp;Signature=hPVzAXcdvlZX3LqDk%2Bw8bYOV%2BwE%3D"></td>
+            <td>
+                &#x9510;&#x5316;
+                <br><br><code>c_fill,h_380,w_380,e_sharpen</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>sharpen:400</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_sharpen%3A400/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780462&amp;Signature=bfGlfc%2Fbm6bfdO7lWcRgj6L8Xyw%3D"></td>
+            <td>
+                &#x4F7F;&#x7528;&#x9510;&#x5316;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;level&#x503C;&#x4E3A;400&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;1&#x5230;2000&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;100
+                <br><br><code>c_fill,h_380,w_380,e_sharpen:400</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>auto_contrast</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_auto_contrast/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780485&amp;Signature=85x57KcbBgtTMLvSqag4y4yElKY%3D"></td>
+            <td>
+                &#x81EA;&#x52A8;&#x5BF9;&#x6BD4;&#x5EA6;
+                <br><br><code>c_fill,h_380,w_380,e_auto_contrast</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>improve</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_improve/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780504&amp;Signature=NYmzvR%2BtSDeNbfpe%2FWDa92AjHtA%3D"></td>
+            <td>
+                &#x81EA;&#x52A8;&#x8C03;&#x6574;&#x56FE;&#x50CF;&#x8272;&#x5F69;&#xFF0C;&#x5BF9;&#x6BD4;&#x5EA6;&#x548C;&#x4EAE;&#x5EA6;&#x3002;
+                <br><br><code>c_fill,h_380,w_380,e_improve</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><b>sepia</b></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_sepia/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780521&amp;Signature=eHWgaDcKYk7VfNkAjg1rxsrRLQc%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x8910;&#x8272;&#xFF0C;&#x5B9E;&#x73B0;&#x8001;&#x7167;&#x7247;&#x6548;&#x679C;
+                <br><br><code>c_fill,h_380,w_380,e_sepia</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>sepia:60</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_sepia%3A60/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780543&amp;Signature=Hv9AAamVUxQwOuhKTT0pR5k8ITs%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x8910;&#x8272;&#xFF0C;&#x5B9E;&#x73B0;&#x8001;&#x7167;&#x7247;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;level&#x503C;&#x4E3A;60&#x3002;&#x53D6;&#x503C;&#x8303;&#x56F4;1&#x5230;100&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;80&#x3002;
+                <br><br><code>c_fill,h_380,w_380,e_sepia:60</code>
+            </td>
+
+        </tr><tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>red:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_red%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780562&amp;Signature=wH%2FQSVXJ3WA6hYEhMcS34mAJzx8%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x7EA2;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_red:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>green:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_green%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780575&amp;Signature=dvXP0ufzgn2lLrMGcrCpV7cRqjM%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x7EFF;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_green:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>blue:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_blue%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780588&amp;Signature=W0qO6qxutxohHyAkAOXXjSbEsn0%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x84DD;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_blue:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>yellow:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_yellow%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780602&amp;Signature=BS29Zm2sH3VXT4N8l3bHZIT8xuA%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x9EC4;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_yellow:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>cyan:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_cyan%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780616&amp;Signature=pXDGPEPPl6xQvxIdcYcPQUToZJI%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x9752;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_cyan:40</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>magenta:40</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_380,w_380,e_magenta%3A40/demo/horses.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780628&amp;Signature=tHkwP66w96NAZh1FBpwC9fj3cmc%3D"></td>
+            <td>
+                &#x589E;&#x52A0;&#x7C89;&#x8272;
+                <br><br><code>c_fill,h_380,w_380,e_magenta:40</code>
+            </td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>opacity</th>
+            <th><b>o</b></th>
+            <th><i>&#x767E;&#x5206;&#x6BD4;</i></th>
+            <th></th>
+            <th>&#x63A7;&#x5236;PNG&#x6216;&#x8005;WEBP&#x683C;&#x5F0F;&#x56FE;&#x7247;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#x3002;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E3A;100&#x3002;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>25</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/h_330,w_330,o_25/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780646&amp;Signature=PLo6%2BUYr%2FQ9tP6ksUXUnXS8CESU%3D"></td>
+            <td>
+                &#x4E0D;&#x900F;&#x660E;&#x5EA6;&#x4E3A;25%
+                <br><br><code>h_330,w_330,o_25</code>
+            </td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>border</th>
+            <th><b>bo</b></th>
+            <th><i>style</i></th>
+            <th></th>
+            <th>&#x8BBE;&#x7F6E;&#x8FB9;&#x6846;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>10_0000004a</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/h_330,w_330,bo_10_0000004a/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780667&amp;Signature=21asF6rN41wa8ezER4xY5G1TVDw%3D"></td>
+            <td>
+                &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8FB9;&#x6846;&#x5BBD;&#x5EA6;&#x4E3A;10px&#xFF0C;&#x989C;&#x8272;&#x503C;&#x4E3A;&#x9ED1;&#x8272;&#xFF0C;&#x900F;&#x660E;&#x5EA6;&#x4E3A;4a&#xFF08;16&#x8FDB;&#x5236;&#xFF09;
+                <br><br><code>h_330,w_330,bo_10_0000004a</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>8_bbbbbb</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/h_330,w_330,bo_8_bbbbbb,r_100/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780686&amp;Signature=tFi1iqhNnyIuuT4jnTYodEn%2FtQw%3D"></td>
+            <td>
+                &#x5BF9;&#x5706;&#x89D2;&#x56FE;&#x50CF;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8FB9;&#x6846;&#x5BBD;&#x5EA6;&#x4E3A;8px&#xFF0C;&#x989C;&#x8272;&#x503C;&#x4E3A;bbbbbb
+                <br><br><code>h_330,w_330,bo_8_bbbbbb,r_100</code>
+            </td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>background</th>
+            <th><b>b</b></th>
+            <th><i>color</i></th>
+            <th></th>
+            <th>&#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x914D;&#x5408;&#x5176;&#x4ED6;&#x6307;&#x4EE4;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>dddddd</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_pad,w_380,h_180,b_dddddd/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780701&amp;Signature=o6fomfZsrB%2B1GhgR%2BlXPDFxDocs%3D"></td>
+            <td>
+                &#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x989C;&#x8272;&#x4E3A;dddddd
+                <br><br><code>c_pad,w_380,h_180,b_dddddd</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>fff6def0</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_110,w_110,a_30,b_fff6def0/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780715&amp;Signature=MysQeT9UxGIMAMXMqW7hlzXwF0k%3D"></td>
+            <td>
+                &#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x989C;&#x8272;&#x4E3A;fff6de&#xFF0C;&#x900F;&#x660E;&#x5EA6;&#x4E3A;f0 (16&#x8FDB;&#x5236;)
+                <br><br><code>c_fill,h_110,w_110,a_30,b_fff6def0</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>dbeced</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,h_140,w_140,r_max,b_dbeced--c_lpad,g_center,w_152,h_152,b_dbeced/demo/sheep.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464780729&amp;Signature=%2BhTugtDL8OCzDgyR95YJ3R9DniI%3D"></td>
+            <td>
+                &#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x989C;&#x8272;&#x4E3A;dddddd
+                <br><br><code>c_fill,h_140,w_140,r_max,b_dbeced--c_lpad,g_center,w_152,h_152,b_dbeced</code>
+            </td>
+        </tr>
+    </tbody>
+
+
+    <thead>
+        <tr>
+            <th>overlay</th>
+            <th><b>l</b></th>
+            <th><i>&#x6C34;&#x5370;&#x56FE;&#x7247;&#x540D;&#xFF0C;&#x6216;&#x8005;&#x5B57;&#x4F53;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x7B49;</i></th>
+            <th></th>
+            <th>&#x5728;&#x539F;&#x56FE;&#x4E0A;&#x589E;&#x52A0;&#x6C34;&#x5370;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x914D;&#x5408;w&#xFF0C;h&#xFF0C;x&#xFF0C;y&#x548C;&#x91CD;&#x529B;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x6C34;&#x5370;&#x7684;&#x5C3A;&#x5BF8;&#x548C;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;o&#x53C2;&#x6570;&#x63A7;&#x5236;&#x6C34;&#x5370;&#x7684;&#x900F;&#x660E;&#x5EA6;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>superman</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fill,w_500,h_500,g_face,f_png--l_superman,g_south_east,w_250,x_-120,y_-60--l_bs_logo,x_20,y_20/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464835936&amp;Signature=VntmQ1EndLDbBb4wiG3ofN7TdcI%3D"></td>
+            <td>
+                &#x5728;&#x56FE;&#x7247;&#x7684;&#x53F3;&#x4E0B;&#x89D2;&#x52A0;&#x4E00;&#x4E2A;&#x65B9;&#x8138;&#x8D85;&#x4EBA;&#x7684;&#x6C34;&#x5370;&#xFF08;&#x652F;&#x6301;&#x5916;&#x90E8;&#x533A;&#x57DF;&#xFF09;&#xFF1B;&#x9996;&#x5148;&#x9700;&#x8981;&#x5C06;&#x6C34;&#x5370;&#x8D34;&#x56FE;&#xFF08;&#x5FC5;&#x987B;&#x662F;png&#x683C;&#x5F0F;&#xFF09;&#x4FDD;&#x5B58;&#x5230;&#x60A8;&#x7684;&#x5BF9;&#x5E94;bucket&#x4E0B;&#xFF0C;&#x8DEF;&#x5F84;&#x89C4;&#x5219;&#x4E3A;&#xFF1A;imgx/overlay/my_name.png&#xFF0C;&#x7136;&#x540E;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;l_my_name&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x6C34;&#x5370;&#x64CD;&#x4F5C;&#x4E86;
+                <br><br><code>c_fill,w_500,h_500,g_face,
+                f_png--l_superman,g_south_east,
+                w_250,x_-120,y_-60--l_scs_logo,x_20,y_20</code>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>text:font_me:&#x4F60;&#x597D;&#xFF0C;&#x767D;&#x5C71;&#x4E91;</i></td>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/l_text:font_me:%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%99%BD%E5%B1%B1%E4%BA%91,g_north_east,x_14,y_14--w_400/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464846517&amp;Signature=8wPZnmR4kfFStvjXBGBQ%2B21j03M%3D"></td>
+            <td>
+                &#x6587;&#x5B57;&#x6C34;&#x5370;&#x3002;&#x5173;&#x4E8E;&#x5B57;&#x4F53;&#x6837;&#x5F0F;&#x7684;&#x8BBE;&#x7F6E;&#x540E;&#x9762;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;
+                <br><br><code>l_text:font_me:&#x4F60;&#x597D;&#xFF0C;&#x767D;&#x5C71;&#x4E91;,
+                g_north_east,x_14,y_14--w_400</code>
+            </td>
+        </tr>
+    </tbody>
+
+
+    <thead>
+        <tr>
+            <th>format</th>
+            <th><b>f</b></th>
+            <th><i>&#x56FE;&#x7247;&#x683C;&#x5F0F;</i></th>
+            <th></th>
+            <th>&#x56FE;&#x7247;&#x683C;&#x5F0F;&#x8F6C;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>png</i></td>
+            <td></td>
+            <td><code>f_png</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>webp</i></td>
+            <td></td>
+            <td><code>f_webp</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>jpeg</i></td>
+            <td></td>
+            <td><code>f_jpeg</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>jpg</i></td>
+            <td></td>
+            <td><code>f_jpg</code></td>
+        </tr>
+    </tbody>
+
+
+    <thead>
+        <tr>
+            <th>version</th>
+            <th><b>v</b></th>
+            <th><i>&#x7248;&#x672C;</i></th>
+            <th></th>
+            <th>&#x7F13;&#x5B58;&#x672A;&#x8FC7;&#x671F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x56FE;&#x50CF;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>1.21</i></td>
+            <td></td>
+            <td>&#x5C0F;&#x6570; <code>v_1.21</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>13</i></td>
+            <td></td>
+            <td>&#x6574;&#x6570; <code>v_13</code></td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>transformation</th>
+            <th><b>t</b></th>
+            <th><i>&#x540D;&#x79F0;</i></th>
+            <th></th>
+            <th>&quot;&#x6307;&#x4EE4;&#x96C6;&quot;&#xFF0C;&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x4E0D;&#x653E;&#x5230;URL&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;json&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>my_thumbs</i></td>
+            <td></td>
+            <td>
+                &#x81EA;&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#xFF0C;&#x5728;&#x5BF9;&#x5E94;&#x7684;bucket&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#xFF1A;<i>imgx/cmd_template/my_thumbs.json</i>
+                <br><br><code>t_my_thumbs</code>
+            </td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>information</th>
+            <th><b>i</b></th>
+            <th><i>&#x4FE1;&#x606F;&#x7C7B;&#x578B;</i></th>
+            <th></th>
+            <th>&#x6309;&#x7167;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4FE1;&#x606F;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>exif</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_exif/info.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=1532134163&amp;Signature=3wHpLeDk%2FZxTLodjQxiT5Lksc6w%3D" target="_blank">exif</a>
+            </td>
+            <td>
+                i_exif, &#x8FD4;&#x56DE;json&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;exif&#x4FE1;&#x606F;
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>iptc</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_iptc/info.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=1532134979&amp;Signature=pOoJof%2Fzjahvk5JrK7c9z2oMOq4%3D" target="_blank">iptc</a>
+            </td>
+            <td>
+                i_iptc, &#x8FD4;&#x56DE;json&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;iptc&#x4FE1;&#x606F;
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><b></b></td>
+            <td><i>all</i></td>
+            <td>
+                <a href="http://imgx-ss.bscstorage.com/imgx-test/i_all/info.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=1532135055&amp;Signature=vsuwXraMZP7KmBql%2Bn1Y3G%2FpwVs%3D" target="_blank">all</a>
+            </td>
+            <td>
+                i_all, &#x8FD4;&#x56DE;json&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#x5168;&#x90E8;&#x4FE1;&#x606F;
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<h2 id="&#x4F7F;&#x7528;aws-sdk&#x8BBF;&#x95EE;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;">&#x4F7F;&#x7528;AWS-SDK&#x8BBF;&#x95EE;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;AWS-SDK&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;&#xFF0C;&#x6CE8;&#x610F;imgx&#x670D;&#x52A1;&#x53EA;&#x63A5;&#x53D7;&#x6807;&#x51C6;&#x7684;<code>get_object</code>&#x64CD;&#x4F5C;&#xFF0C;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x975E;&#x6CD5;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4F7F;&#x7528;python boto3 sdk&#xFF1A;</p>
+<pre><code>import boto3
+
+s2_imgx_domain_name = &apos;http://imgx-ss.bscstorage.com&apos;   # &#x793A;&#x4F8B;&#x4F7F;&#x7528;&#x4E09;&#x526F;&#x672C;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#xFF0C;&#x6B64;&#x5904;&#x9700;&#x8981;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x8C03;&#x6574;
+s2_imgx_access_key = &apos;xxxxxx&apos;                           # &#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;access key
+s2_imgx_secret_key = &apos;xxxxxx&apos;                           # &#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;secret key
+
+imgx_cmd = &apos;c_scale,w_100,h_100&apos; # &#x56FE;&#x7247;&#x5904;&#x7406;&#x547D;&#x4EE4;&#xFF0C;&#x53C2;&#x8003; &#x56FE;&#x7247;&#x5904;&#x7406;&#x6307;&#x4EE4; &#x90E8;&#x5206;
+imgx_bucket = &apos;my_imgx_bucket&apos;   # &#x7528;&#x6237;&#x5728;&#x5B58;&#x50A8;&#x4E0A;&#x7684;bucket&#x540D;&#x79F0;
+imgx_key = &apos;my_img.jpg&apos;          # &#x7528;&#x6237;&#x60F3;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x56FE;&#x7247;&#x7684;key&#x540D;&#x79F0;
+
+
+# &#x521B;&#x5EFA;s2 client
+imgx_cli = boto3.client(&apos;s3&apos;,
+                        endpoint_url=s2_imgx_domain_name,
+                        aws_access_key_id=s2_imgx_access_key,
+                        aws_secret_access_key=s2_imgx_secret_key)
+
+imgx_cmd_key = u&apos;{cmd}/{key}&apos;.format(cmd=imgx_cmd, key=imgx_key) # &#x4F5C;&#x4E3A;&#x6700;&#x7EC8;&#x8BBF;&#x95EE;&#x65F6;&#x7684;Key
+resp = imgx_cli.get_object(Bucket=imgx_bucket, Key=imgx_cmd_key)
+
+print resp
+</code></pre><h2 id="&#x6C34;&#x5370;&#x529F;&#x80FD;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;">&#x6C34;&#x5370;&#x529F;&#x80FD;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</h2>
+<ol>
+<li>&#x6C34;&#x5370;&#x5206;&#x4E3A;&#xFF1A;<code>&#x56FE;&#x7247;&#x6C34;&#x5370;</code> &#x548C; <code>&#x6587;&#x5B57;&#x6C34;&#x5370;</code>&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x4E86;&#x6C34;&#x5370; <code>l</code> &#x6307;&#x4EE4;&#xFF0C;&#x5219;&#x548C; <code>l</code> &#x4E00;&#x7EC4;&#x7684;&#x5176;&#x4ED6;&#x6307;&#x4EE4;&#x5C06;&#x9488;&#x5BF9; <code>&#x6C34;&#x5370;&#x56FE;&#x7247;&#x6216;&#x8005;&#x6587;&#x5B57;</code> &#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;&#x5982;&#xFF1A;<code>w</code>&#x3001;<code>h</code>&#x3001;<code>g</code>&#x3001;<code>x</code>&#x3001;<code>y</code>&#x3001;<code>o</code>&#x3001;<code>bo</code>&#x3001;<code>e</code>&#x3001;<code>a</code>&#x3001;<code>r</code>&#x7B49;&#xFF09;&#xFF0C;&#x540E;&#x9762;&#x4E3E;&#x4F8B;&#x4ECB;&#x7ECD;&#x3002;</li>
+</ol>
+<h3 id="&#x56FE;&#x7247;&#x6C34;&#x5370;">&#x56FE;&#x7247;&#x6C34;&#x5370;</h3>
+<p>&#x60A8;&#x9700;&#x8981;&#x9884;&#x5148;&#x5C06;&#x6C34;&#x5370;&#x8D34;&#x56FE;&#x4FDD;&#x5B58;&#x5230;&#x5BF9;&#x5E94;&#x7684;bucket&#x4E0B; <code>imgx/overlay/&lt;filename&gt;.png</code>&#xFF0C;&#x56FE;&#x7247;&#x5FC5;&#x987B;&#x662F;png&#x683C;&#x5F0F;&#xFF0C;&#x4E0B;&#x9762;&#x4E24;&#x5F20;&#x56FE;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th><i>&#x6C34;&#x5370;&#x8D34;&#x56FE;</i></th>
+            <th><i>&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;</i></th>
+            <th><i>&#x5BF9;&#x5E94;&#x6307;&#x4EE4;</i></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="http://ss.bscstorage.com/imgx-test/imgx/l/icon_v.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464848305&amp;Signature=xlPiRJyVFwdViWHgbsj5yiTYl%2Bk%3D"></td>
+            <td><i>imgx/overlay/icon_v.png</i></td>
+            <td><code>l_icon_v</code></td>
+        </tr>
+        <tr>
+            <td><img src="http://ss.bscstorage.com/imgx-test/imgx/l/bs_logo.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464848350&amp;Signature=H37eufIimTWyx240GDCspIUzAQM%3D"></td>
+            <td><i>imgx/overlay/bs_logo.png</i></td>
+            <td><code>l_bs_logo</code></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p>&#x4E0B;&#x9762;&#x4E3E;&#x4F8B;&#x4ECB;&#x7ECD;&#x5177;&#x4F53;&#x529F;&#x80FD;</p>
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th width="300px"><i>&#x793A;&#x4F8B;</i></th>
+            <th><i>&#x63CF;&#x8FF0;</i></th>
+            <th><i>&#x6307;&#x4EE4;</i></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_fit,w_300,f_png--l_bs_logo,g_north_west,w_120,o_35,x_43,y_20,a_-10/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464848736&amp;Signature=qgX3TgPxRhsDC55OYz0w2DKMLJ0%3D"></td>
+            <td>
+                1. &#x5C06;&#x539F;&#x56FE;&#x7B49;&#x6BD4;&#x653E;&#x7F29;&#xFF1B;<br>
+                2. &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x6C34;&#x5370;&#x5230;&#x539F;&#x56FE;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#xFF0C;&#x5E76;&#x4E14;&#x5FAE;&#x8C03;&#x5750;&#x6807;(x_43,y_20)&#xFF0C;&#x8BBE;&#x7F6E;&#x6C34;&#x5370;&#x7684;&#x5BBD;&#x5EA6;&#x4E3A;120px&#xFF0C;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#x4E3A;35%&#xFF0C;&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x6C34;&#x5370;10&#x5EA6;
+            </td>
+            <td>
+                <code>c_fit,w_300,f_png--
+                l_bs_logo,g_north_west,
+                w_120,o_35,x_43,y_20,a_-10</code>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_icon_v,g_south_east,w_60,x_-1,y_-5/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464848557&amp;Signature=ExulrCr%2BFC%2B%2BTeuHgpah7M%2FwzO0%3D"></td>
+            <td>
+                1. &#x5C06;&#x539F;&#x56FE;&#x5904;&#x7406;&#x6210;&#x4E00;&#x4E2A;&#x5706;&#x89D2;&#x5934;&#x50CF;&#xFF1B;<br>
+                2. &#x5728;&#x53F3;&#x4E0B;&#x89D2;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6C34;&#x5370;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x4E14;&#x5411;&#x5916;&#x5FAE;&#x8C03;&#x6C34;&#x5370;&#x5750;&#x6807;(x_-1,y_-5)&#xFF0C;&#x8BBE;&#x7F6E;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x7684;&#x5BBD;&#x5EA6;&#x4E3A;60px
+            </td>
+            <td>
+                <code>c_thumb,g_face,w_200,h_200,
+                r_max,bo_6_ffffff80,f_png--l_icon_v,
+                g_south_east,w_60,x_-1,y_-5</code>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_icon_v,g_south_east,w_60,x_-1,y_-5,e_negate/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464848604&amp;Signature=LyDMfwGhTgjUzfkoo6GGCRU3%2B1E%3D"></td>
+            <td>
+                1. &#x540C;&#x4E0A;<br>
+                2. &#x5C06;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x53CD;&#x8272;
+            </td>
+            <td>
+                <code>c_thumb,g_face,w_200,h_200,
+                r_max,bo_6_ffffff80,f_png--l_icon_v,
+                g_south_east,w_60,x_-1,y_-5,e_negate</code>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p><br></p>
+<h3 id="&#x6587;&#x5B57;&#x6C34;&#x5370;">&#x6587;&#x5B57;&#x6C34;&#x5370;</h3>
+<p>&#x60A8;&#x9700;&#x8981;&#x9884;&#x5148;&#x5C06;&#x6587;&#x5B57;&#x6C34;&#x5370;&#x7684;&#x5B57;&#x4F53;&#x914D;&#x7F6E;(json&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;)&#x4FDD;&#x5B58;&#x5230;&#x5BF9;&#x5E94;&#x7684;bucket&#x4E0B; <code>imgx/overlay/&lt;file&gt;.json</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_family&quot;</span> : <span class="hljs-string">&quot;Xingkai SC&quot;</span>,
+    <span class="hljs-string">&quot;font_style&quot;</span> : <span class="hljs-string">&quot;bold&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">30</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;000000&quot;</span>,
+    <span class="hljs-string">&quot;background&quot;</span> : <span class="hljs-string">&quot;ff0000cc&quot;</span>,
+    <span class="hljs-string">&quot;padding&quot;</span> : <span class="hljs-number">10</span>,
+    <span class="hljs-string">&quot;word_spacing&quot;</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;kerning&quot;</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;line_spacing&quot;</span> : <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;pierced&quot;</span> : <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;tile&quot;</span> : <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;&#x9ED8;&#x8BA4;&#x503C;&quot;</span>,
+}
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;&#xFF1A;<code>imgx/overlay/my_font.json</code></p>
+<p>&#x5B57;&#x4F53;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;</p>
+<p><em>&#x6240;&#x6709;&#x53C2;&#x6570;&#x975E;&#x5FC5;&#x586B;&#x9879;</em></p>
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th><i>&#x53C2;&#x6570;&#x540D;</i></th>
+            <th><i>&#x4ECB;&#x7ECD;</i></th>
+            <th><i>&#x9ED8;&#x8BA4;&#x503C;</i></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>font_family</b></td>
+            <td>&#x5B57;&#x4F53;&#x5BB6;&#x65CF;&#xFF0C;&#x6211;&#x4EEC;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709; <a href="#H2-&#x5B57;&#x4F53;%20(font_family)">&#x5B57;&#x4F53;</a></td>
+            <td>Songti SC</td>
+        </tr>
+        <tr>
+            <td><b>font_style</b></td>
+            <td>
+                &#x5B57;&#x4F53;&#x6837;&#x5F0F;&#xFF08;&#x5982;&#x679C;&#x5B57;&#x4F53;&#x672C;&#x8EAB;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x6837;&#x5F0F;&#x624D;&#x6709;&#x6548;&#x679C;&#xFF0C;&#x5426;&#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;normal&#xFF09;&#xFF1A;
+                <br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;normal&#xFF08;&#x5E38;&#x89C4;&#xFF09;
+                <br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<i>italic</i>&#xFF08;&#x659C;&#x4F53;&#xFF09;
+                <br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<b>bold</b>&#xFF08;&#x7C97;&#x4F53;&#xFF09;
+                <br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;light&#xFF08;&#x7EC6;&#x4F53;&#xFF09;
+            </td>
+            <td>normal</td>
+        </tr>
+        <tr>
+            <td><b>font_size</b></td>
+            <td>&#x5B57;&#x53F7;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;px&#xFF09;</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td><b>font_color</b></td>
+            <td>16&#x8FDB;&#x5236;rgba&#xFF08;&#x524D;6&#x4E3A;rgb&#xFF0C;&#x6700;&#x540E;2&#x4F4D;alpha&#xFF0C;&#x90FD;&#x662F;0&#x5230;f&#xFF09;&#xFF0C;&#x7701;&#x7565;&#x6700;&#x540E;&#x4E24;&#x4F4D;&#x5219;&#x8BA4;&#x4E3A;&#x4E0D;&#x900F;&#x660E;</td>
+            <td>&#x9ED1;&#x8272;(000000)</td>
+        </tr>
+        <tr>
+            <td><b>background</b></td>
+            <td>16&#x8FDB;&#x5236;rgba&#xFF08;&#x524D;6&#x4E3A;rgb&#xFF0C;&#x6700;&#x540E;2&#x4F4D;alpha&#xFF0C;&#x90FD;&#x662F;0&#x5230;f&#xFF09;&#xFF0C;&#x7701;&#x7565;&#x6700;&#x540E;&#x4E24;&#x4F4D;&#x5219;&#x8BA4;&#x4E3A;&#x4E0D;&#x900F;&#x660E;</td>
+            <td>&#x900F;&#x660E;(ffffff00)</td>
+        </tr>
+        <tr>
+            <td><b>padding</b></td>
+            <td>&#x6587;&#x5B57;&#x5468;&#x56F4;&#x586B;&#x5145;&#x7684;&#x5BBD;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;px&#xFF09;</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td><b>word_spacing</b></td>
+            <td>&#x8BCD;&#x95F4;&#x8DDD;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;px&#xFF09;</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><b>kerning</b></td>
+            <td>&#x5B57;&#x95F4;&#x8DDD;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;px&#xFF09;</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><b>line_spacing</b></td>
+            <td>&#x884C;&#x95F4;&#x8DDD;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;px&#xFF09;</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><b>pierced</b></td>
+            <td>&#x9542;&#x7A7A;&#x5B57;&#x6548;&#x679C;&#xFF08;bool&#x503C;&#xFF09;</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td><b>tile</b></td>
+            <td>&#x662F;&#x5426;&#x5E73;&#x94FA;&#xFF08;bool&#x503C;&#xFF09;</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td><b>text</b></td>
+            <td>&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x4E32;</td>
+            <td>&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;">&#x793A;&#x4F8B;1&#xFF1A;</h4>
+<p><code>imgx/overlay/simple_font.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_family&quot;</span> : <span class="hljs-string">&quot;Microsoft YaHei&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">40</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;ffffff&quot;</span>
+}
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6587;&#x5B57;&#x6C34;&#x5370;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/w_800,f_png--l_text:simple_font:Hello+Bai+Shan%21%21,x_20,y_20,a_-25/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464849050&amp;Signature=dOMoCFXBKPQxLjJ0lunNxsoXT%2BA%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>w_800,f_png--l_text:simple_font:Hello+Bai+Shan!!,x_20,y_20,a_-25
+</code></pre><h4 id="&#x793A;&#x4F8B;2&#xFF1A;">&#x793A;&#x4F8B;2&#xFF1A;</h4>
+<p><code>imgx/overlay/subtitles.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">22</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;ffffff&quot;</span>
+}
+</code></pre>
+<p><code>imgx/overlay/subtitles_s.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">16</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;ffffff&quot;</span>
+}
+</code></pre>
+<p>&#x54B1;&#x4EEC;&#x4E5F;&#x641E;&#x4E00;&#x4E2A;&#x5927;&#x7247;&#x6548;&#x679C;, &#x5E94;&#x7528;&#x5230;&#x4E24;&#x5F20;&#x56FE;&#x4E0A;&#xFF1A;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/f_png,c_fill,w_800,h_400,e_brightness:-8--c_pad,w_800,h_550,g_center,b_000000ff,e_yellow:30--l_text:subtitles:%E4%B8%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%8F%90%E4%BE%9B%E4%B8%80%E5%A5%97%E4%BA%91%E7%AB%AF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1,g_south,y_100--l_text:subtitles_s:Imgx+is+the+image+back-end+for+web+and+mobile+developers,g_south,y_80/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464849662&amp;Signature=7Mw8D66XZsoYNWc7hzMmvQH9Wpg%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>f_png,c_fill,w_800,h_400,e_brightness:-8--c_pad,w_800,h_550,g_center,b_000000ff,e_yellow:30--l_text:subtitles:&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x4E00;&#x5957;&#x4E91;&#x7AEF;&#x56FE;&#x7247;&#x5904;&#x7406;&#x670D;&#x52A1;,g_south,y_100--l_text:subtitles_s:Imgx is the image back-end for web and mobile developers,g_south,y_80
+</code></pre><h4 id="&#x793A;&#x4F8B;3&#xFF1A;">&#x793A;&#x4F8B;3&#xFF1A;</h4>
+<p><code>imgx/overlay/my_font.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_family&quot;</span> : <span class="hljs-string">&quot;Xingkai SC&quot;</span>,
+    <span class="hljs-string">&quot;font_style&quot;</span> : <span class="hljs-string">&quot;bold&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">40</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;000000&quot;</span>,
+    <span class="hljs-string">&quot;background&quot;</span> : <span class="hljs-string">&quot;ff0000cc&quot;</span>,
+    <span class="hljs-string">&quot;padding&quot;</span> : <span class="hljs-number">18</span>
+}
+</code></pre>
+<p>&#x54B1;&#x4EEC;&#x505A;&#x4E00;&#x4E2A;&#x5BF9;&#x8054;&#xFF1A;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/w_800,f_png--l_text:my_font:%E9%A9%AC%E9%A9%B0%E5%A4%A7%E9%81%93%E5%BE%81%E9%80%94%E8%BF%9C,g_south_west,w_40,x_20,y_100--l_text:my_font:%E7%BE%8A%E4%B8%8A%E5%A5%87%E5%B3%B0%E6%99%AF%E8%89%B2%E5%A8%87,g_south_east,w_40,x_20,y_100--l_text:my_font:%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86,g_north,y_20/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464849847&amp;Signature=6clVRP9Jdg1szWrW7nI2jPjEI44%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>w_800,f_png--l_text:my_font:&#x9A6C;&#x9A70;&#x5927;&#x9053;&#x5F81;&#x9014;&#x8FDC;,g_south_west,w_40,x_20,y_100--l_text:my_font:&#x7F8A;&#x4E0A;&#x5947;&#x5CF0;&#x666F;&#x8272;&#x5A07;,g_south_east,w_40,x_20,y_100--l_text:my_font:&#x56FE;&#x7247;&#x5904;&#x7406;,g_north,y_20
+</code></pre><h4 id="&#x793A;&#x4F8B;4&#xFF1A;">&#x793A;&#x4F8B;4&#xFF1A;</h4>
+<p><code>imgx/overlay/font_me.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_family&quot;</span>: <span class="hljs-string">&quot;Microsoft YaHei&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span>: <span class="hljs-number">30</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span>: <span class="hljs-string">&quot;ffffff&quot;</span>,
+    <span class="hljs-string">&quot;font_style&quot;</span>: <span class="hljs-string">&quot;bold&quot;</span>,
+    <span class="hljs-string">&quot;background&quot;</span>: <span class="hljs-string">&quot;0000008f&quot;</span>,
+    <span class="hljs-string">&quot;pierced&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;tile&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-string">&quot;word_spacing&quot;</span>: <span class="hljs-number">2.2</span>,
+    <span class="hljs-string">&quot;line_spacing&quot;</span>: <span class="hljs-number">1.2</span>,
+    <span class="hljs-string">&quot;kerning&quot;</span>: <span class="hljs-number">1.5</span>
+}
+</code></pre>
+<p>&#x9542;&#x7A7A;&#x5B57;&#x6548;&#x679C;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/l_text:font_me:%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%99%BD%E5%B1%B1%E4%BA%91,g_north_west,x_20,y_20--w_800/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850225&amp;Signature=Ogu7V1xUjeTvPA6Ml4%2B64kB02mM%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>l_text:font_me:&#x4F60;&#x597D;&#xFF0C;&#x767D;&#x5C71;&#x4E91;,g_north_west,x_20,y_20--w_800
+</code></pre><h4 id="&#x793A;&#x4F8B;5&#xFF1A;">&#x793A;&#x4F8B;5&#xFF1A;</h4>
+<p><code>imgx/overlay/tile.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_family&quot;</span> : <span class="hljs-string">&quot;Microsoft YaHei&quot;</span>,
+    <span class="hljs-string">&quot;font_style&quot;</span> : <span class="hljs-string">&quot;bold&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">40</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;000000&quot;</span>,
+    <span class="hljs-string">&quot;background&quot;</span> : <span class="hljs-string">&quot;ff000066&quot;</span>,
+    <span class="hljs-string">&quot;padding&quot;</span> : <span class="hljs-number">18</span>,
+    <span class="hljs-string">&quot;tile&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>&#x5E73;&#x94FA;&#x6548;&#x679C;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/w_800,f_png--l_text:tile:Hello+BaiShan%21%21,g_south/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850272&amp;Signature=ZFRF%2F0HOsfQcdb3Y3N5%2FFxhE5jE%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>w_800,f_png--l_text:tile:Hello BaiShan!!,g_south
+</code></pre><h4 id="&#x793A;&#x4F8B;6&#xFF1A;">&#x793A;&#x4F8B;6&#xFF1A;</h4>
+<p><code>imgx/overlay/badge.json</code> :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;font_style&quot;</span> : <span class="hljs-string">&quot;bold&quot;</span>,
+    <span class="hljs-string">&quot;font_size&quot;</span> : <span class="hljs-number">30</span>,
+    <span class="hljs-string">&quot;font_color&quot;</span> : <span class="hljs-string">&quot;ffffff&quot;</span>,
+    <span class="hljs-string">&quot;background&quot;</span> : <span class="hljs-string">&quot;ff0000cc&quot;</span>,
+    <span class="hljs-string">&quot;padding&quot;</span> : <span class="hljs-number">15</span>
+}
+</code></pre>
+<p>&#x589E;&#x52A0;&#x4E00;&#x4E2A;badge(&#x6570;&#x5B57;&#x5FBD;&#x7AE0;)
+<img src="http://imgx-ss.bscstorage.com/imgx-test/c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_text:badge:69,r_max,g_south_east,w_34,h_34,x_-1,y_-5/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850332&amp;Signature=rREFYd6SQEtPdSu5JGFqGjRYxBQ%3D"></p>
+<p>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>c_thumb,g_face,w_200,h_200,r_max,bo_6_ffffff80,f_png--l_text:badge:69,r_max,g_south_east,w_34,h_34,x_-1,y_-5
+</code></pre><h2 id="&#x4F7F;&#x7528;&#x6307;&#x4EE4;&#x96C6;">&#x4F7F;&#x7528;&#x201C;&#x6307;&#x4EE4;&#x96C6;&#x201D;</h2>
+<p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x5E0C;&#x671B;&#x628A;&#x6307;&#x4EE4;&#x66B4;&#x9732;&#x5728;URL&#x4E2D;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#xFF1A;</p>
+<p>&#x4E0B;&#x9762;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#xFF0C;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x7167;&#x7247;&#x4E0A;&#x7684;&#x4EBA;&#x8138;&#x4F4D;&#x7F6E;&#x5E76;&#x505A;&#x4E00;&#x5F20;&#x5E26;&#x6709;&#x8FB9;&#x6846;&#x7684;&#x5706;&#x5F62;&#x7F29;&#x7565;&#x56FE;&#xFF1A;</p>
+<ul>
+<li><p>&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;json&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x5BF9;&#x5E94;&#x7684;bucket&#x4E2D;&#xFF1A;
+&#x8DEF;&#x5F84;&#xFF1A; <code>imgx/cmd_template/avatar.json</code> &#xFF1A;</p>
+<pre><code class="lang-json">[
+  {
+      <span class="hljs-string">&quot;crop&quot;</span> : <span class="hljs-string">&quot;thumb&quot;</span>,
+      <span class="hljs-string">&quot;gravity&quot;</span> : <span class="hljs-string">&quot;face:center&quot;</span>,
+      <span class="hljs-string">&quot;width&quot;</span> : <span class="hljs-number">200</span>,
+      <span class="hljs-string">&quot;height&quot;</span> : <span class="hljs-number">200</span>,
+      <span class="hljs-string">&quot;radius&quot;</span> : <span class="hljs-string">&quot;max&quot;</span>,
+      <span class="hljs-string">&quot;border&quot;</span> : <span class="hljs-string">&quot;6_ffffff80&quot;</span>,
+      <span class="hljs-string">&quot;format&quot;</span> : <span class="hljs-string">&quot;png&quot;</span>
+  },
+  {
+      <span class="hljs-string">&quot;overlay&quot;</span> : <span class="hljs-string">&quot;icon_v&quot;</span>,
+      <span class="hljs-string">&quot;gravity&quot;</span> : <span class="hljs-string">&quot;south_east&quot;</span>,
+      <span class="hljs-string">&quot;width&quot;</span> : <span class="hljs-number">60</span>,
+      <span class="hljs-string">&quot;x&quot;</span> : <span class="hljs-number">-1</span>,
+      <span class="hljs-string">&quot;y&quot;</span> : <span class="hljs-number">-5</span>
+  }
+]
+</code></pre>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#xFF1A;</p>
+</li>
+</ul>
+<pre><code>http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/1.jpg?&lt;&#x7B7E;&#x540D;&gt;
+http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/3.jpg?&lt;&#x7B7E;&#x540D;&gt;
+</code></pre><ul>
+<li>&#x6548;&#x679C;&#xFF1A;
+<img src="http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/1.jpg?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850497&amp;Signature=iRB5cnXfQp5m9sVBSUSsZtL235s%3D">
+<img src="http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/3.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850600&amp;Signature=ZnUlYNjjaYmo9RCKJ5i2QG913G4%3D">
+<img src="http://imgx-ss.bscstorage.com/imgx-test/t_avatar/avatar.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850684&amp;Signature=8EmYZxvTsg5hMkiPBhA7Px37fyE%3D">
+<img src="http://imgx-ss.bscstorage.com/imgx-test/t_avatar/demo/charles.png?AWSAccessKeyId=acc_drdrxp&amp;Expires=2464850768&amp;Signature=Ms%2BM6jzw3KzUB2CjSZ3R8iH6ECY%3D"></li>
+</ul>
+<h2 id="&#x5B57;&#x4F53;-fontfamily">&#x5B57;&#x4F53; (font_family)</h2>
+<blockquote>
+<p>&#x67E5;&#x8BE2;&#x5B57;&#x4F53;&#x7684;API&#xFF1A;<a href="http://imgx-ss.bscstorage.com/fonts" target="_blank">http://imgx-ss.bscstorage.com/fonts</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../offline/offline-api.html" class="navigation navigation-prev " aria-label="Previous page: 离线下载 Offline Downloader">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../transcoder/" class="navigation navigation-next " aria-label="Next page: 视音频处理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"图片实时处理API imgx","level":"1.6","depth":1,"next":{"title":"视音频处理","level":"1.7","depth":1,"path":"doc/transcoder/README.md","ref":"doc/transcoder/README.md","articles":[{"title":"请求签名","level":"1.7.1","depth":2,"path":"doc/transcoder/apis/signing_request.md","ref":"doc/transcoder/apis/signing_request.md","articles":[]},{"title":"管道相关接口","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"创建管道","level":"1.7.2.1","depth":3,"path":"doc/transcoder/apis/pipeline/create_pipeline.md","ref":"doc/transcoder/apis/pipeline/create_pipeline.md","articles":[]},{"title":"获取管道","level":"1.7.2.2","depth":3,"path":"doc/transcoder/apis/pipeline/get_pipeline.md","ref":"doc/transcoder/apis/pipeline/get_pipeline.md","articles":[]},{"title":"列管道","level":"1.7.2.3","depth":3,"path":"doc/transcoder/apis/pipeline/list_pipelines.md","ref":"doc/transcoder/apis/pipeline/list_pipelines.md","articles":[]},{"title":"删除管道","level":"1.7.2.4","depth":3,"path":"doc/transcoder/apis/pipeline/delete_pipeline.md","ref":"doc/transcoder/apis/pipeline/delete_pipeline.md","articles":[]},{"title":"更新管道","level":"1.7.2.5","depth":3,"path":"doc/transcoder/apis/pipeline/update_pipeline.md","ref":"doc/transcoder/apis/pipeline/update_pipeline.md","articles":[]}]},{"title":"任务相关接口","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"创建任务","level":"1.7.3.1","depth":3,"path":"doc/transcoder/apis/job/create_job.md","ref":"doc/transcoder/apis/job/create_job.md","articles":[]},{"title":"获取任务","level":"1.7.3.2","depth":3,"path":"doc/transcoder/apis/job/get_job.md","ref":"doc/transcoder/apis/job/get_job.md","articles":[]},{"title":"列出指定管道的任务","level":"1.7.3.3","depth":3,"path":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","ref":"doc/transcoder/apis/job/list_jobs_by_pipeline.md","articles":[]},{"title":"取消任务","level":"1.7.3.4","depth":3,"path":"doc/transcoder/apis/job/cancel_job.md","ref":"doc/transcoder/apis/job/cancel_job.md","articles":[]}]},{"title":"音视频元信息","level":"1.7.4","depth":2,"path":"doc/transcoder/apis/metadata.md","ref":"doc/transcoder/apis/metadata.md","articles":[]}]},"previous":{"title":"离线下载 Offline Downloader","level":"1.5","depth":1,"path":"doc/offline/offline-api.md","ref":"doc/offline/offline-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/imgx/imgx_manual.md","mtime":"2022-03-28T06:10:51.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-28T06:10:52.518Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

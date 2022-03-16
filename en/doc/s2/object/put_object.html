@@ -1,0 +1,1335 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PUT Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="append_object.html" />
+    
+    
+    <link rel="prev" href="get_object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../intro/overview/">
+            
+                <a href="../../../intro/overview/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../faq-pub.html">
+            
+                <a href="../../../faq-pub.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Object Storage Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../demo/">
+            
+                <a href="../demo/">
+            
+                    
+                    Amazon SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../demo/python.html">
+            
+                <a href="../demo/python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../demo/php.html">
+            
+                <a href="../demo/php.html">
+            
+                    
+                    PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../demo/phpv2.html">
+            
+                <a href="../demo/phpv2.html">
+            
+                    
+                    PHPV2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../demo/browser.html">
+            
+                <a href="../demo/browser.html">
+            
+                    
+                    Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../demo/nodejs.html">
+            
+                <a href="../demo/nodejs.html">
+            
+                    
+                    Nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../demo/java.html">
+            
+                <a href="../demo/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../demo/go.html">
+            
+                <a href="../demo/go.html">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../demo/dotnet.html">
+            
+                <a href="../demo/dotnet.html">
+            
+                    
+                    Dotnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../limitation/limit.html">
+            
+                <a href="../limitation/limit.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../signature/signature.html">
+            
+                <a href="../signature/signature.html">
+            
+                    
+                    Signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../acl/acl.html">
+            
+                <a href="../acl/acl.html">
+            
+                    
+                    ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../service/">
+            
+                <a href="../service/">
+            
+                    
+                    Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../service/buckets_list.html">
+            
+                <a href="../service/buckets_list.html">
+            
+                    
+                    LIST Buckets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../bucket/">
+            
+                <a href="../bucket/">
+            
+                    
+                    Bucket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../bucket/get_bucket_list_objects.html">
+            
+                <a href="../bucket/get_bucket_list_objects.html">
+            
+                    
+                    GET Bucket or List Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../bucket/put_bucket.html">
+            
+                <a href="../bucket/put_bucket.html">
+            
+                    
+                    PUT Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../bucket/delete_bucket.html">
+            
+                <a href="../bucket/delete_bucket.html">
+            
+                    
+                    DELETE Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../bucket/put_bucket_acl.html">
+            
+                <a href="../bucket/put_bucket_acl.html">
+            
+                    
+                    PUT Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../bucket/get_bucket_acl.html">
+            
+                <a href="../bucket/get_bucket_acl.html">
+            
+                    
+                    GET Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Object
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="head_object.html">
+            
+                <a href="head_object.html">
+            
+                    
+                    HEAD Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="get_object.html">
+            
+                <a href="get_object.html">
+            
+                    
+                    GET Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7.3" data-path="put_object.html">
+            
+                <a href="put_object.html">
+            
+                    
+                    PUT Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="append_object.html">
+            
+                <a href="append_object.html">
+            
+                    
+                    APPEND Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="post_object.html">
+            
+                <a href="post_object.html">
+            
+                    
+                    POST Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.6" data-path="put_object_copy.html">
+            
+                <a href="put_object_copy.html">
+            
+                    
+                    PUT Object - Copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.7" data-path="delete_object.html">
+            
+                <a href="delete_object.html">
+            
+                    
+                    DELETE Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.8" data-path="get_object_acl.html">
+            
+                <a href="get_object_acl.html">
+            
+                    
+                    GET Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.9" data-path="put_object_acl.html">
+            
+                <a href="put_object_acl.html">
+            
+                    
+                    PUT Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.10" data-path="initiate_multipart_upload.html">
+            
+                <a href="initiate_multipart_upload.html">
+            
+                    
+                    Initiate Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.11" data-path="upload_part.html">
+            
+                <a href="upload_part.html">
+            
+                    
+                    Upload Part
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.12" data-path="upload_part_copy.html">
+            
+                <a href="upload_part_copy.html">
+            
+                    
+                    Upload Part copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.13" data-path="complete_multipart_upload.html">
+            
+                <a href="complete_multipart_upload.html">
+            
+                    
+                    Complete Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.14" data-path="list_parts.html">
+            
+                <a href="list_parts.html">
+            
+                    
+                    List Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../sts/sts.html">
+            
+                <a href="../sts/sts.html">
+            
+                    
+                    STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../offline/offline-api.html">
+            
+                <a href="../../offline/offline-api.html">
+            
+                    
+                    Offline Downloader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../imgx/imgx_manual.html">
+            
+                <a href="../../imgx/imgx_manual.html">
+            
+                    
+                    Imgx API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../transcoder/">
+            
+                <a href="../../transcoder/">
+            
+                    
+                    Videos Processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../transcoder/apis/signing_request.html">
+            
+                <a href="../../transcoder/apis/signing_request.html">
+            
+                    
+                    Request Signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    Pipeline API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../transcoder/apis/pipeline/create_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/create_pipeline.html">
+            
+                    
+                    Create Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../transcoder/apis/pipeline/get_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/get_pipeline.html">
+            
+                    
+                    Get Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../transcoder/apis/pipeline/list_pipelines.html">
+            
+                <a href="../../transcoder/apis/pipeline/list_pipelines.html">
+            
+                    
+                    List Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                    
+                    Delete Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="../../transcoder/apis/pipeline/update_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/update_pipeline.html">
+            
+                    
+                    Update Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    Job API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../transcoder/apis/job/create_job.html">
+            
+                <a href="../../transcoder/apis/job/create_job.html">
+            
+                    
+                    Create Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../../transcoder/apis/job/get_job.html">
+            
+                <a href="../../transcoder/apis/job/get_job.html">
+            
+                    
+                    Get Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                <a href="../../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                    
+                    List Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../../transcoder/apis/job/cancel_job.html">
+            
+                <a href="../../transcoder/apis/job/cancel_job.html">
+            
+                    
+                    Cancel Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../transcoder/apis/metadata.html">
+            
+                <a href="../../transcoder/apis/metadata.html">
+            
+                    
+                    Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../toolkit/">
+            
+                <a href="../../../toolkit/">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../toolkit/s3-browser.html">
+            
+                <a href="../../../toolkit/s3-browser.html">
+            
+                    
+                    S3 Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../console-use/">
+            
+                <a href="../../../console-use/">
+            
+                    
+                    Console Use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../console-use/console-use.html">
+            
+                <a href="../../../console-use/console-use.html">
+            
+                    
+                    Baishan Cloud Storage Console Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../all-in-one.html">
+            
+                <a href="../../../all-in-one.html">
+            
+                    
+                    All-in-One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >PUT Object</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- mdtoc start -->
+<ul>
+<li><a href="#put-object">PUT Object</a><ul>
+<li><a href="#construction-of-policy&#xFF1A;">Construction of policy&#xFF1A;</a><ul>
+<li><a href="#expiration">Expiration</a></li>
+<li><a href="#condition-">Condition:</a><ul>
+<li><a href="#condition-type">Condition type</a></li>
+<li><a href="#conditions-field">Conditions field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#signature-construction-">Signature Construction:</a></li>
+</ul>
+</li>
+</ul>
+<!-- mdtoc end   -->
+<h3 id="put-object">PUT Object</h3>
+<ul>
+<li><p>Description: upload a file by post (based on browser form).</p>
+</li>
+<li><p>Request&#xFF1A;</p>
+</li>
+</ul>
+<pre><code class="lang-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
+<span class="hljs-attribute">Content-Length</span>: &lt;length&gt;
+
+<span class="fortran">Content-<span class="hljs-keyword">Type</span>:multipart/<span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; boundary=----WebKitFormBoundary1dIjDASRYXQm6DNA
+
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;key&quot;</span>
+
+destinationProject/${filename}
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;success_action_redirect&quot;</span>
+
+http://<span class="hljs-number">123.</span>abc.com/<span class="hljs-number">1.</span>php?f=<span class="hljs-number">1111.</span>txt
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;AWSAccessKeyId&quot;</span>
+
+00M414ZO0X30
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;Policy&quot;</span>
+
+eyJleHBpcmF0aW9uIjoiMjAxMi0wNi0wNlQwNjozOTo0MS4wMDBaIiwiY29uZGl0aW9ucyI6W3siYnVja2V0IjoiczN4cC5zM3dhdGNoIn0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJhbmdlbFwvIl1dfQ==
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;Signature&quot;</span>
+
+VK6Kw4kRqW2e84ZIX2cV2QqHo58=
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;file&quot;</span>; filename=<span class="hljs-string">&quot;112233.txt&quot;</span>
+Content-<span class="hljs-keyword">Type</span>: text/plain
+
+------WebKitFormBoundary1dIjDASRYXQm6DNA
+Content-Disposition: <span class="hljs-keyword">form</span>-<span class="hljs-keyword">data</span>; <span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;submit&quot;</span>
+
+&#x4E0A;&#x4F20;
+------WebKitFormBoundary1dIjDASRYXQm6DNA-
+</span></code></pre>
+<ul>
+<li>Form elements:</li>
+</ul>
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td width="185px">AWSAccessKeyId</td>
+            <td>
+                It is the AccessKey, which can be obtained from the console
+            </td>
+            <td>Yes</td>
+          </tr>    
+
+          <tr>
+            <td>key</td>
+            <td>
+                The key (path) after object upload, such as: angel / ${filename}, variable ${filename} will be automatically replaced with the file name of the uploaded file; of course, you can also directly specify the file name of the uploaded file stored in the storage, such as: angel / path / to / myfile.txt,Variable names can be: filename, SHA1, MD5, size
+            </td>
+            <td>Yes</td>
+          </tr>    
+
+          <tr>
+            <td>acl</td>
+            <td>
+                ACL of file: set an ACL when creating a file. Please refer to &#x300A;ACL&#x300B;
+            </td>
+            <td>No</td>
+          </tr>    
+
+          <tr>
+            <td>success_action_status</td>
+            <td>
+                The response code after successful upload can be set to 200, 201, or 204 (default). If it is set to 200 or 204, the returned body is empty and the status is 200 or 204. If it is set to 201, the returned body in XML format and the status is 201. If it is set to an illegal value, the value is ignored and the default value 204 is used
+              Note: if success is set\_ action\_ Redirect or redirect, this setting is ignored
+            </td>
+            <td>No</td>
+          </tr>  
+
+          <tr>
+            <td>success_action_redirect, redirect</td>
+            <td>
+                The URL redirected by the client after successful upload. The actual returned location will add bucket, key and Etag querystring to the original URL
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Policy</td>
+            <td>
+                File strategy, JSON format string, and encoded with Base64. It will be described in detail later
+            </td>
+            <td>Yes</td>
+          </tr>
+
+          <tr>
+            <td>Signature</td>
+            <td>
+                The string signed with the secret key. It will be described in detail later
+            </td>
+            <td>Yes</td>
+          </tr>
+
+          <tr>
+            <td>file</td>
+            <td>
+                Input form with type = file
+            </td>
+            <td>Yes</td>
+          </tr>
+
+          <tr>
+            <td>x-amz-meta-*</td>
+            <td>
+                User defined metadeta. The header starts with x-amz-meta -, and all meta are stored in the form of key: value. The maximum limit is 64KB. It is returned as it is when HEAD or GET
+            </td>
+            <td>No</td>
+          </tr>
+
+          <tr>
+            <td>Cache-Control, Content-
+Type, Content-Disposition,
+Content-Encoding,
+Expires</td>
+            <td>
+                like put\_file, refer to put\_file interface
+            </td>
+            <td>No</td>
+          </tr>
+
+        </tbody>
+</table>
+
+<h4 id="construction-of-policy&#xFF1A;">Construction of policy&#xFF1A;</h4>
+<p>The policy is a JSON document encoded with UTF-8 and Base64, which specifies the conditions that the request must meet and is used to authenticate the content. Depending on how you design policy documents, you can use them for each upload, each user, all uploads, or other designs that meet your needs.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;2014-04-10T08:55:34.000Z&quot;</span>,
+
+    <span class="hljs-string">&quot;conditions&quot;</span>: [
+
+        {
+            <span class="hljs-string">&quot;bucket&quot;</span>: <span class="hljs-string">&quot;my-bucket-name&quot;</span>
+        },
+
+        {
+            <span class="hljs-string">&quot;acl&quot;</span>: <span class="hljs-string">&quot;private&quot;</span>
+        },
+
+        [
+            <span class="hljs-string">&quot;starts-with&quot;</span>, <span class="hljs-string">&quot;$key&quot;</span>, <span class="hljs-string">&quot;my_prefix/&quot;</span>
+        ],
+
+        [
+            <span class="hljs-string">&quot;content-length-range&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">52428800</span>
+        ]
+    ]
+}
+</code></pre>
+<ul>
+<li><p>Description of the above example:</p>
+<ul>
+<li>Upload must be before &quot;2014-04-10t08:55:34.000z&quot;.</li>
+<li>Upload the file to the bucket named &quot;my bucket name&quot;.</li>
+<li>starts-with&#xFF1A;$key must start with &quot;my_ Prefix&quot; / &apos;(the &quot;$key&quot; in the policy must be preceded by &quot;$&quot;). If the $key value is empty, there is no prefix before the file name.</li>
+<li>content-length-range&#xFF1A;The file size must be within the specified range.</li>
+<li>Finally, Base64 encode the policy and set it to the value of the form policy.expiration:</li>
+</ul>
+</li>
+</ul>
+<h5 id="expiration">Expiration</h5>
+<p>Expiration is used to specify the expiration time of the policy. The expiration date of the policy is specified in ISO 8601 UTC date format. For example, &quot;2007-12-01t12:00:00.000z&quot; specifies that expiration is required in the policy.</p>
+<h5 id="condition">Condition:</h5>
+<p> Condition is used to verify the content of the uploaded object and the fields filled in by the form</p>
+<h6 id="condition-type">Condition type</h6>
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Condition</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td width="185px">Precise Matching</td>
+            <td>
+                1. Precise matching will verify that the field matches a specific value. This example instructs that the ACL must be set to public-read: {&quot;acl&quot;: &quot;public-read&quot; } <br>
+              2.ACL must be set to public-read alternative: [ &quot;eq&quot;, &quot;$acl&quot;, &quot;public-read&quot; ]
+            </td>
+          </tr>    
+
+          <tr>
+            <td>Starts With</td>
+            <td>
+            If the value must start with a specific value, use starts-with. this example instructs that the key must start with user/betty
+starts with:[&quot;starts-with&quot;, &quot;$key&quot;, &quot;user/betty/&quot;]
+
+            </td>
+          </tr>  
+          <tr>
+            <td>Specify the range</td>
+            <td>
+            For fields that accept a range, use a comma to separate the upper and lower limit values. This example allows 1 to 10 MB of
+file sizes:[&quot;content-length-range&quot;, 1048579, 10485760], byte
+
+            </td>
+          </tr>                        
+        </tbody>
+</table>
+
+<h6 id="conditions-field">Conditions field</h6>
+<p>The conditions in the policy document verify the content of the uploaded object. Each form field you specify in the form&#xFF08;AWSAccessKeyId&#x3001;Signature&#x3001; file&#x3001;Policy except&#xFF09;Can be used as a condition</p>
+<h4 id="signature-construction">Signature Construction:</h4>
+<ul>
+<li>Encoding policy with UTF-8</li>
+<li>Encode the policy in UTF-8 form with Base64</li>
+<li>Use HMAC SHA-1 and your secret key to convert your policy. Finally, Base64 coding is performed. For example, when using PHP&#xFF0C;base64_encode( hash_hmac( &quot;sha1&quot;, $policy, $SECRETKEY, true ) );</li>
+<li>Set the final value to the value of the form signature.</li>
+</ul>
+<p>Finally generated HTML form:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;http://my-bucket.&lt;?=c(&apos;api_host&apos;);?&gt;/&quot;</span> <span class="hljs-attr">enctype</span>=<span class="hljs-string">&quot;multipart/form-data&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;AWSAccessKeyId&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x60A8;&#x7684;accesskey&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;key&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;my_prefix/${filename}&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;acl&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;private&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;success_action_status&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;201&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Policy&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;eyJleHBpcmF0aW9uIjoiMjAxNC0wNC0xMFQwOToxNzozMC4wMDBaIiwiY29uZGl0aW9ucyI6W3siYnVja2V0IjoiY2xvdWQxMjMqwqwsdifsdGFydHMtd2l0aCIsIiRrZXkiLCJteWZpbGVzLyJdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRDb250ZW50LURpc3Bvc2l0aW9uIiwiIl0seyJ1aWQiOiIxMjMifSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXV19&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Signature&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;HnOSk3kfx5LFtn4CIiFcSglQUXc=&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x4E0A;&#x4F20;&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<ul>
+<li>matters needing attention&#xFF1A;<ul>
+<li>The URI after the  POST  request can only be &#x201C;/&#x201D;</li>
+<li>success_action_redirect&#xFF1A;Specify the URL to be redirected by the client after successful upload.</li>
+<li>key&#xFF1A;The variable ${filename} will be automatically replaced with the file name of the uploaded file</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="get_object.html" class="navigation navigation-prev " aria-label="Previous page: GET Object">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="append_object.html" class="navigation navigation-next " aria-label="Next page: APPEND Object">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PUT Object","level":"1.4.7.3","depth":3,"next":{"title":"APPEND Object","level":"1.4.7.4","depth":3,"path":"doc/s2/object/append_object.md","ref":"doc/s2/object/append_object.md","articles":[]},"previous":{"title":"GET Object","level":"1.4.7.2","depth":3,"path":"doc/s2/object/get_object.md","ref":"doc/s2/object/get_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/put_object.md","mtime":"2022-03-28T06:09:46.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-28T06:09:48.333Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

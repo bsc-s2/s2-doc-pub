@@ -1,0 +1,1285 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GET Object ACL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="put_object_acl.html" />
+    
+    
+    <link rel="prev" href="delete_object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../intro/overview/">
+            
+                <a href="../../../intro/overview/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../faq-pub.html">
+            
+                <a href="../../../faq-pub.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Object Storage Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../demo/">
+            
+                <a href="../demo/">
+            
+                    
+                    Amazon SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../demo/python.html">
+            
+                <a href="../demo/python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../demo/php.html">
+            
+                <a href="../demo/php.html">
+            
+                    
+                    PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../demo/phpv2.html">
+            
+                <a href="../demo/phpv2.html">
+            
+                    
+                    PHPV2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../demo/browser.html">
+            
+                <a href="../demo/browser.html">
+            
+                    
+                    Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../demo/nodejs.html">
+            
+                <a href="../demo/nodejs.html">
+            
+                    
+                    Nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../demo/java.html">
+            
+                <a href="../demo/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../demo/go.html">
+            
+                <a href="../demo/go.html">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../demo/dotnet.html">
+            
+                <a href="../demo/dotnet.html">
+            
+                    
+                    Dotnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../limitation/limit.html">
+            
+                <a href="../limitation/limit.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../signature/signature.html">
+            
+                <a href="../signature/signature.html">
+            
+                    
+                    Signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../acl/acl.html">
+            
+                <a href="../acl/acl.html">
+            
+                    
+                    ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../service/">
+            
+                <a href="../service/">
+            
+                    
+                    Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../service/buckets_list.html">
+            
+                <a href="../service/buckets_list.html">
+            
+                    
+                    LIST Buckets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../bucket/">
+            
+                <a href="../bucket/">
+            
+                    
+                    Bucket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../bucket/get_bucket_list_objects.html">
+            
+                <a href="../bucket/get_bucket_list_objects.html">
+            
+                    
+                    GET Bucket or List Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../bucket/put_bucket.html">
+            
+                <a href="../bucket/put_bucket.html">
+            
+                    
+                    PUT Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../bucket/delete_bucket.html">
+            
+                <a href="../bucket/delete_bucket.html">
+            
+                    
+                    DELETE Bucket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../bucket/put_bucket_acl.html">
+            
+                <a href="../bucket/put_bucket_acl.html">
+            
+                    
+                    PUT Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../bucket/get_bucket_acl.html">
+            
+                <a href="../bucket/get_bucket_acl.html">
+            
+                    
+                    GET Bucket ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Object
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="head_object.html">
+            
+                <a href="head_object.html">
+            
+                    
+                    HEAD Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="get_object.html">
+            
+                <a href="get_object.html">
+            
+                    
+                    GET Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="put_object.html">
+            
+                <a href="put_object.html">
+            
+                    
+                    PUT Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="append_object.html">
+            
+                <a href="append_object.html">
+            
+                    
+                    APPEND Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="post_object.html">
+            
+                <a href="post_object.html">
+            
+                    
+                    POST Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.6" data-path="put_object_copy.html">
+            
+                <a href="put_object_copy.html">
+            
+                    
+                    PUT Object - Copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.7" data-path="delete_object.html">
+            
+                <a href="delete_object.html">
+            
+                    
+                    DELETE Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7.8" data-path="get_object_acl.html">
+            
+                <a href="get_object_acl.html">
+            
+                    
+                    GET Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.9" data-path="put_object_acl.html">
+            
+                <a href="put_object_acl.html">
+            
+                    
+                    PUT Object ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.10" data-path="initiate_multipart_upload.html">
+            
+                <a href="initiate_multipart_upload.html">
+            
+                    
+                    Initiate Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.11" data-path="upload_part.html">
+            
+                <a href="upload_part.html">
+            
+                    
+                    Upload Part
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.12" data-path="upload_part_copy.html">
+            
+                <a href="upload_part_copy.html">
+            
+                    
+                    Upload Part copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.13" data-path="complete_multipart_upload.html">
+            
+                <a href="complete_multipart_upload.html">
+            
+                    
+                    Complete Multipart Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.14" data-path="list_parts.html">
+            
+                <a href="list_parts.html">
+            
+                    
+                    List Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../sts/sts.html">
+            
+                <a href="../sts/sts.html">
+            
+                    
+                    STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../offline/offline-api.html">
+            
+                <a href="../../offline/offline-api.html">
+            
+                    
+                    Offline Downloader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../imgx/imgx_manual.html">
+            
+                <a href="../../imgx/imgx_manual.html">
+            
+                    
+                    Imgx API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../transcoder/">
+            
+                <a href="../../transcoder/">
+            
+                    
+                    Videos Processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../transcoder/apis/signing_request.html">
+            
+                <a href="../../transcoder/apis/signing_request.html">
+            
+                    
+                    Request Signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    Pipeline API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../transcoder/apis/pipeline/create_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/create_pipeline.html">
+            
+                    
+                    Create Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../transcoder/apis/pipeline/get_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/get_pipeline.html">
+            
+                    
+                    Get Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../transcoder/apis/pipeline/list_pipelines.html">
+            
+                <a href="../../transcoder/apis/pipeline/list_pipelines.html">
+            
+                    
+                    List Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/delete_pipeline.html">
+            
+                    
+                    Delete Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="../../transcoder/apis/pipeline/update_pipeline.html">
+            
+                <a href="../../transcoder/apis/pipeline/update_pipeline.html">
+            
+                    
+                    Update Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    Job API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../transcoder/apis/job/create_job.html">
+            
+                <a href="../../transcoder/apis/job/create_job.html">
+            
+                    
+                    Create Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../../transcoder/apis/job/get_job.html">
+            
+                <a href="../../transcoder/apis/job/get_job.html">
+            
+                    
+                    Get Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                <a href="../../transcoder/apis/job/list_jobs_by_pipeline.html">
+            
+                    
+                    List Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../../transcoder/apis/job/cancel_job.html">
+            
+                <a href="../../transcoder/apis/job/cancel_job.html">
+            
+                    
+                    Cancel Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../transcoder/apis/metadata.html">
+            
+                <a href="../../transcoder/apis/metadata.html">
+            
+                    
+                    Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../toolkit/">
+            
+                <a href="../../../toolkit/">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../toolkit/s3-browser.html">
+            
+                <a href="../../../toolkit/s3-browser.html">
+            
+                    
+                    S3 Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../console-use/">
+            
+                <a href="../../../console-use/">
+            
+                    
+                    Console Use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../console-use/console-use.html">
+            
+                <a href="../../../console-use/console-use.html">
+            
+                    
+                    Baishan Cloud Storage Console Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../all-in-one.html">
+            
+                <a href="../../../all-in-one.html">
+            
+                    
+                    All-in-One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >GET Object ACL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- mdtoc start -->
+<ul>
+<li><a href="#get-object">GET Object</a></li>
+</ul>
+<!-- mdtoc end   -->
+<h3 id="get-object">GET Object</h3>
+<ul>
+<li><p>Description: get an object (download).</p>
+</li>
+<li><p>Request format:</p>
+</li>
+</ul>
+<pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/&lt;ObjectName&gt;</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: &lt;Your-Bucket-Name&gt;.ss.bscstorage.com
+<span class="hljs-attribute">Date</span>: &lt;date&gt;
+<span class="hljs-attribute">Authorization</span>: &lt;authorization string&gt; #Please refer to signature algorithm
+<span class="hljs-attribute">Range</span>: bytes=&lt;byte_range&gt; #Support breakpoint Download
+</code></pre>
+<ul>
+<li>Response:</li>
+</ul>
+<pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Date</span>: Tue, 08 Apr 2014 02:59:47 GMT
+<span class="hljs-attribute">Connection</span>: keep-alive
+<span class="hljs-attribute">Content-Type</span>: &lt;object-mime-type&gt;
+<span class="hljs-attribute">Content-Length</span>: &lt;object-file-bytes&gt;
+<span class="hljs-attribute">ETag</span>: &quot;&lt;MD5 value of file&gt;&quot;
+<span class="hljs-attribute">Last-Modified</span>: &lt;Last modification time&gt;
+<span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
+<span class="hljs-attribute">x-amz-s2-requester</span>: &lt;Your UserName&gt;
+<span class="hljs-attribute">x-amz-meta-foo1</span>: &lt;value1&gt; #Custom meta: foo1
+<span class="hljs-attribute">x-amz-meta-foo2</span>: &lt;value2&gt; #Custom meta: foo2
+
+<span class="stylus"><span class="hljs-selector-id">#File</span> <span class="hljs-attribute">content</span>
+&lt;BODY&gt;
+</span></code></pre>
+<ul>
+<li>Request Headers&#xFF1A;</li>
+</ul>
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Range</td>
+            <td>
+                Downloads the specified range bytes of an object. For more information about the HTTP Range header, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.<br>
+                &#x2022; Type: String<br>
+                &#x2022; Default: None<br>
+                &#x2022; Constraints: None
+            </td>
+            <td>No</td>
+          </tr>    
+
+          <tr>
+            <td>If-Modified-Since</td>
+            <td>
+                Return the object only if it has been modified since the specified time, otherwise return a 304 (not modified).<br>
+                &#x2022; Type: String<br>
+                &#x2022; Default: None<br>
+                &#x2022; Constraints: None
+            </td>
+            <td>No</td>
+          </tr>    
+
+          <tr>
+            <td>If-Unmodified-Since</td>
+            <td>
+                Return the object only if it has not been modified since the specified time, otherwise return a 412 (precondition failed).<br>
+                &#x2022; Type: String<br>
+                &#x2022; Default: None<br>
+                &#x2022; Constraints: None
+            </td>
+            <td>No</td>
+          </tr>    
+
+          <tr>
+            <td>If-Match</td>
+            <td>
+                Return the object only if its entity tag (ETag) is the same as the one specified; otherwise, return a 412 (precondition failed).<br>
+                &#x2022; Type: String<br>
+                &#x2022; Default: None<br>
+                &#x2022; Constraints: None
+            </td>
+            <td>No</td>
+          </tr>  
+
+          <tr>
+            <td>If-None-Match</td>
+            <td>
+                Return the object only if its entity tag (ETag) is different from the one specified; otherwise, return a 304 (not modified).<br>
+                &#x2022; Type: String<br>
+                &#x2022; Default: None<br>
+                &#x2022; Constraints: None
+            </td>
+            <td>No</td>
+          </tr> 
+
+        </tbody>
+</table>
+
+<ul>
+<li>Response Headers&#xFF1A;</li>
+</ul>
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Content-Type</td>
+            <td>Object&apos;s mime-type</td>
+          </tr>
+          <tr>
+            <td>Content-Length</td>
+            <td>Object&apos;s size(bytes)</td>
+          </tr>
+          <tr>
+            <td>ETag</td>
+            <td>Object&apos;s hash value&#xFF0C;normally it is md5</td>
+          </tr>
+          <tr>
+            <td>Last-Modified</td>
+            <td>Object&apos;s last modified time</td>
+          </tr>
+          <tr>
+            <td>x-amz-meta-*</td>
+            <td>You can customize the file attribute information and return the original value when reading.<br>
+            For example&#xFF1A;<br>
+            x-amz-meta-UploadLocation: My Home<br>
+            X-amz-meta-ReviewedBy: test@test.net<br>
+            X-amz-meta-FileChecksum: 0x02661779<br>
+            X-amz-meta-CheckSumAlgorithm: crc32<br>
+            </td>
+          </tr>
+          <tr>
+            <td>x-amz-meta-crc32</td>
+            <td>Object&apos;s CRC32 value</td>
+          </tr>
+        </tbody>
+</table>
+
+<ul>
+<li>Request example:</li>
+</ul>
+<pre><code>curl -v -H &quot;Range: bytes=0-1024&quot; -H &quot;Date: Sat, 20 Nov 2286 17:46:39 GMT&quot; -H &quot;Authorization: AWS &lt;access_key&gt;:&lt;ssig&gt;&quot; &quot;http://&lt;Your-Bucket-Name&gt;.ss.bscstorage.com/&lt;Object-Name&gt;&quot;
+</code></pre><ul>
+<li><p>Application examples:</p>
+</li>
+<li><p>Standard example:</p>
+</li>
+</ul>
+<pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/my_bucket/path/to/my/file.txt</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: ss.bscstorage.com
+<span class="hljs-attribute">Date</span>: Sun, 1 Jan 2006 12:00:00 GMT
+<span class="hljs-attribute">Authorization</span>: AWS AccessKey:ssig
+<span class="hljs-attribute">Range</span>: bytes=100-2048
+</code></pre>
+<pre><code>-    &#x54CD;&#x5E94;&#xFF1A;
+</code></pre><pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">206</span> Partial Content
+<span class="hljs-attribute">Server</span>: openresty/1.9.7.4
+<span class="hljs-attribute">Content-Type</span>: application/xml
+<span class="hljs-attribute">Connection</span>: keep-alive
+<span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
+<span class="hljs-attribute">x-amz-s2-requester</span>: GRPS000000ANONYMOUSE
+<span class="hljs-attribute">Date</span>: Mon, 08 Aug 2016 02:46:21 GMT
+<span class="hljs-attribute">Last-Modified</span>: Mon, 08 Aug 2016 02:45:55 GMT
+<span class="hljs-attribute">ETag</span>: &quot;21b1a992d1cbf49729fc4461e55dd94f&quot;
+<span class="hljs-attribute">x-amz-meta-s2-size</span>: 109051904
+<span class="hljs-attribute">x-amz-meta-s2-crc32</span>: 9422bc32
+<span class="hljs-attribute">Cache-Control</span>: max-age=31536000
+<span class="hljs-attribute">Content-Length</span>: 109051904
+
+<span class="erlang">...
+file_content
+...
+</span></code></pre>
+<ul>
+<li>Download methods using various verification measures:</li>
+</ul>
+<pre><code class="lang-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/path/to/my/file.txt?AWSAccessKeyId=&lt;AccessKey&gt;&amp;Expires=&lt;1175139620&gt;&amp;Signature=&lt;your_sign&gt;</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: my_bucket.ss.bscstorage.com
+<span class="hljs-attribute">Date</span>: date
+<span class="hljs-attribute">Range</span>: bytes=byte_range
+</code></pre>
+<ul>
+<li>Response:</li>
+</ul>
+<pre><code class="lang-http">HTTP/1.1 <span class="hljs-number">206</span> Partial Content
+<span class="hljs-attribute">Server</span>: openresty/1.9.7.4
+<span class="hljs-attribute">Content-Type</span>: application/xml
+<span class="hljs-attribute">Connection</span>: keep-alive
+<span class="hljs-attribute">x-amz-request-id</span>: 0000106c-1608-0810-4621-00163e000064
+<span class="hljs-attribute">x-amz-s2-requester</span>: GRPS000000ANONYMOUSE
+<span class="hljs-attribute">Date</span>: Mon, 08 Aug 2016 02:46:21 GMT
+<span class="hljs-attribute">Last-Modified</span>: Mon, 08 Aug 2016 02:45:55 GMT
+<span class="hljs-attribute">ETag</span>: &quot;21b1a992d1cbf49729fc4461e55dd94f&quot;
+<span class="hljs-attribute">x-amz-meta-s2-size</span>: 109051904
+<span class="hljs-attribute">x-amz-meta-s2-crc32</span>: 9422bc32
+<span class="hljs-attribute">Cache-Control</span>: max-age=31536000
+<span class="hljs-attribute">Content-Length</span>: 109051904
+
+<span class="erlang">...
+file_content
+...
+</span></code></pre>
+<p><strong><em>For the meaning of QueryString in the above example, please refer to the description of authentication method in [signature algorithm] [1].</em></strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="delete_object.html" class="navigation navigation-prev " aria-label="Previous page: DELETE Object">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="put_object_acl.html" class="navigation navigation-next " aria-label="Next page: PUT Object ACL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GET Object ACL","level":"1.4.7.8","depth":3,"next":{"title":"PUT Object ACL","level":"1.4.7.9","depth":3,"path":"doc/s2/object/put_object_acl.md","ref":"doc/s2/object/put_object_acl.md","articles":[]},"previous":{"title":"DELETE Object","level":"1.4.7.7","depth":3,"path":"doc/s2/object/delete_object.md","ref":"doc/s2/object/delete_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/s2/object/get_object_acl.md","mtime":"2022-03-28T06:09:47.100Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-28T06:09:48.333Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
