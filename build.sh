@@ -12,57 +12,57 @@
 #       install calibre.app
 #       $ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
-die()
-{
+die() {
     echo "ERROR: $@" >&2
     exit 1
 }
 
+BUILDING='building/'
+DIST='dist/'
 
-rm -rf building
-mkdir building || die mkdir building
-
+rm -rf $BUILDING
+mkdir $BUILDING || die mkdir $BUILDING
 
 # adding toc changes src files
-cp -R src/* building/ || die copy to building/
+cp -R src/* $BUILDING || die copy to $BUILDING
 
+for language in $(ls $BUILDING); do
 
-# build pdf, it does not need manually created table-of-content.
-gitbook pdf building/ s2-doc.pdf || die build pdf with gitbook
+    # build pdf, it does not need manually created table-of-content.
+    gitbook pdf $BUILDING/$language s2-doc.pdf || die build pdf with gitbook
 
+    # build all in one page doc
+    cat $BUILDING/$language/SUMMARY.md | grep -v 'all-in-one.md\|toolkit' | grep '(' \
+                                    | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
+        cat $BUILDING/$language/$pth
+        echo ""
+    done > $BUILDING/$language/all-in-one.md
 
-# build all in one page doc
-cat building/SUMMARY.md | grep -v 'all-in-one.md\|toolkit' | grep '(' | awk -F'(' '{print $NF}' | tr -d ')' | while read pth; do
-    cat building/$pth
-    echo ""
-done > building/all-in-one.md
+    # add table-of-content to every *.md
+    for i in $( cd $BUILDING/$language; find . -name "*.md" | grep -v "SUMMARY\|README" ); do
+        python2 mdtoc.py "$BUILDING/$language/$i" "$BUILDING/$language/$i" || die adding TOC to "$language/$i"
+    done
 
-
-# add table-of-content to every *.md
-for i in $(cd building; find . -name "*.md" | grep -v "SUMMARY\|README"); do
-
-    python2 mdtoc.py "building/$i" "building/$i" || die adding TOC to "$i"
+    gitbook build -f web $BUILDING/$language $DIST/$language || die build html with gitbook
+    mv s2-doc.pdf DIST/$language
 
 done
-
-
-gitbook build -f web building/ dist || die build html with gitbook
-mv s2-doc.pdf dist/
-
 
 # build branch: release
 git checkout release || die checkout release
 rm -rf building/     || die rm building/
 
+for language in $(ls $DIST); do
 
-# remove everything those are not in dist/
-for p in $(ls dist/); do
-    rm -rf "$p" || die rm -rf "$p"
+    # remove everything those are not in dist/
+    for p in $(ls $DIST/$language); do
+        rm -rf "$language/$p" || die rm -rf "$language/$p"
+    done
+
+    mv $DIST/$language/* $language/
 done
 
-
-mv dist/* .          || die mv dist/xx
-rmdir dist/          || die rmdir dist/
+rm -rf dist/          || die rmdir dist/
 git add .            || die git-add .
 git add -u .         || die git-add -u .
 
