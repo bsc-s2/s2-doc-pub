@@ -7,7 +7,7 @@
 ### 安装AWS SDK for PHP
 
 ```
-curl -O http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar
+curl -O https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar
 ```
 
 初始化，设置帐号信息和域名

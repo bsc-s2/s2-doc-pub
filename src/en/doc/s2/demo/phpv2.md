@@ -1,176 +1,145 @@
-## Python Demo
+## PHP Demo (V2)
 
-### Install the AWS Python client – boto3
+ System Requirement: 
+ - PHP version>=5.3.3 and compiled with the cURL, JSON, and XML extensions. 
+ - A recent version of cURL 7.16.2+ compiled with OpenSSL and Zlib
 
+### Install the AWS SDK for PHP
+ 
 ```
-pip install boto3
-```
-
-### Initialization & account and domain setup
-
-```python
-
-import boto3
-from boto3.s3.transfer import TransferConfig
-
-cli = boto3.client(
-    's3',
-    aws_access_key_id='ziw5dp1alvty9n47qksu', #please replace with your access_key
-    aws_secret_access_key='V+ZTZ5u5wNvXb+KP5g0dMNzhMeWe372/yRKx4hZV', #please replace with your secret_key
-    endpoint_url='http://ss.bscstorage.com'
-)
-
+curl -O https://docs.aws.amazon.com/aws-sdk-php/v2/download/aws.phar
 ```
 
+ Initialization & Set the account information and the domain name
 
-###  File operation API
+```php
+require 'aws.phar';
+
+$cli = Aws\S3\S3Client::factory(array(
+	'endpoint' => 'http://ss.bscstorage.com',
+	'credentials' => array(
+		'key' => 'your access key',
+		'secret' => 'your secret key',
+	),
+	'region' => 'us-east-1',
+));
+```
+
+### File Operation API 
 
 #### File Upload
 
-##### Using the put_object interface
+The permitted values of ACL are 'private', 'public-read', 'public-read-write', and 'authenticated-read'. And the developer needs to fill in the Body line with the File's content.
 
-ACL can set as：'private' or 'public-read' or 'public-read-write' or 'authenticated-read'
-
-```python
-resp = cli.put_object(
-    ACL='public-read',
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx',
-    ContentType='image/jpeg', # please replace with applicable content type
-    Body='the content of the file as a string'
-)
+```php
+$resp = $cli->putObject(array(
+	'ACL' => 'public-read',
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+	'ContentType' => 'image/jpeg',
+	'Body' => 'file content as a string'
+));
 ```
 
-##### Using upload_file interface (It suits to upload the large File, it supports dividing the File into different blocks automatically and uploading those blocks simultaneously.)
+#### Using the 'upload' interface (It suits to upload the large File, it supports dividing the File into different blocks automatically and uploading those blocks simultaneously.)
 
-```python
-config = TransferConfig(
-    multipart_threshold=30 * 1024 * 1024,
-    multipart_chunksize=8 * 1024 * 1024,
-    max_concurrency=10
-)
-resp = cli.upload_file(
-    '/root/test.mp4',
-    'test-bucket-xxx',
-    'test-key-xxx',
-    ExtraArgs={
-        'ContentType': 'image/jpeg', # please replace with applicable content type
-        'ACL': 'private',
-    },
-    Config=config
-)
+```
+$resp = $cli->upload('test-bucket-xxx',
+	'test-key-xxx', fopen('path/to/my/file/test.txt', 'r'));
 ```
 
-#### File Copy
+#### Upload the entire directory. (The necessary parameters are the local directory to be uploaded, the name of the bucket, and the prefix needed )
 
-Copy all files in the source bucket prefixed with `aa` to the target bucket
-
-```python
-marker = ''
-
-while True:
-    resp = s3.list_objects(
-        Bucket='src-bucket',
-        Prefix='aa',
-        Marker=marker,
-    )
-
-    if 'Contents' not in resp:
-        break
-
-    for content in resp['Contents']:
-        s3.copy_object(Bucket='dst-bucket', Key=content['key'], CopySource='/%s/%s' % ('src-bucket', content['key']))
-
-    marker = resp['Contents'][-1]['Key']
 ```
-
+$resp = $cli->uploadDirectory('/root/mydata\_dir',
+	'test-bucket-xxx',
+	''
+);
+```
 #### File Download
 
-```python
-resp = cli.get_object(
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx'
-)
+```php
+$resp = $cli->getObject(array(
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
+```
+
+#### Download the File to the local directory. The necessary parameters are the file storage directory, the name of the bucket, and the prefix of the File to be downloaded
+
+```
+$resp = $cli->downloadBucket('/root/download\_dir',
+	'test-bucket-xxx',
+	''
+);
 ```
 
 #### Get File URL
 
-获取已签名的URL用来下载文件，可通过参数ExpiresIn设置签名过期时间。
+Get the pre-signed URL to download the File, and the developer could set an expired time.
 
-```python
-url = cli.generate_presigned_url(
-    'get_object',
-    Params={
-        'Bucket': 'test-bucket-xxx',
-        'Key': 'test-key-xxx'
-    },
-    ExpiresIn=60
-)
-print url
+```php
+$cmd = $cli->getCommand('GetObject', array(
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
+
+$url = $cmd->createPresignedUrl('+100 seconds');
 ```
 
 #### File Delete
 
-```python
-resp = cli.delete_object(
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx'
-)
+```php
+$resp = $cli->deleteObject(array(
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
 ```
 
 #### Get File ACL
 
-```python
-resp = cli.get_object_acl(
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx'
-)
+```php
+$resp = $cli->getObjectAcl(array(
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
 ```
 
 #### Set File ACL
 
 ##### Using the pre-defined ACL
 
-Support pre-defined ACL：'private', 'public-read', 'public-read-write' 或 'authenticated-read'
+The permitted values of ACL are 'private', 'public-read', 'public-read-write', and 'authentication-read'
 
-```python
-resp = cli.put_object_acl(
-    ACL='public-read',
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx'
-)
+```php
+$resp = $cli->putObjectAcl(array(
+	'ACL' => 'public-read-write',
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
 ```
 
 ##### Using the custom ACL
 
-Permission includes：'FULL_CONTROL', 'WRITE', 'WRITE_ACP', 'READ', 'READ_ACP'
+The permitted values of Permission are 'FULL_CONTROL', 'WRITE', 'WRITE_ACP', 'READ', and 'READ_ACP'
 
-```python
-resp = cli.put_object_acl(
-    AccessControlPolicy={
-        'Grants': [
-            {
-                'Grantee': {
-                    'ID': 'user_foo', # 请替换为真实存在的用户
-                    'Type': 'CanonicalUser',
-                },
-                'Permission': 'WRITE',
-            },
-            {
-                'Grantee': {
-                    'ID': 'your-user-name',
-                    'Type': 'CanonicalUser',
-                },
-                'Permission': 'FULL_CONTROL',
-            },
-        ],
-        'Owner': {
-            'ID': 'your-user-name',
-        },
-    },
-    Bucket='test-bucket-xxx',
-    Key='test-key-xxx'
-)
+```php
+$resp = $cli->putObjectAcl(array(
+	'Grants' => array(
+		array(
+			'Grantee' => array(
+				'ID' => 'user\_foo', //请替换为真实存在的用户
+				'Type' => 'CanonicalUser',
+			),
+			'Permission' => 'FULL\_CONTROL',
+		),
+	),
+	'Owner' => array(
+		'ID' => 'your-user-name',
+	),
+	'Bucket' => 'test-bucket-xxx',
+	'Key' => 'test-key-xxx',
+));
 ```
 
 
@@ -178,114 +147,106 @@ resp = cli.put_object_acl(
 
 #### Bucket Create
 
-ACL can be set as：'private' or 'public-read' or 'public-read-write' or 'authenticated-read'
+The permitted values of ACL are 'private', 'public-read', 'public-read-write', and 'authentication-read'
 
-```python
-resp = cli.create_bucket(
-    ACL='public-read',
-    Bucket='test-bucket-xxx'
-)
+```php
+$resp = $cli->createBucket(array(
+	'Bucket' => 'test-bucket-xxx',
+	'ACL' => 'public-read',
+));
 ```
 
-#### List Bucket File (List all the files contained on the bucket. The max number of returning files each time is 1000)
+#### List all the files contained on the bucket. The max number of returning files at the same time is 1000
 
-```python
-resp = cli.list_objects(
-    Bucket='test-bucket-xxx',
-    Prefix='',
-    Marker='',
-)
+```php
+$resp = $cli->listObjects(array(
+	'Bucket' => 'test-bucket-xxx',
+	'Prefix' => '',
+	'Marker' => '',
+));
 ```
 
-#### List all the files contained in the bucket
+#### List all the files contained on the bucket.
 
-```python
-marker = ''
+```php
+$marker = '';
+while (true):
+	$resp = $cli->listObjects(array(
+		'Bucket' => 'test-bucket-xxx',
+		'Marker' => $marker,
+	));
 
-while True:
-    resp = s3.list_objects(
-        Bucket='test-bucket-xxx',
-        Marker=marker,
-    )
+	if($resp['Contents'] == NULL)
+	{
+		break;
+	}
 
-    if 'Contents' not in resp:
-        break
-
-    for content in resp['Contents']:
-        print 'key: %s, size: %d' % (content['Key'], content['Size'])
-
-    marker = resp['Contents'][-1]['Key']
+	foreach($resp['Contents'] as $content)
+	{
+		var_dump($content['Key']);
+		$marker = $content['Key'];
+	}
+endwhile;
 ```
 
-####  Bucket Delete
+#### Bucket Delete
 
-```python
-resp = cli.delete_bucket(
-    Bucket='test-bucket-xxx'
-)
+```php
+$resp = $cli->deleteBucket(array(
+	'Bucket' => 'test-bucket-xxx',
+));
 ```
 
 #### Get Bucket ACL
 
-```python
-resp = cli.get_bucket_acl(
-    Bucket='test-bucket-xxx'
-)
+```php
+$resp = $cli->getBucketAcl(array(
+	'Bucket' => 'test-bucket-xxx',
+));
 ```
-
 #### Set Bucket ACL
 
 ##### Using the pre-defined ACL
 
-Support pre-defined ACL：'private', 'public-read', 'public-read-write' or 'authenticated-read'
+The permitted values of ACL are 'private', 'public-read', 'public-read-write', and 'authentication-read'.
 
-```python
-resp = cli.put_bucket_acl(
-    ACL='public-read',
-    Bucket='test-bucket-xxx',
-)
+```php
+$resp = $cli->putBucketAcl(array(
+	'ACL' => 'public-read-write',
+	'Bucket' => 'test-bucket-xxx',
+));
 ```
 
 ##### Using the custom ACL
 
-Permission includes：'FULL_CONTROL', 'WRITE', 'WRITE_ACP', 'READ', 'READ_ACP'
-
-```python
-resp = cli.put_bucket_acl(
-    AccessControlPolicy={
-        'Grants': [
-            {
-                'Grantee': {
-                    'ID': 'user_foo', # 请替换为真实存在的用户
-                    'Type': 'CanonicalUser',
-                },
-                'Permission': 'WRITE',
-            },
-            {
-                'Grantee': {
-                    'ID': 'your-user-name',
-                    'Type': 'CanonicalUser',
-                },
-                'Permission': 'FULL_CONTROL',
-            },
-        ],
-        'Owner': {
-            'ID': 'your-user-name',
-        },
-    },
-    Bucket='test-bucket-xxx'
-)
+The permitted values of Permission are 'FULL_CONTROL', 'WRITE', 'WRITE_ACP', 'READ', and 'READ_ACP'
+ 
+```php
+$resp = $cli->putBucketAcl(array(
+	'Grants' => array(
+		array(
+			'Grantee' => array(
+				'ID' => 'user\_foo', //请替换为真实存在的用户
+				'Type' => 'CanonicalUser',
+			),
+			'Permission' => 'FULL\_CONTROL',
+		),
+	),
+	'Owner' => array(
+		'ID' => 'your-user-name',
+	),
+	'Bucket' => 'test-bucket-xxx',
+));
 ```
 
 
-### Service operation API
+### Service Operation API
 
-#### List all buckets
+#### Buckets List (List all the Buckets of your service)
 
-```python
-resp = cli.list_buckets()
+```php
+$resp = $cli->listBuckets();
 ```
 
-AWS Official SDK [aws-sdk-python](https://aws.amazon.com/sdk-for-python/)
-
-API doc [api-reference](https://boto3.readthedocs.io/en/latest/reference/services/s3.html)
+Official AWS SDK for PHP: [aws-sdk-php](https://aws.amazon.com/sdk-for-php/)
+API documentation: [api-reference](http://docs.aws.amazon.com/aws-sdk-php/v2/api/class-Aws.S3.S3Client.html)
